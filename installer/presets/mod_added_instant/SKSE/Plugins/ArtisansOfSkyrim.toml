@@ -1,0 +1,2428 @@
+# Artisans of Skyrim unified runtime configuration
+# Final targets: ArtisansOfSkyrim.esp and ArtisansOfSkyrim.dll.
+# Legacy standalone Smithing/Enchanting plugins are reference-only historical inputs.
+# Alchemy itemForm values point at generated ALCH records in ArtisansOfSkyrim.esp.
+
+[mod]
+name = "Artisans of Skyrim"
+plugin = "ArtisansOfSkyrim.esp"
+dll = "ArtisansOfSkyrim.dll"
+editorIdPrefix = "AOS_"
+globalDiscountCap = 0.2
+alchemyBatchSize = 5
+
+[services]
+# false removes that service completely: no dialogue option, no menu.
+smithing = true
+enchanting = true
+alchemy = true
+
+[features]
+# Each custom option is a separate installer checkbox. A checked box installs
+# ArtisansOfSkyrim_<Option>.toml, which turns its key on. Items created with an
+# option that is later turned off keep working and stay protected from
+# disenchanting; vanilla Wolf Armor support is always available.
+enableSkyforgeEquipment = false   # Eorlund's custom Skyforge Steel equipment
+enableCustomEnchantments = false  # six custom enchantments
+enableCustomPotions = false       # Health, Magicka and Stamina Over Time potions
+
+[ui]
+enableHotkey = false
+interactionScanCode = 68
+pageSize = 3
+
+# =============================================================================
+# PRICES
+# Everything a player usually wants to change is in this block.
+# All prices are in gold, before the Speech / Fortify Barter / Haggling discount.
+#
+# Tip: copy only the lines you change into ArtisansOfSkyrim_Custom.toml (same
+# [section] names). Mod updates never overwrite that file.
+#
+# Per-item prices are further below in this file:
+#   Enchanting: adeptPrice / expertPrice / masterPrice in each [[enchantments]]
+#   Alchemy:    batchPrice (price of the whole batch) in each [[alchemy.items]]
+# =============================================================================
+
+# --- Smithing: crafting ------------------------------------------------------
+# Price = fee for the item size + item value x craftMultiplier
+# The fee is the work, the multiplier the material. Both always count.
+#   Small  = daggers
+#   Medium = one-handed weapons, bows, shields, light armor and armor pieces
+#   Large  = two-handed weapons, crossbows and heavy body armor
+[pricing.crafting]
+craftMultiplier = 1.25
+smallServiceFee = 400.0
+mediumServiceFee = 700.0
+largeServiceFee = 1000.0
+# Arrows and bolts without a fixed batch price. Vanilla ammunition batches
+# (24 arrows / 10 bolts) have fixed prices and ignore this fee.
+ammunitionServiceFee = 200.0
+
+# --- Smithing: improvement ---------------------------------------------------
+# Price = fee for the quality and item size + item value x valueMultiplier
+# The fee is the work, the multiplier the material. Both always count.
+# Works for mod-added items too: only the gold value and item size are used.
+[pricing.improvement]
+valueMultiplier = 0.2
+
+# Fee per quality and item size (Small / Medium / Large as in crafting).
+[pricing.improvementFees]
+fineSmall = 200.0
+fineMedium = 250.0
+fineLarge = 300.0
+
+superiorSmall = 300.0
+superiorMedium = 350.0
+superiorLarge = 400.0
+
+exquisiteSmall = 400.0
+exquisiteMedium = 450.0
+exquisiteLarge = 500.0
+
+flawlessSmall = 500.0
+flawlessMedium = 750.0
+flawlessLarge = 1000.0
+
+epicSmall = 1000.0
+epicMedium = 1250.0
+epicLarge = 1500.0
+
+legendarySmall = 1500.0
+legendaryMedium = 2000.0
+legendaryLarge = 2500.0
+
+# --- Smithing: quality results (not prices) ----------------------------------
+# Damage or armor multiplier an item receives at each quality.
+# Each value stays inside its quality's range (Fine 1.10-1.19, ... Epic 1.50-1.59);
+# Legendary can go from 1.60 upwards.
+[tempering.targets]
+fine = 1.19
+superior = 1.29
+exquisite = 1.39
+flawless = 1.49
+epic = 1.59
+legendary = 2.0
+
+# --- Enchanting --------------------------------------------------------------
+[pricing]
+# Added once per effect (twice for a dual enchantment).
+grandSoulServiceCost = 1000
+# Charge a new weapon enchantment receives. Not a price.
+grandSoulWeaponCharge = 3000
+
+# --- Discount -----------------------------------------------------------------
+# Applies to every service. The total discount never exceeds maxDiscount
+# (and never more than 0.2 = 20%).
+[pricing.barter]
+enabled = true
+maxDiscount = 0.2
+# Speech skill: discountPerPoint for each Speech point above speechBaseline.
+includeSpeechSkill = true
+speechBaseline = 15.0
+speechSkillDiscountPerPoint = 0.0025
+# Fortify Barter / Fortify Speech effects count as a percentage discount.
+includeSpeechcraftModifiers = true
+# Haggling perk ranks: 10% / 15% / 20% / 25% / 30% (highest owned rank only).
+includeHagglingPerks = true
+
+# =============================================================================
+# END OF PRICES
+# =============================================================================
+
+[rules]
+defaultSmithTier = "Adept"
+# Blacksmiths from other mods (still need the blacksmith faction): Adept, Expert or Master.
+modAddedSmithTier = "Adept"
+includeModAddedEquipment = true
+requireBlacksmithFaction = true
+requireTemperingRecipe = true
+allowRecognizedKeywordFallback = true
+allowUnknownMaterialFallbackForExpertOrMaster = true
+uniqueItemsRequireMaster = true
+# Unique/quest items: those with an artifact keyword, MagicDisallowEnchanting or
+# an [items].special entry, and items that no leveled list or NPC outfit uses and
+# no regular forge recipe creates. Improving them requires a Master.
+# The two rules below only filter forge recipes added by other mods.
+excludeConversionRecipes = true
+excludeUniqueCrafting = true
+artifactsRequireMaster = true
+allowEnchantedItems = true
+enchantedItemsRequireExpert = true
+allowEquippedItems = false
+showBlockedItemsWithReason = false
+stalhrimOnlyBaldorForCrafting = true
+stalhrimOnlyBaldorForImprovement = true
+eorlundRequiresTrustQuest = true
+gunmarRequiresRecruitmentQuest = true
+baldorRequiresQuest = true
+dawnguardGearOnlyGunmar = true
+solstheimGearOnlySolstheimSmiths = true
+dragonGearRequiresWayOfVoice = true
+dragonGearRequiresMaster = true
+enhancedCrossbowsRequireAncientTechnology = true
+
+[crafting.allowedCategories]
+weapons = true
+armor = true
+shields = true
+arrows = true
+bolts = true
+
+[orders]
+enabled = false
+
+[orders.smithing]
+maximumActivePerSmith = 5
+daggerHours = 24.0
+swordHours = 48.0
+warAxeHours = 48.0
+maceHours = 48.0
+bootsHours = 48.0
+gauntletsHours = 48.0
+bowHours = 48.0
+shieldHours = 48.0
+helmetHours = 48.0
+greatswordHours = 72.0
+battleaxeHours = 72.0
+warhammerHours = 72.0
+lightBodyArmorHours = 48.0
+heavyBodyArmorHours = 72.0
+crossbowHours = 72.0
+
+[forms]
+blacksmithFaction = "Skyrim.esm|0005091D"
+eorlund = "Skyrim.esm|00013B9D"
+baldor = "Dragonborn.esm|00018FB5"
+gunmar = "Dawnguard.esm|0000336C"
+glover = "Dragonborn.esm|0001828E"
+eorlundProvingHonorQuestEditorID = "C01"
+eorlundMissingInActionQuestEditorID = "MS09"
+gunmarRecruitmentQuestEditorID = "DLC1HunterBaseIntro"
+baldorQuestEditorID = "DLC2SV02"
+wayOfVoiceQuestEditorID = "MQ105"
+skyforgeUnlockQuestEditorID = "C06"
+ancientTechnologyQuestEditorID = "DLC1RH05"
+temperingBenchEditorIDs = ["CraftingSmithingArmorTable", "CraftingSmithingSharpeningWheel"]
+forgeBenchEditorIDs = ["CraftingSmithingForge", "CraftingSmithingSkyforge"]
+farengar = "Skyrim.esm|00013BBB"
+calcelmo = "Skyrim.esm|0001338E"
+sergius = "Skyrim.esm|0001C23E"
+sybille = "Skyrim.esm|000132AA"
+neloth = "Dragonborn.esm|0001773A"
+feranSadri = "Dawnguard.esm|00003366"
+collegeFaction = "Skyrim.esm|0001F259"
+volkiharFaction = "Dawnguard.esm|00003376"
+dawnguardFaction = "Dawnguard.esm|00003375"
+potemaFirstQuestEditorID = "MS06Start"
+nelothDwemerQuestEditorID = "DLC2MQ04"
+alchemyFaction = "Skyrim.esm|0005091C"
+
+[materials]
+adeptTokens = ["iron", "steel", "leather", "hide", "studded", "imperial"]
+expertTokens = [
+    "steelplate",
+    "scaled",
+    "silver",
+    "dwarven",
+    "dwemer",
+    "dwarf",
+    "orcish",
+    "elven",
+    "nordic",
+    "glass",
+    "ebony",
+    "bonemold",
+    "chitin",
+]
+masterTokens = ["daedric", "dragonbone", "dragonplate", "dragonscale", "stalhrim"]
+artifactKeywordTokens = ["daedricartifact", "weaptypeartifact", "artifact"]
+dragonGearTokens = ["dragonbone", "dragonplate", "dragonscale"]
+dawnguardGearTokens = ["dawnguard", "crossbow", "bolt"]
+enhancedCrossbowTokens = [
+    "enhancedcrossbow",
+    "enhanced crossbow",
+    "enhanceddwarvencrossbow",
+    "enhanced dwarven crossbow",
+    "dwarvencrossbow",
+    "dwarven crossbow",
+    "dwarvenbolt",
+    "dwarven bolt",
+    "exploding",
+    "explodingbolt",
+    "exploding bolt",
+]
+solstheimGearTokens = ["bonemold", "chitin"]
+
+[smithing.specialCategories]
+nordHeroWeapons = [
+    "Skyrim.esm|000EAFDF", # Nord Hero Arrow
+    "Skyrim.esm|00068C57",
+    "Skyrim.esm|00068C63",
+    "Skyrim.esm|00068C79",
+    "Skyrim.esm|00068C7B",
+    "Skyrim.esm|000A3115",
+]
+ancientNordArmor = [
+    "Skyrim.esm|00018388",
+    "Skyrim.esm|00056A9D",
+    "Skyrim.esm|00056A9E",
+    "Skyrim.esm|00056B17",
+]
+ancientNordWeaponKeywords = ["WeapMaterialDraugr", "WeapMaterialDraugrHoned"]
+manualDawnguardItems = [
+    "Dawnguard.esm|0000D098", # Dawnguard War Axe
+    "Dawnguard.esm|0000DD55", # Dawnguard Warhammer
+    "Dawnguard.esm|0000F3FB", # Light torso - Red
+    "Dawnguard.esm|0000F402", # Light torso - Gray
+    "Dawnguard.esm|0000F404", # Light torso - Brown
+    "Dawnguard.esm|0000F400", # Light Boots
+    "Dawnguard.esm|0000F3FE", # Light Gauntlets
+    "Dawnguard.esm|0001989E", # Light Helmet
+    "Dawnguard.esm|0000F3F7", # Heavy torso - Brown
+    "Dawnguard.esm|0000F3FA", # Heavy torso - Gray
+    "Dawnguard.esm|00014757", # Heavy Boots
+    "Dawnguard.esm|00014758", # Heavy Gauntlets
+    "Dawnguard.esm|000050D0", # Full Helmet
+    "Dawnguard.esm|000150B8", # Heavy Shield
+]
+manualWolfItems = [
+    "Skyrim.esm|000CAE15", # Wolf Armor
+    "Skyrim.esm|000CEE7C", # Wolf Boots
+    "Skyrim.esm|000CEE7E", # Wolf Gauntlets
+    "Skyrim.esm|0004C3D0", # Wolf Helmet
+]
+manualAdeptItems = [
+  "Skyrim.esm|000135B8", # Imperial Sword
+  "Skyrim.esm|00013841", # Imperial Bow
+  "Skyrim.esm|00013985", # Hunting Bow
+  "Skyrim.esm|0003B562", # Long Bow
+]
+
+[[smithing.menuLabelOverrides]]
+form = "Skyrim.esm|00013952"
+label = "Steel Armor (No Shoulders)"
+preserveFull = true
+
+[[smithing.menuLabelOverrides]]
+form = "Skyrim.esm|000F6F22"
+label = "Steel Armor (Shoulders)"
+preserveFull = true
+
+[[smithing.menuLabelOverrides]]
+form = "Dragonborn.esm|00037563"
+label = "Bonemold Pauldron Armor"
+preserveFull = true
+
+[[smithing.menuLabelOverrides]]
+form = "Dragonborn.esm|0003AB26"
+label = "Improved Bonemold Armor"
+preserveFull = true
+
+[[smithing.menuLabelOverrides]]
+form = "Dragonborn.esm|0003AB25"
+label = "Improved Bonemold Boots"
+preserveFull = true
+
+[[smithing.menuLabelOverrides]]
+form = "Dragonborn.esm|0003AB22"
+label = "Improved Bonemold Gauntlets"
+preserveFull = true
+
+[[smithing.menuLabelOverrides]]
+form = "Dragonborn.esm|0003AB23"
+label = "Improved Bonemold Helmet"
+preserveFull = true
+
+[[smithing.menuLabelOverrides]]
+form = "Dragonborn.esm|0003AB24"
+label = "Improved Bonemold Shield"
+preserveFull = true
+
+[[smithing.menuLabelOverrides]]
+form = "Dragonborn.esm|0001CD98"
+label = "Nordic Carved Gauntlets"
+preserveFull = true
+
+[[smithing.menuLabelOverrides]]
+form = "Skyrim.esm|000F6F23"
+label = "Steel Imperial Gauntlets"
+preserveFull = true
+
+[[smithing.menuLabelOverrides]]
+form = "Dawnguard.esm|0000D098"
+label = "Dawnguard War Axe"
+
+[[smithing.menuLabelOverrides]]
+form = "Dawnguard.esm|0000DD55"
+label = "Dawnguard Warhammer"
+
+[[smithing.menuLabelOverrides]]
+form = "Dawnguard.esm|0000F3FB"
+label = "Dawnguard Armor (Light, Red)"
+
+[[smithing.menuLabelOverrides]]
+form = "Dawnguard.esm|0000F402"
+label = "Dawnguard Armor (Light, Gray)"
+
+[[smithing.menuLabelOverrides]]
+form = "Dawnguard.esm|0000F404"
+label = "Dawnguard Armor (Light, Brown)"
+
+[[smithing.menuLabelOverrides]]
+form = "Dawnguard.esm|0000F400"
+label = "Dawnguard Boots (Light)"
+
+[[smithing.menuLabelOverrides]]
+form = "Dawnguard.esm|0000F3FE"
+label = "Dawnguard Gauntlets (Light)"
+
+[[smithing.menuLabelOverrides]]
+form = "Dawnguard.esm|0001989E"
+label = "Dawnguard Helmet (Light)"
+
+[[smithing.menuLabelOverrides]]
+form = "Dawnguard.esm|0000F3F7"
+label = "Dawnguard Heavy Armor (Brown)"
+
+[[smithing.menuLabelOverrides]]
+form = "Dawnguard.esm|0000F3FA"
+label = "Dawnguard Heavy Armor (Gray)"
+
+[[smithing.menuLabelOverrides]]
+form = "Dawnguard.esm|00014757"
+label = "Dawnguard Boots (Heavy)"
+
+[[smithing.menuLabelOverrides]]
+form = "Dawnguard.esm|00014758"
+label = "Dawnguard Gauntlets (Heavy)"
+
+[[smithing.menuLabelOverrides]]
+form = "Dawnguard.esm|000050D0"
+label = "Dawnguard Full Helmet (Heavy)"
+
+[[smithing.menuLabelOverrides]]
+form = "Dawnguard.esm|000150B8"
+label = "Dawnguard Shield (Heavy)"
+
+[[smithing.materialLabelOverrides]]
+form = "Skyrim.esm|000F6F23"
+label = "Steel"
+
+[items]
+# Items named in a patch ([[items.tiers]] form, or allow) skip the mod's own
+# exclusions: unique items, conversion recipes, unknown materials, items enchanted
+# by default, Ancient Nord weapons and defaultBlock below. Safety rules (value,
+# playable, category, quest items) and lore gates (Baldor, Gunmar, Eorlund...)
+# still apply. block always wins, even over a named item.
+allow = []
+block = []
+# The mod's own blocks; a patch that names one of these items offers it anyway.
+defaultBlock = [
+    "Dawnguard.esm|0001668C", # Dawnguard Rune Axe
+    "Dawnguard.esm|00011BAD", # Dawnguard Rune Hammer
+    "Dawnguard.esm|00011BAF", # Dawnguard Rune Shield
+]
+special = []
+# Blacksmith tier for an item or a material keyword. The log lists skipped items
+# as lines ready to copy, e.g.:
+#   [[items.tiers]]
+#   form = "Plugin.esp|000800"            # one item: also named (see above)
+#   tier = "Expert"
+#   price = 2500                          # needed without a forge recipe or at value 0
+#   count = 24                            # arrows/bolts without a forge recipe
+#   [[items.tiers]]
+#   keyword = "ArmorMaterialThievesGuild"  # every item with this keyword
+#   tier = "Adept"
+# A keyword only sets the tier; it does not name the items.
+artifactKeywordTokens = ["daedricartifact", "weaptypeartifact", "artifact"]
+specialItemTokens = ["unique", "artifact"]
+
+[[npcs.overrides]]
+name = "Eorlund Gray-Mane"
+form = "Skyrim.esm|00013B9D"
+tier = "Master"
+courierLocation = "Skyforge in Whiterun"
+
+[[npcs.overrides]]
+name = "Gunmar"
+form = "Dawnguard.esm|0000336C"
+tier = "Master"
+courierLocation = "Fort Dawnguard"
+
+[[npcs.overrides]]
+name = "Baldor Iron-Shaper"
+form = "Dragonborn.esm|00018FB5"
+tier = "Master"
+courierLocation = "forge in Skaal Village"
+
+[[npcs.overrides]]
+name = "Balimund"
+form = "Skyrim.esm|0001334C"
+tier = "Expert"
+courierLocation = "forge in Riften"
+
+[[npcs.overrides]]
+name = "Moth gro-Bagol"
+form = "Skyrim.esm|00055A5E"
+tier = "Expert"
+courierLocation = "forge in Markarth"
+
+[[npcs.overrides]]
+name = "Oengul War-Anvil"
+form = "Skyrim.esm|00014142"
+tier = "Expert"
+courierLocation = "forge in Windhelm"
+
+[[npcs.overrides]]
+name = "Gharol"
+form = "Skyrim.esm|00013B7C"
+tier = "Expert"
+courierLocation = "forge in Dushnikh Yal"
+
+[[npcs.overrides]]
+name = "Glover Mallory"
+form = "Dragonborn.esm|0001828E"
+tier = "Expert"
+courierLocation = "forge in Raven Rock"
+
+[[npcs.overrides]]
+name = "Ulfberth War-Bear"
+form = "Skyrim.esm|00013B9F"
+tier = "Adept"
+courierLocation = "forge in Whiterun"
+
+[[npcs.overrides]]
+name = "Beirand"
+form = "Skyrim.esm|00013261"
+tier = "Adept"
+courierLocation = "forge in Solitude"
+
+[[npcs.overrides]]
+name = "Ghorza gra-Bagol"
+form = "Skyrim.esm|0001339A"
+tier = "Adept"
+courierLocation = "forge in Markarth"
+
+[[npcs.overrides]]
+name = "Tacitus Sallustius"
+form = "Skyrim.esm|0001402D"
+tier = "Adept"
+courierLocation = "forge in Markarth"
+
+[[npcs.overrides]]
+name = "Asbjorn Fire-Tamer"
+form = "Skyrim.esm|00019DF2"
+tier = "Adept"
+courierLocation = "forge in Riften"
+
+[[npcs.overrides]]
+name = "Heimvar"
+form = "Skyrim.esm|00013286"
+tier = "Adept"
+courierLocation = "forge in Solitude"
+
+[[npcs.overrides]]
+name = "Hermir Strong-Heart"
+form = "Skyrim.esm|0001412D"
+tier = "Adept"
+courierLocation = "forge in Windhelm"
+
+[alchemy.rules]
+allowDisplayNameFallback = false
+# Alchemists from other mods (still need the alchemist faction): Adept, Expert or Master.
+modAddedAlchemistTier = "Adept"
+
+[[alchemy.npcs]]
+name = "Babette"
+editorID = "Babette"
+plugin = "Skyrim.esm"
+form = "Skyrim.esm|0001D4B7"
+tier = "Master"
+validation = "RESOLVED_FROM_MASTER"
+
+[[alchemy.npcs]]
+name = "Bothela"
+editorID = "Bothela"
+plugin = "Skyrim.esm"
+form = "Skyrim.esm|0001338B"
+tier = "Master"
+validation = "RESOLVED_FROM_MASTER"
+
+[[alchemy.npcs]]
+name = "Nurelion"
+editorID = "Nurelion"
+plugin = "Skyrim.esm"
+form = "Skyrim.esm|00014148"
+tier = "Master"
+validation = "RESOLVED_FROM_MASTER"
+
+[[alchemy.npcs]]
+name = "Florentius Baenius"
+editorID = "DLC1FlorentiusBaenius"
+plugin = "Dawnguard.esm"
+form = "Dawnguard.esm|0000336D"
+tier = "Master"
+requiredQuest = "Dawnguard.esm|00013F1F"
+lockedReason = "Florentius will offer this service after he has joined the Dawnguard."
+validation = "RESOLVED_FROM_MASTER"
+
+[[alchemy.npcs]]
+name = "Arcadia"
+editorID = "Arcadia"
+plugin = "Skyrim.esm"
+form = "Skyrim.esm|00013BA4"
+tier = "Expert"
+validation = "RESOLVED_FROM_MASTER"
+
+[[alchemy.npcs]]
+name = "Milore Ienth"
+editorID = "DLC2RRMiloreIenth"
+plugin = "Dragonborn.esm"
+form = "Dragonborn.esm|000182A1"
+tier = "Expert"
+validation = "RESOLVED_FROM_MASTER"
+
+[[alchemy.npcs]]
+name = "Elgrim"
+editorID = "Elgrim"
+plugin = "Skyrim.esm"
+form = "Skyrim.esm|00013357"
+tier = "Expert"
+validation = "RESOLVED_FROM_MASTER"
+
+[[alchemy.npcs]]
+name = "Frida"
+editorID = "Frida"
+plugin = "Skyrim.esm"
+form = "Skyrim.esm|00013614"
+tier = "Expert"
+validation = "RESOLVED_FROM_MASTER"
+
+[[alchemy.npcs]]
+name = "Quintus Navale"
+editorID = "QuintusNavale"
+plugin = "Skyrim.esm"
+form = "Skyrim.esm|0001414C"
+tier = "Expert"
+validation = "RESOLVED_FROM_MASTER"
+
+[[enchantments]]
+id = "fortify_health"
+displayName = "Fortify Health"
+type = "Apparel"
+group = "Attribute"
+minimumTier = "Adept"
+sourceForm = "Skyrim.esm|0010FB77"
+adeptMagnitude = 30
+adeptValue = "30 points"
+adeptPrice = 600
+expertMagnitude = 40
+expertValue = "40 points"
+expertPrice = 1200
+masterMagnitude = 50
+masterValue = "50 points"
+masterPrice = 2400
+
+[[enchantments]]
+id = "fortify_magicka"
+displayName = "Fortify Magicka"
+type = "Apparel"
+group = "Attribute"
+minimumTier = "Adept"
+sourceForm = "Skyrim.esm|0010FB7C"
+adeptMagnitude = 30
+adeptValue = "30 points"
+adeptPrice = 600
+expertMagnitude = 40
+expertValue = "40 points"
+expertPrice = 1200
+masterMagnitude = 50
+masterValue = "50 points"
+masterPrice = 2400
+
+[[enchantments]]
+id = "fortify_stamina"
+displayName = "Fortify Stamina"
+type = "Apparel"
+group = "Attribute"
+minimumTier = "Adept"
+sourceForm = "Skyrim.esm|0010FB85"
+adeptMagnitude = 30
+adeptValue = "30 points"
+adeptPrice = 600
+expertMagnitude = 40
+expertValue = "40 points"
+expertPrice = 1200
+masterMagnitude = 50
+masterValue = "50 points"
+masterPrice = 2400
+
+[[enchantments]]
+id = "fortify_one_handed"
+displayName = "Fortify One-Handed"
+type = "Apparel"
+group = "Combat"
+minimumTier = "Expert"
+sourceForm = "Skyrim.esm|0010FB7F"
+expertMagnitude = 25
+expertValue = "25%"
+expertPrice = 1600
+masterMagnitude = 35
+masterValue = "35%"
+masterPrice = 3200
+
+[[enchantments]]
+id = "fortify_two_handed"
+displayName = "Fortify Two-Handed"
+type = "Apparel"
+group = "Combat"
+minimumTier = "Expert"
+sourceForm = "Skyrim.esm|0010FB87"
+expertMagnitude = 25
+expertValue = "25%"
+expertPrice = 1600
+masterMagnitude = 35
+masterValue = "35%"
+masterPrice = 3200
+
+[[enchantments]]
+id = "fortify_archery"
+displayName = "Fortify Archery"
+type = "Apparel"
+group = "Combat"
+minimumTier = "Expert"
+sourceForm = "Skyrim.esm|0010FB7E"
+expertMagnitude = 25
+expertValue = "25%"
+expertPrice = 1600
+masterMagnitude = 35
+masterValue = "35%"
+masterPrice = 3200
+
+[[enchantments]]
+id = "fortify_block"
+displayName = "Fortify Block"
+type = "Apparel"
+group = "Combat"
+minimumTier = "Expert"
+sourceForm = "Skyrim.esm|0010FB72"
+expertMagnitude = 25
+expertValue = "25%"
+expertPrice = 1600
+masterMagnitude = 35
+masterValue = "35%"
+masterPrice = 3200
+
+[[enchantments]]
+id = "fortify_heavy_armor"
+displayName = "Fortify Heavy Armor"
+type = "Apparel"
+group = "Combat"
+minimumTier = "Expert"
+sourceForm = "Skyrim.esm|0010FB78"
+expertMagnitude = 25
+expertValue = "25 points"
+expertPrice = 1200
+masterMagnitude = 50
+masterValue = "50 points"
+masterPrice = 2400
+
+[[enchantments]]
+id = "fortify_light_armor"
+displayName = "Fortify Light Armor"
+type = "Apparel"
+group = "Combat"
+minimumTier = "Expert"
+sourceForm = "Skyrim.esm|0010FB7A"
+expertMagnitude = 25
+expertValue = "25 points"
+expertPrice = 1200
+masterMagnitude = 50
+masterValue = "50 points"
+masterPrice = 2400
+
+[[enchantments]]
+id = "fortify_unarmed"
+displayName = "Fortify Unarmed"
+type = "Apparel"
+group = "Combat"
+minimumTier = "Expert"
+sourceForm = "Skyrim.esm|0010FB88"
+expertMagnitude = 25
+expertValue = "25%"
+expertPrice = 1600
+masterMagnitude = 35
+masterValue = "35%"
+masterPrice = 3200
+
+[[enchantments]]
+id = "fortify_alteration_magicka_regen"
+displayName = "Fortify Alteration & Magicka Regen"
+type = "Apparel"
+group = "Block"
+minimumTier = "Block"
+blocked = true
+
+[[enchantments]]
+id = "fortify_conjuration_magicka_regen"
+displayName = "Fortify Conjuration & Magicka Regen"
+type = "Apparel"
+group = "Block"
+minimumTier = "Block"
+blocked = true
+
+[[enchantments]]
+id = "fortify_destruction_magicka_regen"
+displayName = "Fortify Destruction & Magicka Regen"
+type = "Apparel"
+group = "Block"
+minimumTier = "Block"
+blocked = true
+
+[[enchantments]]
+id = "fortify_illusion_magicka_regen"
+displayName = "Fortify Illusion & Magicka Regen"
+type = "Apparel"
+group = "Block"
+minimumTier = "Block"
+blocked = true
+
+[[enchantments]]
+id = "fortify_restoration_magicka_regen"
+displayName = "Fortify Restoration & Magicka Regen"
+type = "Apparel"
+group = "Block"
+minimumTier = "Block"
+blocked = true
+
+[[enchantments]]
+id = "fortify_alchemy"
+displayName = "Fortify Alchemy"
+type = "Apparel"
+group = "Block"
+minimumTier = "Block"
+sourceForm = "Skyrim.esm|0010FB70"
+blocked = true
+
+[[enchantments]]
+id = "fortify_smithing"
+displayName = "Fortify Smithing"
+type = "Apparel"
+group = "Block"
+minimumTier = "Block"
+sourceForm = "Skyrim.esm|0010FB82"
+blocked = true
+
+[[enchantments]]
+id = "fortify_barter"
+displayName = "Fortify Barter"
+type = "Apparel"
+group = "Block"
+minimumTier = "Block"
+sourceForm = "Skyrim.esm|0010FB84"
+blocked = true
+
+[[enchantments]]
+id = "fortify_alteration"
+displayName = "Fortify Alteration"
+type = "Apparel"
+group = "Magic"
+minimumTier = "Expert"
+sourceForm = "Skyrim.esm|0010FB71"
+expertMagnitude = 20
+expertValue = "20%"
+expertPrice = 1600
+masterMagnitude = 25
+masterValue = "25%"
+masterPrice = 3200
+
+[[enchantments]]
+id = "fortify_conjuration"
+displayName = "Fortify Conjuration"
+type = "Apparel"
+group = "Magic"
+minimumTier = "Expert"
+sourceForm = "Skyrim.esm|0010FB74"
+expertMagnitude = 20
+expertValue = "20%"
+expertPrice = 1600
+masterMagnitude = 25
+masterValue = "25%"
+masterPrice = 3200
+
+[[enchantments]]
+id = "fortify_destruction"
+displayName = "Fortify Destruction"
+type = "Apparel"
+group = "Magic"
+minimumTier = "Expert"
+sourceForm = "Skyrim.esm|0010FB75"
+expertMagnitude = 20
+expertValue = "20%"
+expertPrice = 1600
+masterMagnitude = 25
+masterValue = "25%"
+masterPrice = 3200
+
+[[enchantments]]
+id = "fortify_illusion"
+displayName = "Fortify Illusion"
+type = "Apparel"
+group = "Magic"
+minimumTier = "Expert"
+sourceForm = "Skyrim.esm|0010FB79"
+expertMagnitude = 20
+expertValue = "20%"
+expertPrice = 1600
+masterMagnitude = 25
+masterValue = "25%"
+masterPrice = 3200
+
+[[enchantments]]
+id = "fortify_restoration"
+displayName = "Fortify Restoration"
+type = "Apparel"
+group = "Magic"
+minimumTier = "Expert"
+sourceForm = "Skyrim.esm|0010FB81"
+expertMagnitude = 20
+expertValue = "20%"
+expertPrice = 1600
+masterMagnitude = 25
+masterValue = "25%"
+masterPrice = 3200
+
+[[enchantments]]
+id = "fortify_healing_rate"
+displayName = "Fortify Healing Rate"
+type = "Apparel"
+group = "Attribute"
+minimumTier = "Expert"
+sourceForm = "Skyrim.esm|0010FB76"
+expertMagnitude = 25
+expertValue = "25%"
+expertPrice = 1200
+masterMagnitude = 35
+masterValue = "35%"
+masterPrice = 2400
+
+[[enchantments]]
+id = "fortify_magicka_regen"
+displayName = "Fortify Magicka Regen"
+type = "Apparel"
+group = "Attribute"
+minimumTier = "Expert"
+sourceForm = "Skyrim.esm|0010FB7D"
+expertMagnitude = 25
+expertValue = "25%"
+expertPrice = 1200
+masterMagnitude = 35
+masterValue = "35%"
+masterPrice = 2400
+
+[[enchantments]]
+id = "fortify_stamina_regen"
+displayName = "Fortify Stamina Regen"
+type = "Apparel"
+group = "Attribute"
+minimumTier = "Expert"
+sourceForm = "Skyrim.esm|0010FB86"
+expertMagnitude = 25
+expertValue = "25%"
+expertPrice = 1200
+masterMagnitude = 35
+masterValue = "35%"
+masterPrice = 2400
+
+[[enchantments]]
+id = "resist_fire"
+displayName = "Resist Fire"
+type = "Apparel"
+group = "Resistance"
+minimumTier = "Adept"
+sourceForm = "Skyrim.esm|0010FB8B"
+adeptMagnitude = 15
+adeptValue = "15%"
+adeptPrice = 800
+expertMagnitude = 25
+expertValue = "25%"
+expertPrice = 1600
+masterMagnitude = 35
+masterValue = "35%"
+masterPrice = 3200
+
+[[enchantments]]
+id = "resist_frost"
+displayName = "Resist Frost"
+type = "Apparel"
+group = "Resistance"
+minimumTier = "Adept"
+sourceForm = "Skyrim.esm|0010FB8C"
+adeptMagnitude = 15
+adeptValue = "15%"
+adeptPrice = 800
+expertMagnitude = 25
+expertValue = "25%"
+expertPrice = 1600
+masterMagnitude = 35
+masterValue = "35%"
+masterPrice = 3200
+
+[[enchantments]]
+id = "resist_shock"
+displayName = "Resist Shock"
+type = "Apparel"
+group = "Resistance"
+minimumTier = "Adept"
+sourceForm = "Skyrim.esm|0010FB8F"
+adeptMagnitude = 15
+adeptValue = "15%"
+adeptPrice = 800
+expertMagnitude = 25
+expertValue = "25%"
+expertPrice = 1600
+masterMagnitude = 35
+masterValue = "35%"
+masterPrice = 3200
+
+[[enchantments]]
+id = "resist_disease"
+displayName = "Resist Disease"
+type = "Apparel"
+group = "Resistance"
+minimumTier = "Expert"
+sourceForm = "Skyrim.esm|0010FB8A"
+expertMagnitude = 50
+expertValue = "50%"
+expertPrice = 1200
+masterMagnitude = 100
+masterValue = "100%"
+masterPrice = 2400
+
+[[enchantments]]
+id = "resist_poison"
+displayName = "Resist Poison"
+type = "Apparel"
+group = "Resistance"
+minimumTier = "Expert"
+sourceForm = "Skyrim.esm|0010FB8E"
+expertMagnitude = 25
+expertValue = "25%"
+expertPrice = 1200
+masterMagnitude = 50
+masterValue = "50%"
+masterPrice = 2400
+
+[[enchantments]]
+id = "resist_magic"
+displayName = "Resist Magic"
+type = "Apparel"
+group = "Resistance"
+minimumTier = "Master"
+sourceForm = "Skyrim.esm|0010FB8D"
+masterMagnitude = 20
+masterValue = "20%"
+masterPrice = 4000
+
+[[enchantments]]
+id = "fortify_sneak"
+displayName = "Fortify Sneak"
+type = "Apparel"
+group = "Stealth"
+minimumTier = "Expert"
+sourceForm = "Skyrim.esm|0010FB83"
+expertMagnitude = 25
+expertValue = "25%"
+expertPrice = 1600
+masterMagnitude = 35
+masterValue = "35%"
+masterPrice = 3200
+
+[[enchantments]]
+id = "fortify_lockpicking"
+displayName = "Fortify Lockpicking"
+type = "Apparel"
+group = "Stealth"
+minimumTier = "Expert"
+sourceForm = "Skyrim.esm|0010FB7B"
+expertMagnitude = 25
+expertValue = "25%"
+expertPrice = 1600
+masterMagnitude = 35
+masterValue = "35%"
+masterPrice = 3200
+
+[[enchantments]]
+id = "fortify_pickpocket"
+displayName = "Fortify Pickpocket"
+type = "Apparel"
+group = "Stealth"
+minimumTier = "Expert"
+sourceForm = "Skyrim.esm|0010FB80"
+expertMagnitude = 25
+expertValue = "25%"
+expertPrice = 1600
+masterMagnitude = 35
+masterValue = "35%"
+masterPrice = 3200
+
+[[enchantments]]
+id = "fortify_carry_weight"
+displayName = "Fortify Carry Weight"
+type = "Apparel"
+group = "Utility"
+minimumTier = "Expert"
+sourceForm = "Skyrim.esm|0010FB73"
+expertMagnitude = 30
+expertValue = "30 points"
+expertPrice = 1200
+masterMagnitude = 60
+masterValue = "60 points"
+masterPrice = 2400
+
+[[enchantments]]
+id = "muffle"
+displayName = "Muffle"
+type = "Apparel"
+group = "Stealth"
+minimumTier = "Master"
+sourceForm = "Skyrim.esm|0010FB89"
+masterValue = "Muffle"
+masterPrice = 4000
+
+[[enchantments]]
+id = "waterbreathing"
+displayName = "Waterbreathing"
+type = "Apparel"
+group = "Utility"
+minimumTier = "Master"
+sourceForm = "Skyrim.esm|0010FB90"
+masterValue = "Waterbreathing"
+masterPrice = 4000
+
+[[enchantments]]
+id = "absorb_magicka"
+displayName = "Absorb Magicka"
+type = "Weapon"
+group = "Absorb"
+minimumTier = "Master"
+sourceForm = "Skyrim.esm|0010FB9D"
+masterMagnitude = 20
+masterValue = "20 points"
+masterPrice = 4000
+
+[[enchantments]]
+id = "absorb_stamina"
+displayName = "Absorb Stamina"
+type = "Weapon"
+group = "Absorb"
+minimumTier = "Master"
+sourceForm = "Skyrim.esm|0010FB92"
+masterMagnitude = 20
+masterValue = "20 points"
+masterPrice = 4000
+
+[[enchantments]]
+id = "absorb_health"
+displayName = "Absorb Health"
+type = "Weapon"
+group = "Absorb"
+minimumTier = "Master"
+sourceForm = "Skyrim.esm|0010FB91"
+masterMagnitude = 20
+masterValue = "20 points"
+masterPrice = 4000
+
+[[enchantments]]
+id = "turn_undead"
+displayName = "Turn Undead"
+type = "Weapon"
+group = "Control"
+minimumTier = "Adept"
+sourceForm = "Skyrim.esm|0010FB9C"
+adeptMagnitude = 10
+adeptValue = "level 10"
+adeptPrice = 500
+expertMagnitude = 20
+expertValue = "level 20"
+expertPrice = 1000
+masterMagnitude = 30
+masterValue = "level 30"
+masterPrice = 2000
+
+[[enchantments]]
+id = "fear"
+displayName = "Fear"
+type = "Weapon"
+group = "Control"
+minimumTier = "Adept"
+sourceForm = "Skyrim.esm|0010FB94"
+adeptMagnitude = 10
+adeptValue = "level 10"
+adeptPrice = 500
+expertMagnitude = 20
+expertValue = "level 20"
+expertPrice = 1000
+masterMagnitude = 30
+masterValue = "level 30"
+masterPrice = 2000
+
+[[enchantments]]
+id = "paralyze"
+displayName = "Paralyze"
+type = "Weapon"
+group = "Control"
+minimumTier = "Master"
+sourceForm = "Skyrim.esm|0010FB98"
+masterDuration = 2
+masterValue = "2 seconds"
+masterPrice = 4000
+
+[[enchantments]]
+id = "banish"
+displayName = "Banish"
+type = "Weapon"
+group = "Control"
+minimumTier = "Master"
+sourceForm = "Skyrim.esm|0010FB93"
+masterMagnitude = 30
+masterValue = "level 30"
+masterPrice = 4000
+
+[[enchantments]]
+id = "fire_damage"
+displayName = "Fire Damage"
+type = "Weapon"
+group = "Damage"
+minimumTier = "Adept"
+sourceForm = "Skyrim.esm|0010FB95"
+adeptMagnitude = 15
+adeptValue = "15 points"
+adeptPrice = 500
+expertMagnitude = 20
+expertValue = "20 points"
+expertPrice = 1000
+masterMagnitude = 25
+masterValue = "25 points"
+masterPrice = 2000
+
+[[enchantments]]
+id = "frost_damage"
+displayName = "Frost Damage"
+type = "Weapon"
+group = "Damage"
+minimumTier = "Adept"
+sourceForm = "Skyrim.esm|0010FB96"
+adeptMagnitude = 15
+adeptValue = "15 points"
+adeptPrice = 500
+expertMagnitude = 20
+expertValue = "20 points"
+expertPrice = 1000
+masterMagnitude = 25
+masterValue = "25 points"
+masterPrice = 2000
+
+[[enchantments]]
+id = "shock_damage"
+displayName = "Shock Damage"
+type = "Weapon"
+group = "Damage"
+minimumTier = "Adept"
+sourceForm = "Skyrim.esm|0010FB99"
+adeptMagnitude = 15
+adeptValue = "15 points"
+adeptPrice = 500
+expertMagnitude = 20
+expertValue = "20 points"
+expertPrice = 1000
+masterMagnitude = 25
+masterValue = "25 points"
+masterPrice = 2000
+
+[[enchantments]]
+id = "damage_magicka"
+displayName = "Damage Magicka"
+type = "Weapon"
+group = "Damage"
+minimumTier = "Adept"
+sourceForm = "Skyrim.esm|0010FB97"
+adeptMagnitude = 15
+adeptValue = "15 points"
+adeptPrice = 500
+expertMagnitude = 20
+expertValue = "20 points"
+expertPrice = 1000
+masterMagnitude = 25
+masterValue = "25 points"
+masterPrice = 2000
+
+[[enchantments]]
+id = "damage_stamina"
+displayName = "Damage Stamina"
+type = "Weapon"
+group = "Damage"
+minimumTier = "Adept"
+sourceForm = "Skyrim.esm|0010FB9B"
+adeptMagnitude = 15
+adeptValue = "15 points"
+adeptPrice = 500
+expertMagnitude = 20
+expertValue = "20 points"
+expertPrice = 1000
+masterMagnitude = 25
+masterValue = "25 points"
+masterPrice = 2000
+
+[[enchantments]]
+id = "chaos_damage"
+displayName = "Chaos Damage"
+type = "Weapon"
+group = "Block"
+minimumTier = "Block"
+blocked = true
+
+[[enchantments]]
+id = "fiery_soul_trap"
+displayName = "Fiery Soul Trap"
+type = "Weapon"
+group = "Block"
+minimumTier = "Block"
+blocked = true
+
+[[enchantments]]
+id = "silent_moons_enchant"
+displayName = "Silent Moons Enchant"
+type = "Weapon"
+group = "Block"
+minimumTier = "Block"
+blocked = true
+
+[[enchantments]]
+id = "huntsmans_prowess"
+displayName = "Huntsman's Prowess"
+type = "Weapon"
+group = "Block"
+minimumTier = "Block"
+blocked = true
+
+[[enchantments]]
+id = "soul_trap"
+displayName = "Soul Trap"
+type = "Weapon"
+group = "Control"
+minimumTier = "Master"
+sourceForm = "Skyrim.esm|0010FB9A"
+masterDuration = 1
+masterValue = "1 second"
+masterPrice = 4000
+
+[[enchantments]]
+id = "silver_blessing"
+displayName = "Silver Blessing"
+type = "Weapon"
+group = "Damage"
+minimumTier = "Expert"
+sourceForm = "ArtisansOfSkyrim.esp|000F06"
+exclusive = true
+expertMagnitude = 25
+expertValue = "25% more damage against undead and werebeasts"
+expertChargeCost = 20
+expertPrice = 2000
+masterMagnitude = 50
+masterValue = "50% more damage against undead and werebeasts"
+masterChargeCost = 30
+masterPrice = 5000
+
+[[enchantments]]
+id = "elemental_burst"
+displayName = "Elemental Burst"
+type = "Apparel"
+group = "Magic"
+minimumTier = "Expert"
+sourceForm = "ArtisansOfSkyrim.esp|000F07"
+exclusive = true
+expertMagnitude = 25
+expertValue = "Fire, Frost, and Shock spells are 25% stronger"
+expertPrice = 2000
+masterMagnitude = 50
+masterValue = "Fire, Frost, and Shock spells are 50% stronger"
+masterPrice = 5000
+
+[[enchantments]]
+id = "berserker_soul"
+displayName = "Berserker Soul"
+type = "Weapon"
+group = "Damage"
+minimumTier = "Expert"
+sourceForm = "ArtisansOfSkyrim.esp|000F08"
+exclusive = true
+expertMagnitude = 20
+expertValue = "Ignores 20% of armor"
+expertChargeCost = 30
+expertPrice = 2000
+masterMagnitude = 40
+masterValue = "Ignores 40% of armor"
+masterChargeCost = 42.857143
+masterPrice = 5000
+
+[[enchantments]]
+id = "honed_metal"
+displayName = "Honed Metal"
+type = "Weapon"
+group = "Damage"
+minimumTier = "Expert"
+sourceForm = "ArtisansOfSkyrim.esp|000F09"
+exclusive = true
+expertMagnitude = 15
+expertValue = "15% more damage"
+expertChargeCost = 30
+expertPrice = 2000
+masterMagnitude = 30
+masterValue = "30% more damage"
+masterChargeCost = 42.857143
+masterPrice = 5000
+
+[[enchantments]]
+id = "unburden"
+displayName = "Unburden"
+type = "Apparel"
+group = "Utility"
+minimumTier = "Expert"
+sourceForm = "ArtisansOfSkyrim.esp|000F0A"
+exclusive = true
+expertMagnitude = 15
+expertValue = "Armor weighs nothing and sprinting and power attacks cost 15% less Stamina"
+expertPrice = 2000
+masterMagnitude = 30
+masterValue = "Armor weighs nothing and sprinting and power attacks cost 30% less Stamina"
+masterPrice = 5000
+
+[[enchantments]]
+id = "reinforcement"
+displayName = "Reinforcement"
+type = "Apparel"
+group = "Utility"
+minimumTier = "Expert"
+sourceForm = "ArtisansOfSkyrim.esp|000F0B"
+exclusive = true
+expertMagnitude = 20
+expertValue = "20% less stagger"
+expertPrice = 2000
+masterMagnitude = 40
+masterValue = "40% less stagger"
+masterPrice = 5000
+
+[[alchemy.items]]
+id = "poison_damage_health_adept"
+displayName = "Poison of Damage Health"
+itemType = "Poison"
+effect = "Damage Health"
+group = "Attribute Damage"
+minimumTier = "Adept"
+batchSize = 5
+batchPrice = 250
+alchValue = 30
+valueText = "25 points"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A00"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "poison_damage_health_expert"
+displayName = "Poison of Damage Health"
+itemType = "Poison"
+effect = "Damage Health"
+group = "Attribute Damage"
+minimumTier = "Expert"
+batchSize = 5
+batchPrice = 500
+alchValue = 60
+valueText = "50 points"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A01"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "poison_damage_health_master"
+displayName = "Poison of Damage Health"
+itemType = "Poison"
+effect = "Damage Health"
+group = "Attribute Damage"
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 1000
+alchValue = 110
+valueText = "100 points"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A02"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "poison_damage_magicka_adept"
+displayName = "Poison of Damage Magicka"
+itemType = "Poison"
+effect = "Damage Magicka"
+group = "Attribute Damage"
+minimumTier = "Adept"
+batchSize = 5
+batchPrice = 250
+alchValue = 30
+valueText = "50 points"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A03"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "poison_damage_magicka_expert"
+displayName = "Poison of Damage Magicka"
+itemType = "Poison"
+effect = "Damage Magicka"
+group = "Attribute Damage"
+minimumTier = "Expert"
+batchSize = 5
+batchPrice = 500
+alchValue = 60
+valueText = "100 points"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A04"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "poison_damage_magicka_master"
+displayName = "Poison of Damage Magicka"
+itemType = "Poison"
+effect = "Damage Magicka"
+group = "Attribute Damage"
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 1000
+alchValue = 110
+valueText = "200 points"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A05"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "poison_damage_stamina_adept"
+displayName = "Poison of Damage Stamina"
+itemType = "Poison"
+effect = "Damage Stamina"
+group = "Attribute Damage"
+minimumTier = "Adept"
+batchSize = 5
+batchPrice = 250
+alchValue = 30
+valueText = "50 points"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A06"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "poison_damage_stamina_expert"
+displayName = "Poison of Damage Stamina"
+itemType = "Poison"
+effect = "Damage Stamina"
+group = "Attribute Damage"
+minimumTier = "Expert"
+batchSize = 5
+batchPrice = 500
+alchValue = 60
+valueText = "100 points"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A07"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "poison_damage_stamina_master"
+displayName = "Poison of Damage Stamina"
+itemType = "Poison"
+effect = "Damage Stamina"
+group = "Attribute Damage"
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 1000
+alchValue = 110
+valueText = "200 points"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A08"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "poison_damage_health_plus_lingering_damage_health_master"
+displayName = "Poison of Lingering Damage"
+itemType = "Poison"
+effect = "Damage Health + Lingering Damage Health"
+group = "Attribute Damage"
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 2000
+alchValue = 180
+valueText = "100 points + 10 points per second for 10 seconds"
+riskClass = "Very High"
+itemForm = "ArtisansOfSkyrim.esp|000A09"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "poison_fear_master"
+displayName = "Poison of Fear"
+itemType = "Poison"
+effect = "Fear"
+group = "Control"
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 2000
+alchValue = 190
+valueText = "up to level 30 for 60 seconds"
+riskClass = "High"
+itemForm = "ArtisansOfSkyrim.esp|000A0A"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "poison_frenzy_master"
+displayName = "Poison of Frenzy"
+itemType = "Poison"
+effect = "Frenzy"
+group = "Control"
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 2000
+alchValue = 190
+valueText = "up to level 30 for 60 seconds"
+riskClass = "High"
+itemForm = "ArtisansOfSkyrim.esp|000A0B"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "poison_paralysis_master"
+displayName = "Poison of Paralysis"
+itemType = "Poison"
+effect = "Paralysis"
+group = "Control"
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 2000
+alchValue = 180
+valueText = "15 seconds"
+riskClass = "Very High"
+itemForm = "ArtisansOfSkyrim.esp|000A0C"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+
+[[alchemy.items]]
+id = "poison_slow_expert"
+displayName = "Poison of Slow"
+itemType = "Poison"
+effect = "Slow"
+group = "Control"
+minimumTier = "Expert"
+batchSize = 5
+batchPrice = 750
+alchValue = 70
+valueText = "50% slower for 10 seconds"
+riskClass = "High"
+itemForm = "ArtisansOfSkyrim.esp|000A0D"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "poison_slow_master"
+displayName = "Poison of Slow"
+itemType = "Poison"
+effect = "Slow"
+group = "Control"
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 1500
+alchValue = 140
+valueText = "50% slower for 20 seconds"
+riskClass = "High"
+itemForm = "ArtisansOfSkyrim.esp|000A0E"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_fortify_destruction_expert"
+displayName = "Potion of Fortify Destruction"
+preserveFullMenuName = true
+itemType = "Potion"
+effect = "Fortify Destruction"
+group = "Fortify Ability"
+minimumTier = "Expert"
+batchSize = 5
+batchPrice = 1000
+alchValue = 110
+valueText = "20% 60 seconds"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A0F"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_fortify_destruction_master"
+displayName = "Potion of Fortify Destruction"
+preserveFullMenuName = true
+itemType = "Potion"
+effect = "Fortify Destruction"
+group = "Fortify Ability"
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 2000
+alchValue = 220
+valueText = "40% 60 seconds"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A10"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_fortify_illusion_expert"
+displayName = "Potion of Fortify Illusion"
+itemType = "Potion"
+effect = "Fortify Illusion"
+group = "Fortify Ability"
+minimumTier = "Expert"
+batchSize = 5
+batchPrice = 1000
+alchValue = 110
+valueText = "20% 60 seconds"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A11"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_fortify_illusion_master"
+displayName = "Potion of Fortify Illusion"
+itemType = "Potion"
+effect = "Fortify Illusion"
+group = "Fortify Ability"
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 2000
+alchValue = 220
+valueText = "40% 60 seconds"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A12"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_fortify_archery_expert"
+displayName = "Potion of Fortify Archery"
+itemType = "Potion"
+effect = "Fortify Archery"
+group = "Fortify Ability"
+minimumTier = "Expert"
+batchSize = 5
+batchPrice = 1000
+alchValue = 110
+valueText = "20% 60 seconds"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A13"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+
+[[alchemy.items]]
+id = "potion_fortify_archery_master"
+displayName = "Potion of Fortify Archery"
+itemType = "Potion"
+effect = "Fortify Archery"
+group = "Fortify Ability"
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 2000
+alchValue = 220
+valueText = "40% 60 seconds"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A14"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+
+[[alchemy.items]]
+id = "potion_fortify_one_handed_expert"
+displayName = "Potion of Fortify One-Handed"
+itemType = "Potion"
+effect = "Fortify One-Handed"
+group = "Fortify Ability"
+minimumTier = "Expert"
+batchSize = 5
+batchPrice = 1000
+alchValue = 110
+valueText = "20% 60 seconds"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A15"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_fortify_one_handed_master"
+displayName = "Potion of Fortify One-Handed"
+itemType = "Potion"
+effect = "Fortify One-Handed"
+group = "Fortify Ability"
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 2000
+alchValue = 220
+valueText = "40% 60 seconds"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A16"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_fortify_two_handed_expert"
+displayName = "Potion of Fortify Two-Handed"
+itemType = "Potion"
+effect = "Fortify Two-Handed"
+group = "Fortify Ability"
+minimumTier = "Expert"
+batchSize = 5
+batchPrice = 1000
+alchValue = 110
+valueText = "20% 60 seconds"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A17"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_fortify_two_handed_master"
+displayName = "Potion of Fortify Two-Handed"
+itemType = "Potion"
+effect = "Fortify Two-Handed"
+group = "Fortify Ability"
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 2000
+alchValue = 220
+valueText = "40% 60 seconds"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A18"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_fortify_sneak_expert"
+displayName = "Potion of Fortify Sneak"
+itemType = "Potion"
+effect = "Fortify Sneak"
+group = "Fortify Ability"
+minimumTier = "Expert"
+batchSize = 5
+batchPrice = 1000
+alchValue = 110
+valueText = "20% 60 seconds"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A19"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_fortify_sneak_master"
+displayName = "Potion of Fortify Sneak"
+itemType = "Potion"
+effect = "Fortify Sneak"
+group = "Fortify Ability"
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 2000
+alchValue = 220
+valueText = "40% 60 seconds"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A1A"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_resist_fire_expert"
+displayName = "Potion of Resist Fire"
+itemType = "Potion"
+effect = "Resist Fire"
+group = "Resistance"
+minimumTier = "Expert"
+batchSize = 5
+batchPrice = 750
+alchValue = 80
+valueText = "20% 60 seconds"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A1B"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_resist_fire_master"
+displayName = "Potion of Resist Fire"
+itemType = "Potion"
+effect = "Resist Fire"
+group = "Resistance"
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 1500
+alchValue = 170
+valueText = "40% 60 seconds"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A1C"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_resist_frost_expert"
+displayName = "Potion of Resist Frost"
+itemType = "Potion"
+effect = "Resist Frost"
+group = "Resistance"
+minimumTier = "Expert"
+batchSize = 5
+batchPrice = 750
+alchValue = 80
+valueText = "20% 60 seconds"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A1D"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_resist_frost_master"
+displayName = "Potion of Resist Frost"
+itemType = "Potion"
+effect = "Resist Frost"
+group = "Resistance"
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 1500
+alchValue = 170
+valueText = "40% 60 seconds"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A1E"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_resist_shock_expert"
+displayName = "Potion of Resist Shock"
+itemType = "Potion"
+effect = "Resist Shock"
+group = "Resistance"
+minimumTier = "Expert"
+batchSize = 5
+batchPrice = 750
+alchValue = 80
+valueText = "20% 60 seconds"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A1F"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_resist_shock_master"
+displayName = "Potion of Resist Shock"
+itemType = "Potion"
+effect = "Resist Shock"
+group = "Resistance"
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 1500
+alchValue = 170
+valueText = "40% 60 seconds"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A20"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_resist_magic_master"
+displayName = "Potion of Resist Magic"
+itemType = "Potion"
+effect = "Resist Magic"
+group = "Resistance"
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 2000
+alchValue = 190
+valueText = "40% 60 seconds"
+riskClass = "High"
+itemForm = "ArtisansOfSkyrim.esp|000A21"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_resist_poison_expert"
+displayName = "Potion of Resist Poison"
+itemType = "Potion"
+effect = "Resist Poison"
+group = "Resistance"
+minimumTier = "Expert"
+batchSize = 5
+batchPrice = 500
+alchValue = 60
+valueText = "20% 60 seconds"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A22"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_resist_poison_master"
+displayName = "Potion of Resist Poison"
+itemType = "Potion"
+effect = "Resist Poison"
+group = "Resistance"
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 1000
+alchValue = 110
+valueText = "40% 60 seconds"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A23"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_restore_health_adept"
+displayName = "Potion of Restore Health"
+itemType = "Potion"
+effect = "Restore Health"
+group = "Restore"
+minimumTier = "Adept"
+batchSize = 5
+batchPrice = 250
+alchValue = 30
+valueText = "50 points"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A24"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_restore_health_expert"
+displayName = "Potion of Restore Health"
+itemType = "Potion"
+effect = "Restore Health"
+group = "Restore"
+minimumTier = "Expert"
+batchSize = 5
+batchPrice = 500
+alchValue = 60
+valueText = "100 points"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A25"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_restore_health_master"
+displayName = "Potion of Restore Health"
+itemType = "Potion"
+effect = "Restore Health"
+group = "Restore"
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 1000
+alchValue = 110
+valueText = "200 points"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A26"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_restore_magicka_adept"
+displayName = "Potion of Restore Magicka"
+itemType = "Potion"
+effect = "Restore Magicka"
+group = "Restore"
+minimumTier = "Adept"
+batchSize = 5
+batchPrice = 250
+alchValue = 30
+valueText = "50 points"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A27"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_restore_magicka_expert"
+displayName = "Potion of Restore Magicka"
+itemType = "Potion"
+effect = "Restore Magicka"
+group = "Restore"
+minimumTier = "Expert"
+batchSize = 5
+batchPrice = 500
+alchValue = 60
+valueText = "100 points"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A28"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_restore_magicka_master"
+displayName = "Potion of Restore Magicka"
+itemType = "Potion"
+effect = "Restore Magicka"
+group = "Restore"
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 1000
+alchValue = 110
+valueText = "200 points"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A29"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_restore_stamina_adept"
+displayName = "Potion of Restore Stamina"
+itemType = "Potion"
+effect = "Restore Stamina"
+group = "Restore"
+minimumTier = "Adept"
+batchSize = 5
+batchPrice = 250
+alchValue = 30
+valueText = "50 points"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A2A"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_restore_stamina_expert"
+displayName = "Potion of Restore Stamina"
+itemType = "Potion"
+effect = "Restore Stamina"
+group = "Restore"
+minimumTier = "Expert"
+batchSize = 5
+batchPrice = 500
+alchValue = 60
+valueText = "100 points"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A2B"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_restore_stamina_master"
+displayName = "Potion of Restore Stamina"
+itemType = "Potion"
+effect = "Restore Stamina"
+group = "Restore"
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 1000
+alchValue = 110
+valueText = "200 points"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A2C"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_restore_magicka_plus_regenerate_magicka_master"
+displayName = "Potion of Magicka Recovery"
+itemType = "Potion"
+effect = "Restore Magicka + Regenerate Magicka"
+groups = ["Restore", "Regeneration"]
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 2000
+alchValue = 190
+valueText = "200 points + 20% faster 60 seconds"
+riskClass = "High"
+itemForm = "ArtisansOfSkyrim.esp|000A2D"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_restore_magicka_plus_fortify_destruction_master"
+displayName = "Potion of Destruction Focus"
+itemType = "Potion"
+effect = "Restore Magicka + Fortify Destruction"
+groups = ["Restore", "Fortify Ability"]
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 2500
+alchValue = 240
+valueText = "200 points + 40% 60 seconds"
+riskClass = "High"
+itemForm = "ArtisansOfSkyrim.esp|000A2E"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_restore_magicka_plus_fortify_illusion_master"
+displayName = "Potion of Illusion Focus"
+itemType = "Potion"
+effect = "Restore Magicka + Fortify Illusion"
+groups = ["Restore", "Fortify Ability"]
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 2500
+alchValue = 240
+valueText = "200 points + 40% 60 seconds"
+riskClass = "High"
+itemForm = "ArtisansOfSkyrim.esp|000A2F"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_restore_stamina_plus_regenerate_stamina_master"
+displayName = "Potion of Stamina Recovery"
+itemType = "Potion"
+effect = "Restore Stamina + Regenerate Stamina"
+groups = ["Restore", "Regeneration"]
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 2000
+alchValue = 190
+valueText = "200 points + 20% faster 60 seconds"
+riskClass = "High"
+itemForm = "ArtisansOfSkyrim.esp|000A30"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_cure_disease_adept"
+displayName = "Potion of Cure Disease"
+itemType = "Potion"
+effect = "Cure Disease"
+group = "Utility"
+minimumTier = "Adept"
+batchSize = 5
+batchPrice = 500
+alchValue = 60
+valueText = "Yes"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A31"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+
+[[alchemy.items]]
+id = "potion_fortify_carry_weight_expert"
+displayName = "Potion of Fortify Carry Weight"
+preserveFullMenuName = true
+itemType = "Potion"
+effect = "Fortify Carry Weight"
+group = "Utility"
+minimumTier = "Expert"
+batchSize = 5
+batchPrice = 500
+alchValue = 50
+valueText = "50 points 120 seconds"
+riskClass = "High"
+itemForm = "ArtisansOfSkyrim.esp|000A32"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_fortify_carry_weight_master"
+displayName = "Potion of Fortify Carry Weight"
+preserveFullMenuName = true
+itemType = "Potion"
+effect = "Fortify Carry Weight"
+group = "Utility"
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 1000
+alchValue = 100
+valueText = "100 points 120 seconds"
+riskClass = "High"
+itemForm = "ArtisansOfSkyrim.esp|000A33"
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+
+[[alchemy.items]]
+id = "potion_waterbreathing_master"
+displayName = "Potion of Waterbreathing"
+itemType = "Potion"
+effect = "Waterbreathing"
+group = "Utility"
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 1500
+alchValue = 140
+valueText = "60 seconds"
+riskClass = "High"
+itemForm = "ArtisansOfSkyrim.esp|000A34"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+
+[[alchemy.items]]
+id = "potion_invisibility_master"
+displayName = "Potion of Invisibility"
+itemType = "Potion"
+effect = "Invisibility"
+group = "Utility"
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 2000
+alchValue = 180
+valueText = "60 seconds"
+riskClass = "Very High"
+itemForm = "ArtisansOfSkyrim.esp|000A35"
+notes = "ALCH record generated in ArtisansOfSkyrim.esp; runtime itemForm is a real plugin-local FormID."
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+
+[[alchemy.items]]
+id = "potion_health_over_time_adept"
+displayName = "Potion of Health Over Time"
+itemType = "Potion"
+effect = "Health Over Time"
+group = "Restore"
+minimumTier = "Adept"
+batchSize = 5
+batchPrice = 250
+alchValue = 30
+valueText = "10 points per second for 10 seconds"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A36"
+exclusive = true
+
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+[[alchemy.items]]
+id = "potion_health_over_time_expert"
+displayName = "Potion of Health Over Time"
+itemType = "Potion"
+effect = "Health Over Time"
+group = "Restore"
+minimumTier = "Expert"
+batchSize = 5
+batchPrice = 500
+alchValue = 60
+valueText = "20 points per second for 10 seconds"
+riskClass = "High"
+itemForm = "ArtisansOfSkyrim.esp|000A37"
+exclusive = true
+
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+[[alchemy.items]]
+id = "potion_health_over_time_master"
+displayName = "Potion of Health Over Time"
+itemType = "Potion"
+effect = "Health Over Time"
+group = "Restore"
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 1000
+alchValue = 120
+valueText = "40 points per second for 10 seconds"
+riskClass = "High"
+itemForm = "ArtisansOfSkyrim.esp|000A38"
+exclusive = true
+
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+[[alchemy.items]]
+id = "potion_magicka_over_time_adept"
+displayName = "Potion of Magicka Over Time"
+itemType = "Potion"
+effect = "Magicka Over Time"
+group = "Restore"
+minimumTier = "Adept"
+batchSize = 5
+batchPrice = 250
+alchValue = 30
+valueText = "10 points per second for 10 seconds"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A39"
+exclusive = true
+
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+[[alchemy.items]]
+id = "potion_magicka_over_time_expert"
+displayName = "Potion of Magicka Over Time"
+itemType = "Potion"
+effect = "Magicka Over Time"
+group = "Restore"
+minimumTier = "Expert"
+batchSize = 5
+batchPrice = 500
+alchValue = 60
+valueText = "20 points per second for 10 seconds"
+riskClass = "High"
+itemForm = "ArtisansOfSkyrim.esp|000A3A"
+exclusive = true
+
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+[[alchemy.items]]
+id = "potion_magicka_over_time_master"
+displayName = "Potion of Magicka Over Time"
+itemType = "Potion"
+effect = "Magicka Over Time"
+group = "Restore"
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 1000
+alchValue = 120
+valueText = "40 points per second for 10 seconds"
+riskClass = "High"
+itemForm = "ArtisansOfSkyrim.esp|000A3B"
+exclusive = true
+
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+[[alchemy.items]]
+id = "potion_stamina_over_time_adept"
+displayName = "Potion of Stamina Over Time"
+itemType = "Potion"
+effect = "Stamina Over Time"
+group = "Restore"
+minimumTier = "Adept"
+batchSize = 5
+batchPrice = 250
+alchValue = 30
+valueText = "10 points per second for 10 seconds"
+riskClass = "Normal"
+itemForm = "ArtisansOfSkyrim.esp|000A3C"
+exclusive = true
+
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+[[alchemy.items]]
+id = "potion_stamina_over_time_expert"
+displayName = "Potion of Stamina Over Time"
+itemType = "Potion"
+effect = "Stamina Over Time"
+group = "Restore"
+minimumTier = "Expert"
+batchSize = 5
+batchPrice = 500
+alchValue = 60
+valueText = "20 points per second for 10 seconds"
+riskClass = "High"
+itemForm = "ArtisansOfSkyrim.esp|000A3D"
+exclusive = true
+
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"
+[[alchemy.items]]
+id = "potion_stamina_over_time_master"
+displayName = "Potion of Stamina Over Time"
+itemType = "Potion"
+effect = "Stamina Over Time"
+group = "Restore"
+minimumTier = "Master"
+batchSize = 5
+batchPrice = 1000
+alchValue = 120
+valueText = "40 points per second for 10 seconds"
+riskClass = "High"
+itemForm = "ArtisansOfSkyrim.esp|000A3E"
+exclusive = true
+
+formStatus = "GENERATED_IN_ARTISANSOF_SKYRIM_ESP"

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://qconsulting.ca/fo3/ModConfig5.0.xsd">
+  <moduleName>Artisans of Skyrim 1.8</moduleName>
+  <requiredInstallFiles>
+    <folder source="Core" destination="" priority="0" />
+  </requiredInstallFiles>
+  <installSteps order="Explicit">
+    <installStep name="Equipment Compatibility">
+      <optionalFileGroups order="Explicit">
+        <group name="Equipment sources" type="SelectExactlyOne">
+          <plugins order="Explicit">
+            <plugin name="Skyrim and Official DLC Only">
+              <description>Supports equipment from Skyrim and the official Dawnguard, HearthFires, and Dragonborn DLC.
+
+Creation Club and other mod-added equipment are not picked up automatically; patches can still add specific items. Recommended for a vanilla-focused playthrough.</description>
+              <conditionFlags>
+                <flag name="AOS_Equipment">official</flag>
+              </conditionFlags>
+              <typeDescriptor><type name="Recommended" /></typeDescriptor>
+            </plugin>
+            <plugin name="Include Mod-Added Equipment">
+              <description>Includes eligible equipment from Creation Club and other ESM, ESP, and ESL plugins.
+
+Normal material, artisan rank, and quest requirements still apply. Not every mod-added item is eligible.</description>
+              <conditionFlags>
+                <flag name="AOS_Equipment">mod_added</flag>
+              </conditionFlags>
+              <typeDescriptor><type name="Optional" /></typeDescriptor>
+            </plugin>
+          </plugins>
+        </group>
+      </optionalFileGroups>
+    </installStep>
+    <installStep name="Smithing Orders">
+      <optionalFileGroups order="Explicit">
+        <group name="Crafting delivery" type="SelectExactlyOne">
+          <plugins order="Explicit">
+            <plugin name="Timed Orders with Courier Notices">
+              <description>Equipment takes one or more in-game days, depending on its type. Each workshop completes its orders in sequence.
+
+A courier brings a reminder when the current queue is finished. Collect ready items from an available blacksmith in that workshop at any time.
+
+Arrows and bolts are delivered immediately. Enchanting and Alchemy are always immediate.</description>
+              <conditionFlags>
+                <flag name="AOS_Orders">delayed</flag>
+              </conditionFlags>
+              <typeDescriptor><type name="Recommended" /></typeDescriptor>
+            </plugin>
+            <plugin name="Immediate Crafting">
+              <description>Receive crafted equipment immediately after payment. The confirmation shows the final price.
+
+This option uses no crafting queue, collection dialogue, or courier notices. Enchanting and Alchemy are also immediate.</description>
+              <conditionFlags>
+                <flag name="AOS_Orders">instant</flag>
+              </conditionFlags>
+              <typeDescriptor><type name="Optional" /></typeDescriptor>
+            </plugin>
+          </plugins>
+        </group>
+      </optionalFileGroups>
+    </installStep>
+    <installStep name="Custom Effects">
+      <optionalFileGroups order="Explicit">
+        <group name="Additional content" type="SelectAny">
+          <plugins order="Explicit">
+            <plugin name="Custom Skyforge Equipment">
+              <description>Eorlund forges custom Skyforge Steel equipment with improved stats.
+
+Unchecked, Eorlund provides ordinary Steel and Steel Plate equipment with vanilla stats. Items made earlier keep their stats.</description>
+              <files><folder source="Options/skyforge_equipment" destination="" priority="100" /></files>
+              <conditionFlags>
+                <flag name="AOS_SkyforgeEquipment">on</flag>
+              </conditionFlags>
+              <typeDescriptor><type name="Recommended" /></typeDescriptor>
+            </plugin>
+            <plugin name="Custom Enchantments">
+              <description>Adds six custom enchantments offered by Expert and Master enchanters. Strength depends on artisan rank.
+
+Unchecked, enchanters offer vanilla effects only. Items with custom enchantments from an earlier installation continue to work and remain protected from disenchanting.</description>
+              <files><folder source="Options/custom_enchantments" destination="" priority="100" /></files>
+              <conditionFlags>
+                <flag name="AOS_CustomEnchantments">on</flag>
+              </conditionFlags>
+              <typeDescriptor><type name="Recommended" /></typeDescriptor>
+            </plugin>
+            <plugin name="Custom Potions">
+              <description>Adds three restoration-over-time potion effects: Health, Magicka, and Stamina. Strength depends on artisan rank.
+
+Unchecked, alchemists offer vanilla potion and poison effects only.</description>
+              <files><folder source="Options/custom_potions" destination="" priority="100" /></files>
+              <conditionFlags>
+                <flag name="AOS_CustomPotions">on</flag>
+              </conditionFlags>
+              <typeDescriptor><type name="Recommended" /></typeDescriptor>
+            </plugin>
+          </plugins>
+        </group>
+      </optionalFileGroups>
+    </installStep>
+  </installSteps>
+  <conditionalFileInstalls>
+    <patterns>
+      <pattern>
+        <dependencies operator="And">
+          <flagDependency flag="AOS_Equipment" value="official" />
+          <flagDependency flag="AOS_Orders" value="instant" />
+        </dependencies>
+        <files><folder source="Presets/official_instant" destination="" priority="100" /></files>
+      </pattern>
+      <pattern>
+        <dependencies operator="And">
+          <flagDependency flag="AOS_Equipment" value="official" />
+          <flagDependency flag="AOS_Orders" value="delayed" />
+        </dependencies>
+        <files><folder source="Presets/official_delayed" destination="" priority="100" /></files>
+      </pattern>
+      <pattern>
+        <dependencies operator="And">
+          <flagDependency flag="AOS_Equipment" value="mod_added" />
+          <flagDependency flag="AOS_Orders" value="instant" />
+        </dependencies>
+        <files><folder source="Presets/mod_added_instant" destination="" priority="100" /></files>
+      </pattern>
+      <pattern>
+        <dependencies operator="And">
+          <flagDependency flag="AOS_Equipment" value="mod_added" />
+          <flagDependency flag="AOS_Orders" value="delayed" />
+        </dependencies>
+        <files><folder source="Presets/mod_added_delayed" destination="" priority="100" /></files>
+      </pattern>
+      <!-- The MCM page set without custom pages is in Core. These add the
+           custom pages; the combined set has the highest priority. -->
+      <pattern>
+        <dependencies operator="And">
+          <flagDependency flag="AOS_CustomEnchantments" value="on" />
+        </dependencies>
+        <files><folder source="Mcm/enchantments" destination="" priority="101" /></files>
+      </pattern>
+      <pattern>
+        <dependencies operator="And">
+          <flagDependency flag="AOS_CustomPotions" value="on" />
+        </dependencies>
+        <files><folder source="Mcm/potions" destination="" priority="101" /></files>
+      </pattern>
+      <pattern>
+        <dependencies operator="And">
+          <flagDependency flag="AOS_CustomEnchantments" value="on" />
+          <flagDependency flag="AOS_CustomPotions" value="on" />
+        </dependencies>
+        <files><folder source="Mcm/enchantments_potions" destination="" priority="102" /></files>
+      </pattern>
+    </patterns>
+  </conditionalFileInstalls>
+</config>

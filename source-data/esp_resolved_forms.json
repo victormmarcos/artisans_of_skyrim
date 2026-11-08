@@ -1,0 +1,988 @@
+{
+  "results": [
+    {
+      "plugin": "Skyrim.esm",
+      "type": "FACT",
+      "edid": "JobApothecaryFaction",
+      "formid": "0005091C",
+      "local": "05091C",
+      "flags": "00000000",
+      "fields": []
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "MGEF",
+      "edid": "AlchResistPoison",
+      "formid": "00090041",
+      "local": "090041",
+      "flags": "00000000",
+      "fields": [
+        [
+          "EDID",
+          "416c6368526573697374506f69736f6e00",
+          "AlchResistPoison"
+        ],
+        [
+          "FULL",
+          "d00e0000",
+          ""
+        ]
+      ]
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "MGEF",
+      "edid": "AlchCureDisease",
+      "formid": "000AE722",
+      "local": "0AE722",
+      "flags": "00000000",
+      "fields": [
+        [
+          "EDID",
+          "416c6368437572654469736561736500",
+          "AlchCureDisease"
+        ],
+        [
+          "FULL",
+          "66720000",
+          ""
+        ]
+      ]
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "MGEF",
+      "edid": "AlchParalysis",
+      "formid": "00073F30",
+      "local": "073F30",
+      "flags": "00000000",
+      "fields": [
+        [
+          "EDID",
+          "416c6368506172616c7973697300",
+          "AlchParalysis"
+        ],
+        [
+          "FULL",
+          "e7a50000",
+          ""
+        ]
+      ]
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "MGEF",
+      "edid": "AlchWaterbreathing",
+      "formid": "0003AC2D",
+      "local": "03AC2D",
+      "flags": "00000000",
+      "fields": [
+        [
+          "EDID",
+          "416c63685761746572627265617468696e6700",
+          "AlchWaterbreathing"
+        ],
+        [
+          "FULL",
+          "38f40000",
+          ""
+        ]
+      ]
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "MGEF",
+      "edid": "AlchDamageStamina",
+      "formid": "0003A2C6",
+      "local": "03A2C6",
+      "flags": "00000000",
+      "fields": [
+        [
+          "EDID",
+          "416c636844616d6167655374616d696e6100",
+          "AlchDamageStamina"
+        ],
+        [
+          "FULL",
+          "c1390000",
+          ""
+        ]
+      ]
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "MGEF",
+      "edid": "AlchDamageMagicka",
+      "formid": "0003A2B6",
+      "local": "03A2B6",
+      "flags": "00000000",
+      "fields": [
+        [
+          "EDID",
+          "416c636844616d6167654d616769636b6100",
+          "AlchDamageMagicka"
+        ],
+        [
+          "FULL",
+          "85cd0000",
+          ""
+        ]
+      ]
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "MGEF",
+      "edid": "AlchResistMagic",
+      "formid": "00039E51",
+      "local": "039E51",
+      "flags": "00000000",
+      "fields": [
+        [
+          "EDID",
+          "416c63685265736973744d6167696300",
+          "AlchResistMagic"
+        ],
+        [
+          "FULL",
+          "3bd20000",
+          ""
+        ]
+      ]
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "MGEF",
+      "edid": "AlchDamageHealth",
+      "formid": "0003EB42",
+      "local": "03EB42",
+      "flags": "00000000",
+      "fields": [
+        [
+          "EDID",
+          "416c636844616d6167654865616c746800",
+          "AlchDamageHealth"
+        ],
+        [
+          "FULL",
+          "aaaa0000",
+          ""
+        ]
+      ]
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "MGEF",
+      "edid": "AlchFortifyIllusion",
+      "formid": "0003EB27",
+      "local": "03EB27",
+      "flags": "00000000",
+      "fields": [
+        [
+          "EDID",
+          "416c6368466f7274696679496c6c7573696f6e00",
+          "AlchFortifyIllusion"
+        ],
+        [
+          "FULL",
+          "c7e50000",
+          ""
+        ]
+      ]
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "MGEF",
+      "edid": "AlchFortifyDestruction",
+      "formid": "0003EB26",
+      "local": "03EB26",
+      "flags": "00000000",
+      "fields": [
+        [
+          "EDID",
+          "416c6368466f72746966794465737472756374696f6e00",
+          "AlchFortifyDestruction"
+        ],
+        [
+          "FULL",
+          "1b920000",
+          ""
+        ]
+      ]
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "MGEF",
+      "edid": "AlchFortifySneak",
+      "formid": "0003EB22",
+      "local": "03EB22",
+      "flags": "00000000",
+      "fields": [
+        [
+          "EDID",
+          "416c6368466f7274696679536e65616b00",
+          "AlchFortifySneak"
+        ],
+        [
+          "FULL",
+          "0e060000",
+          ""
+        ]
+      ]
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "MGEF",
+      "edid": "AlchFortifyMarksman",
+      "formid": "0003EB1B",
+      "local": "03EB1B",
+      "flags": "00000000",
+      "fields": [
+        [
+          "EDID",
+          "416c6368466f72746966794d61726b736d616e00",
+          "AlchFortifyMarksman"
+        ],
+        [
+          "FULL",
+          "a99c0000",
+          ""
+        ]
+      ]
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "MGEF",
+      "edid": "AlchFortifyTwoHanded",
+      "formid": "0003EB1A",
+      "local": "03EB1A",
+      "flags": "00000000",
+      "fields": [
+        [
+          "EDID",
+          "416c6368466f727469667954776f48616e64656400",
+          "AlchFortifyTwoHanded"
+        ],
+        [
+          "FULL",
+          "d11c0000",
+          ""
+        ]
+      ]
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "MGEF",
+      "edid": "AlchFortifyOneHanded",
+      "formid": "0003EB19",
+      "local": "03EB19",
+      "flags": "00000000",
+      "fields": [
+        [
+          "EDID",
+          "416c6368466f72746966794f6e6548616e64656400",
+          "AlchFortifyOneHanded"
+        ],
+        [
+          "FULL",
+          "003f0000",
+          ""
+        ]
+      ]
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "MGEF",
+      "edid": "AlchRestoreMagicka",
+      "formid": "0003EB17",
+      "local": "03EB17",
+      "flags": "00000000",
+      "fields": [
+        [
+          "EDID",
+          "416c6368526573746f72654d616769636b6100",
+          "AlchRestoreMagicka"
+        ],
+        [
+          "FULL",
+          "79fc0000",
+          ""
+        ]
+      ]
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "MGEF",
+      "edid": "AlchRestoreStamina",
+      "formid": "0003EB16",
+      "local": "03EB16",
+      "flags": "00000000",
+      "fields": [
+        [
+          "EDID",
+          "416c6368526573746f72655374616d696e6100",
+          "AlchRestoreStamina"
+        ],
+        [
+          "FULL",
+          "bc830000",
+          ""
+        ]
+      ]
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "MGEF",
+      "edid": "AlchRestoreHealth",
+      "formid": "0003EB15",
+      "local": "03EB15",
+      "flags": "00000000",
+      "fields": [
+        [
+          "EDID",
+          "416c6368526573746f72654865616c746800",
+          "AlchRestoreHealth"
+        ],
+        [
+          "FULL",
+          "6fee0000",
+          ""
+        ]
+      ]
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "MGEF",
+      "edid": "AlchFortifyStaminaRate",
+      "formid": "0003EB08",
+      "local": "03EB08",
+      "flags": "00000000",
+      "fields": [
+        [
+          "EDID",
+          "416c6368466f72746966795374616d696e615261746500",
+          "AlchFortifyStaminaRate"
+        ],
+        [
+          "FULL",
+          "8bd60000",
+          ""
+        ]
+      ]
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "MGEF",
+      "edid": "AlchFortifyMagickaRate",
+      "formid": "0003EB07",
+      "local": "03EB07",
+      "flags": "00000000",
+      "fields": [
+        [
+          "EDID",
+          "416c6368466f72746966794d616769636b615261746500",
+          "AlchFortifyMagickaRate"
+        ],
+        [
+          "FULL",
+          "5f0e0000",
+          ""
+        ]
+      ]
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "MGEF",
+      "edid": "AlchFortifyCarryWeight",
+      "formid": "0003EB01",
+      "local": "03EB01",
+      "flags": "00000000",
+      "fields": [
+        [
+          "EDID",
+          "416c6368466f7274696679436172727957656967687400",
+          "AlchFortifyCarryWeight"
+        ],
+        [
+          "FULL",
+          "cae10000",
+          ""
+        ]
+      ]
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "MGEF",
+      "edid": "AlchResistShock",
+      "formid": "0003EAEC",
+      "local": "03EAEC",
+      "flags": "00000000",
+      "fields": [
+        [
+          "EDID",
+          "416c636852657369737453686f636b00",
+          "AlchResistShock"
+        ],
+        [
+          "FULL",
+          "306e0000",
+          ""
+        ]
+      ]
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "MGEF",
+      "edid": "AlchResistFrost",
+      "formid": "0003EAEB",
+      "local": "03EAEB",
+      "flags": "00000000",
+      "fields": [
+        [
+          "EDID",
+          "416c636852657369737446726f737400",
+          "AlchResistFrost"
+        ],
+        [
+          "FULL",
+          "82e10000",
+          ""
+        ]
+      ]
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "MGEF",
+      "edid": "AlchResistFire",
+      "formid": "0003EAEA",
+      "local": "03EAEA",
+      "flags": "00000000",
+      "fields": [
+        [
+          "EDID",
+          "416c63685265736973744669726500",
+          "AlchResistFire"
+        ],
+        [
+          "FULL",
+          "4d700000",
+          ""
+        ]
+      ]
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "NPC_",
+      "edid": "Babette",
+      "formid": "0001D4B7",
+      "local": "01D4B7",
+      "flags": "00040000",
+      "fields": []
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "NPC_",
+      "edid": "QuintusNavale",
+      "formid": "0001414C",
+      "local": "01414C",
+      "flags": "00040000",
+      "fields": []
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "NPC_",
+      "edid": "Nurelion",
+      "formid": "00014148",
+      "local": "014148",
+      "flags": "00040000",
+      "fields": []
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "NPC_",
+      "edid": "Arcadia",
+      "formid": "00013BA4",
+      "local": "013BA4",
+      "flags": "00040000",
+      "fields": []
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "NPC_",
+      "edid": "Frida",
+      "formid": "00013614",
+      "local": "013614",
+      "flags": "00040000",
+      "fields": []
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "NPC_",
+      "edid": "Bothela",
+      "formid": "0001338B",
+      "local": "01338B",
+      "flags": "00040000",
+      "fields": []
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "NPC_",
+      "edid": "Elgrim",
+      "formid": "00013357",
+      "local": "013357",
+      "flags": "00040000",
+      "fields": []
+    },
+    {
+      "plugin": "Skyrim.esm",
+      "type": "ALCH",
+      "edid": "CureDisease",
+      "formid": "000AE723",
+      "local": "0AE723",
+      "flags": "00000000",
+      "fields": [
+        [
+          "EDID",
+          "437572654469736561736500",
+          "CureDisease"
+        ],
+        [
+          "OBND",
+          "fcfffcff0000040004001000",
+          ""
+        ],
+        [
+          "FULL",
+          "b2430000",
+          ""
+        ],
+        [
+          "MODL",
+          "436c75747465725c506f74696f6e735c506f74696f6e4865616c74684c65737365722e6e696600",
+          "Clutter\\Potions\\PotionHealthLesser.nif"
+        ],
+        [
+          "YNAM",
+          "bded0300",
+          ""
+        ],
+        [
+          "ZNAM",
+          "c0ed0300",
+          ""
+        ],
+        [
+          "DATA",
+          "0000003f",
+          ""
+        ],
+        [
+          "ENIT",
+          "4f00000000000000000000000000000035640b00",
+          ""
+        ],
+        [
+          "EFID",
+          "22e70a00",
+          ""
+        ],
+        [
+          "EFIT",
+          "0000c8420000000000000000",
+          ""
+        ]
+      ]
+    }
+  ],
+  "mgef_alch_like": [
+    {
+      "edid": "AlchInfluenceAggUpComboCOPY0000",
+      "formid": "0010FDD4",
+      "local": "10FDD4",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchDamageMagickaDuration",
+      "formid": "0010DE5F",
+      "local": "10DE5F",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchDamageStaminaDuration",
+      "formid": "0010DE5E",
+      "local": "10DE5E",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchDamageHealthDuration",
+      "formid": "0010AA4A",
+      "local": "10AA4A",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchCurePoison",
+      "formid": "00109ADD",
+      "local": "109ADD",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchRestoreStaminaAll",
+      "formid": "000FFA05",
+      "local": "0FFA05",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchRestoreMagickaAll",
+      "formid": "000FFA04",
+      "local": "0FFA04",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchRestoreHealthAll",
+      "formid": "000FFA03",
+      "local": "0FFA03",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchInfluenceAggUpCombo",
+      "formid": "000FF9F8",
+      "local": "0FF9F8",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchFortifyPersuasion",
+      "formid": "000D6947",
+      "local": "0D6947",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchUnknown",
+      "formid": "0001B9A7",
+      "local": "01B9A7",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchWeaknessPoison",
+      "formid": "00090042",
+      "local": "090042",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchResistPoison",
+      "formid": "00090041",
+      "local": "090041",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchCureDisease",
+      "formid": "000AE722",
+      "local": "0AE722",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchWeaknessMagic",
+      "formid": "00073F51",
+      "local": "073F51",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchParalysis",
+      "formid": "00073F30",
+      "local": "073F30",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchWeaknessShock",
+      "formid": "00073F2F",
+      "local": "073F2F",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchWeaknessFrost",
+      "formid": "00073F2E",
+      "local": "073F2E",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchWeaknessFire",
+      "formid": "00073F2D",
+      "local": "073F2D",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchDamageStaminaRate",
+      "formid": "00073F2C",
+      "local": "073F2C",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchDamageMagickaRate",
+      "formid": "00073F2B",
+      "local": "073F2B",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchInfluenceAggUp",
+      "formid": "00073F29",
+      "local": "073F29",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchDamageMagickaRavage",
+      "formid": "00073F27",
+      "local": "073F27",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchDamageHealthRavage",
+      "formid": "00073F26",
+      "local": "073F26",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchDamageSpeed",
+      "formid": "00073F25",
+      "local": "073F25",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchDamageStaminaRavage",
+      "formid": "00073F23",
+      "local": "073F23",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchInfluenceConfDown",
+      "formid": "00073F20",
+      "local": "073F20",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchWaterbreathing",
+      "formid": "0003AC2D",
+      "local": "03AC2D",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchDamageStamina",
+      "formid": "0003A2C6",
+      "local": "03A2C6",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchDamageMagicka",
+      "formid": "0003A2B6",
+      "local": "03A2B6",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchResistMagic",
+      "formid": "00039E51",
+      "local": "039E51",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchDamageHealth",
+      "formid": "0003EB42",
+      "local": "03EB42",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchInvisibillity",
+      "formid": "0003EB3D",
+      "local": "03EB3D",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchFortifyEnchanting",
+      "formid": "0003EB29",
+      "local": "03EB29",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchFortifyRestoration",
+      "formid": "0003EB28",
+      "local": "03EB28",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchFortifyIllusion",
+      "formid": "0003EB27",
+      "local": "03EB27",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchFortifyDestruction",
+      "formid": "0003EB26",
+      "local": "03EB26",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchFortifyConjuration",
+      "formid": "0003EB25",
+      "local": "03EB25",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchFortifyAlteration",
+      "formid": "0003EB24",
+      "local": "03EB24",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchFortifyBarter",
+      "formid": "0003EB23",
+      "local": "03EB23",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchFortifySneak",
+      "formid": "0003EB22",
+      "local": "03EB22",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchFortifyLockpicking",
+      "formid": "0003EB21",
+      "local": "03EB21",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchFortifyPickpocket",
+      "formid": "0003EB20",
+      "local": "03EB20",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchFortifyLightArmor",
+      "formid": "0003EB1F",
+      "local": "03EB1F",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchFortifyHeavyArmor",
+      "formid": "0003EB1E",
+      "local": "03EB1E",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchFortifySmithing",
+      "formid": "0003EB1D",
+      "local": "03EB1D",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchFortifyBlock",
+      "formid": "0003EB1C",
+      "local": "03EB1C",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchFortifyMarksman",
+      "formid": "0003EB1B",
+      "local": "03EB1B",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchFortifyTwoHanded",
+      "formid": "0003EB1A",
+      "local": "03EB1A",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchFortifyOneHanded",
+      "formid": "0003EB19",
+      "local": "03EB19",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchFortifyAlchemy",
+      "formid": "0003EB18",
+      "local": "03EB18",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchRestoreMagicka",
+      "formid": "0003EB17",
+      "local": "03EB17",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchRestoreStamina",
+      "formid": "0003EB16",
+      "local": "03EB16",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchRestoreHealth",
+      "formid": "0003EB15",
+      "local": "03EB15",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchFortifyStaminaRate",
+      "formid": "0003EB08",
+      "local": "03EB08",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchFortifyMagickaRate",
+      "formid": "0003EB07",
+      "local": "03EB07",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchFortifyHealRate",
+      "formid": "0003EB06",
+      "local": "03EB06",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchFortifyCarryWeight",
+      "formid": "0003EB01",
+      "local": "03EB01",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchFortifyStamina",
+      "formid": "0003EAF9",
+      "local": "03EAF9",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchFortifyMagicka",
+      "formid": "0003EAF8",
+      "local": "03EAF8",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchFortifyHealth",
+      "formid": "0003EAF3",
+      "local": "03EAF3",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchResistShock",
+      "formid": "0003EAEC",
+      "local": "03EAEC",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchResistFrost",
+      "formid": "0003EAEB",
+      "local": "03EAEB",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchResistFire",
+      "formid": "0003EAEA",
+      "local": "03EAEA",
+      "plugin": "Skyrim.esm"
+    },
+    {
+      "edid": "AlchWaterWalking",
+      "formid": "020390E1",
+      "local": "0390E1",
+      "plugin": "Dragonborn.esm"
+    }
+  ]
+}

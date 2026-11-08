@@ -1,0 +1,31 @@
+DisplayName,Service,Tier,Plugin,FormID,EditorID,PrimaryKey,ValidationStatus,Notes
+Eorlund Gray-Mane,Smithing,Master,Skyrim.esm,00013B9D,,Skyrim.esm|00013B9D,FORMID_FROM_EXISTING_CONFIG,
+Gunmar,Smithing,Master,Dawnguard.esm,0000336C,,Dawnguard.esm|0000336C,FORMID_FROM_EXISTING_CONFIG,
+Baldor Iron-Shaper,Smithing,Master,Dragonborn.esm,00018FB5,,Dragonborn.esm|00018FB5,FORMID_FROM_EXISTING_CONFIG,
+Balimund,Smithing,Expert,Skyrim.esm,0001334C,,Skyrim.esm|0001334C,FORMID_FROM_EXISTING_CONFIG,
+Moth gro-Bagol,Smithing,Expert,Skyrim.esm,00055A5E,,Skyrim.esm|00055A5E,FORMID_FROM_EXISTING_CONFIG,
+Oengul War-Anvil,Smithing,Expert,Skyrim.esm,00014142,,Skyrim.esm|00014142,FORMID_FROM_EXISTING_CONFIG,
+Gharol,Smithing,Expert,Skyrim.esm,00013B7C,,Skyrim.esm|00013B7C,FORMID_FROM_EXISTING_CONFIG,
+Glover Mallory,Smithing,Expert,Dragonborn.esm,0001828E,,Dragonborn.esm|0001828E,FORMID_FROM_EXISTING_CONFIG,
+Ulfberth War-Bear,Smithing,Adept,Skyrim.esm,00013B9F,,Skyrim.esm|00013B9F,FORMID_FROM_EXISTING_CONFIG,
+Beirand,Smithing,Adept,Skyrim.esm,00013261,,Skyrim.esm|00013261,FORMID_FROM_EXISTING_CONFIG,
+Ghorza gra-Bagol,Smithing,Adept,Skyrim.esm,0001339A,,Skyrim.esm|0001339A,FORMID_FROM_EXISTING_CONFIG,
+Tacitus Sallustius,Smithing,Adept,Skyrim.esm,0001402D,TacitusSallustius,Skyrim.esm|0001402D,RESOLVED_FROM_MASTER,Successor service becomes available only after Ghorza dies.
+Asbjorn Fire-Tamer,Smithing,Adept,Skyrim.esm,00019DF2,Asbjorn,Skyrim.esm|00019DF2,RESOLVED_FROM_MASTER,Successor service becomes available only after Balimund dies.
+Heimvar,Smithing,Adept,Skyrim.esm,00013286,Heimvar,Skyrim.esm|00013286,RESOLVED_FROM_MASTER,Successor service becomes available only after Beirand dies.
+Hermir Strong-Heart,Smithing,Adept,Skyrim.esm,0001412D,Hermir,Skyrim.esm|0001412D,RESOLVED_FROM_MASTER,Successor service becomes available only after Oengul dies.
+Farengar,Enchanting,Adept,Skyrim.esm,00013BBB,farengar,Skyrim.esm|00013BBB,FORMID_FROM_EXISTING_CONFIG,Closed list; requires College of Winterhold membership (the Arch-Mage is included).
+Calcelmo,Enchanting,Adept,Skyrim.esm,0001338E,calcelmo,Skyrim.esm|0001338E,FORMID_FROM_EXISTING_CONFIG,Closed list; requires College of Winterhold membership (the Arch-Mage is included).
+Sergius Turrianus,Enchanting,Expert,Skyrim.esm,0001C23E,sergius,Skyrim.esm|0001C23E,FORMID_FROM_EXISTING_CONFIG,Closed list; requires College of Winterhold membership (the Arch-Mage is included).
+Sybille Stentor,Enchanting,Expert,Skyrim.esm,000132AA,sybille,Skyrim.esm|000132AA,FORMID_FROM_EXISTING_CONFIG,Closed list; service requires completion of The Man Who Cried Wolf.
+Neloth,Enchanting,Master,Dragonborn.esm,0001773A,neloth,Dragonborn.esm|0001773A,FORMID_FROM_EXISTING_CONFIG,Closed list; requires College of Winterhold membership (the Arch-Mage is included).
+Feran Sadri,Enchanting,Master,Dawnguard.esm,00003366,feranSadri,Dawnguard.esm|00003366,FORMID_FROM_EXISTING_CONFIG,Closed list; requires College of Winterhold membership (the Arch-Mage is included).
+Babette,Alchemy,Master,Skyrim.esm,0001D4B7,Babette,Skyrim.esm|0001D4B7,RESOLVED_FROM_MASTER,Resolved from local Skyrim masters; display name is documentation only.
+Bothela,Alchemy,Master,Skyrim.esm,0001338B,Bothela,Skyrim.esm|0001338B,RESOLVED_FROM_MASTER,Resolved from local Skyrim masters; display name is documentation only.
+Nurelion,Alchemy,Master,Skyrim.esm,00014148,Nurelion,Skyrim.esm|00014148,RESOLVED_FROM_MASTER,Resolved from local Skyrim masters; display name is documentation only.
+Florentius Baenius,Alchemy,Master,Dawnguard.esm,0000336D,DLC1FlorentiusBaenius,Dawnguard.esm|0000336D,RESOLVED_FROM_MASTER,Service requires completed quest Dawnguard.esm|00013F1F.
+Arcadia,Alchemy,Expert,Skyrim.esm,00013BA4,Arcadia,Skyrim.esm|00013BA4,RESOLVED_FROM_MASTER,Resolved from local Skyrim masters; display name is documentation only.
+Milore Ienth,Alchemy,Expert,Dragonborn.esm,000182A1,DLC2RRMiloreIenth,Dragonborn.esm|000182A1,RESOLVED_FROM_MASTER,Resolved from local Skyrim masters; display name is documentation only.
+Elgrim,Alchemy,Expert,Skyrim.esm,00013357,Elgrim,Skyrim.esm|00013357,RESOLVED_FROM_MASTER,Resolved from local Skyrim masters; display name is documentation only.
+Frida,Alchemy,Expert,Skyrim.esm,00013614,Frida,Skyrim.esm|00013614,RESOLVED_FROM_MASTER,Resolved from local Skyrim masters; display name is documentation only.
+Quintus Navale,Alchemy,Expert,Skyrim.esm,0001414C,QuintusNavale,Skyrim.esm|0001414C,RESOLVED_FROM_MASTER,Resolved from local Skyrim masters; display name is documentation only.

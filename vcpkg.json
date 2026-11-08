@@ -1,0 +1,11 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+  "name": "artisans-of-skyrim",
+  "dependencies": [
+    "directxtk",
+    "rapidcsv",
+    "spdlog",
+    "minhook",
+    "tomlplusplus"
+  ]
+}

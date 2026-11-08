@@ -1,0 +1,64 @@
+EditorID,DisplayName,FormKey,FormIDInPluginFile,LocalFormID,Type,Tier,BatchPrice,ALCHValuePerFlask
+AOS_ALCH_PoisonDamageHealthAdept,Poison of Damage Health,ArtisansOfSkyrim.esp|000A00,03000A00,000A00,Poison,Adept,250,30
+AOS_ALCH_PoisonDamageHealthExpert,Poison of Damage Health,ArtisansOfSkyrim.esp|000A01,03000A01,000A01,Poison,Expert,500,60
+AOS_ALCH_PoisonDamageHealthMaster,Poison of Damage Health,ArtisansOfSkyrim.esp|000A02,03000A02,000A02,Poison,Master,1000,110
+AOS_ALCH_PoisonDamageMagickaAdept,Poison of Damage Magicka,ArtisansOfSkyrim.esp|000A03,03000A03,000A03,Poison,Adept,250,30
+AOS_ALCH_PoisonDamageMagickaExpert,Poison of Damage Magicka,ArtisansOfSkyrim.esp|000A04,03000A04,000A04,Poison,Expert,500,60
+AOS_ALCH_PoisonDamageMagickaMaster,Poison of Damage Magicka,ArtisansOfSkyrim.esp|000A05,03000A05,000A05,Poison,Master,1000,110
+AOS_ALCH_PoisonDamageStaminaAdept,Poison of Damage Stamina,ArtisansOfSkyrim.esp|000A06,03000A06,000A06,Poison,Adept,250,30
+AOS_ALCH_PoisonDamageStaminaExpert,Poison of Damage Stamina,ArtisansOfSkyrim.esp|000A07,03000A07,000A07,Poison,Expert,500,60
+AOS_ALCH_PoisonDamageStaminaMaster,Poison of Damage Stamina,ArtisansOfSkyrim.esp|000A08,03000A08,000A08,Poison,Master,1000,110
+AOS_ALCH_PoisonDamageHealthPlusLingeringDamageHealthMaster,Poison of Lingering Damage,ArtisansOfSkyrim.esp|000A09,03000A09,000A09,Poison,Master,2000,180
+AOS_ALCH_PoisonFearMaster,Poison of Fear,ArtisansOfSkyrim.esp|000A0A,03000A0A,000A0A,Poison,Master,2000,190
+AOS_ALCH_PoisonFrenzyMaster,Poison of Frenzy,ArtisansOfSkyrim.esp|000A0B,03000A0B,000A0B,Poison,Master,2000,190
+AOS_ALCH_PoisonParalysisMaster,Poison of Paralysis,ArtisansOfSkyrim.esp|000A0C,03000A0C,000A0C,Poison,Master,2000,180
+AOS_ALCH_PoisonSlowExpert,Poison of Slow,ArtisansOfSkyrim.esp|000A0D,03000A0D,000A0D,Poison,Expert,750,70
+AOS_ALCH_PoisonSlowMaster,Poison of Slow,ArtisansOfSkyrim.esp|000A0E,03000A0E,000A0E,Poison,Master,1500,140
+AOS_ALCH_PotionFortifyDestructionExpert,Potion of Fortify Destruction,ArtisansOfSkyrim.esp|000A0F,03000A0F,000A0F,Potion,Expert,1000,110
+AOS_ALCH_PotionFortifyDestructionMaster,Potion of Fortify Destruction,ArtisansOfSkyrim.esp|000A10,03000A10,000A10,Potion,Master,2000,220
+AOS_ALCH_PotionFortifyIllusionExpert,Potion of Fortify Illusion,ArtisansOfSkyrim.esp|000A11,03000A11,000A11,Potion,Expert,1000,110
+AOS_ALCH_PotionFortifyIllusionMaster,Potion of Fortify Illusion,ArtisansOfSkyrim.esp|000A12,03000A12,000A12,Potion,Master,2000,220
+AOS_ALCH_PotionFortifyArcheryExpert,Potion of Fortify Archery,ArtisansOfSkyrim.esp|000A13,03000A13,000A13,Potion,Expert,1000,110
+AOS_ALCH_PotionFortifyArcheryMaster,Potion of Fortify Archery,ArtisansOfSkyrim.esp|000A14,03000A14,000A14,Potion,Master,2000,220
+AOS_ALCH_PotionFortifyOneHandedExpert,Potion of Fortify One-Handed,ArtisansOfSkyrim.esp|000A15,03000A15,000A15,Potion,Expert,1000,110
+AOS_ALCH_PotionFortifyOneHandedMaster,Potion of Fortify One-Handed,ArtisansOfSkyrim.esp|000A16,03000A16,000A16,Potion,Master,2000,220
+AOS_ALCH_PotionFortifyTwoHandedExpert,Potion of Fortify Two-Handed,ArtisansOfSkyrim.esp|000A17,03000A17,000A17,Potion,Expert,1000,110
+AOS_ALCH_PotionFortifyTwoHandedMaster,Potion of Fortify Two-Handed,ArtisansOfSkyrim.esp|000A18,03000A18,000A18,Potion,Master,2000,220
+AOS_ALCH_PotionFortifySneakExpert,Potion of Fortify Sneak,ArtisansOfSkyrim.esp|000A19,03000A19,000A19,Potion,Expert,1000,110
+AOS_ALCH_PotionFortifySneakMaster,Potion of Fortify Sneak,ArtisansOfSkyrim.esp|000A1A,03000A1A,000A1A,Potion,Master,2000,220
+AOS_ALCH_PotionResistFireExpert,Potion of Resist Fire,ArtisansOfSkyrim.esp|000A1B,03000A1B,000A1B,Potion,Expert,750,80
+AOS_ALCH_PotionResistFireMaster,Potion of Resist Fire,ArtisansOfSkyrim.esp|000A1C,03000A1C,000A1C,Potion,Master,1500,170
+AOS_ALCH_PotionResistFrostExpert,Potion of Resist Frost,ArtisansOfSkyrim.esp|000A1D,03000A1D,000A1D,Potion,Expert,750,80
+AOS_ALCH_PotionResistFrostMaster,Potion of Resist Frost,ArtisansOfSkyrim.esp|000A1E,03000A1E,000A1E,Potion,Master,1500,170
+AOS_ALCH_PotionResistShockExpert,Potion of Resist Shock,ArtisansOfSkyrim.esp|000A1F,03000A1F,000A1F,Potion,Expert,750,80
+AOS_ALCH_PotionResistShockMaster,Potion of Resist Shock,ArtisansOfSkyrim.esp|000A20,03000A20,000A20,Potion,Master,1500,170
+AOS_ALCH_PotionResistMagicMaster,Potion of Resist Magic,ArtisansOfSkyrim.esp|000A21,03000A21,000A21,Potion,Master,2000,190
+AOS_ALCH_PotionResistPoisonExpert,Potion of Resist Poison,ArtisansOfSkyrim.esp|000A22,03000A22,000A22,Potion,Expert,500,60
+AOS_ALCH_PotionResistPoisonMaster,Potion of Resist Poison,ArtisansOfSkyrim.esp|000A23,03000A23,000A23,Potion,Master,1000,110
+AOS_ALCH_PotionRestoreHealthAdept,Potion of Restore Health,ArtisansOfSkyrim.esp|000A24,03000A24,000A24,Potion,Adept,250,30
+AOS_ALCH_PotionRestoreHealthExpert,Potion of Restore Health,ArtisansOfSkyrim.esp|000A25,03000A25,000A25,Potion,Expert,500,60
+AOS_ALCH_PotionRestoreHealthMaster,Potion of Restore Health,ArtisansOfSkyrim.esp|000A26,03000A26,000A26,Potion,Master,1000,110
+AOS_ALCH_PotionRestoreMagickaAdept,Potion of Restore Magicka,ArtisansOfSkyrim.esp|000A27,03000A27,000A27,Potion,Adept,250,30
+AOS_ALCH_PotionRestoreMagickaExpert,Potion of Restore Magicka,ArtisansOfSkyrim.esp|000A28,03000A28,000A28,Potion,Expert,500,60
+AOS_ALCH_PotionRestoreMagickaMaster,Potion of Restore Magicka,ArtisansOfSkyrim.esp|000A29,03000A29,000A29,Potion,Master,1000,110
+AOS_ALCH_PotionRestoreStaminaAdept,Potion of Restore Stamina,ArtisansOfSkyrim.esp|000A2A,03000A2A,000A2A,Potion,Adept,250,30
+AOS_ALCH_PotionRestoreStaminaExpert,Potion of Restore Stamina,ArtisansOfSkyrim.esp|000A2B,03000A2B,000A2B,Potion,Expert,500,60
+AOS_ALCH_PotionRestoreStaminaMaster,Potion of Restore Stamina,ArtisansOfSkyrim.esp|000A2C,03000A2C,000A2C,Potion,Master,1000,110
+AOS_ALCH_PotionRestoreMagickaPlusRegenerateMagickaMaster,Potion of Magicka Recovery,ArtisansOfSkyrim.esp|000A2D,03000A2D,000A2D,Potion,Master,2000,190
+AOS_ALCH_PotionRestoreMagickaPlusFortifyDestructionMaster,Potion of Destruction Focus,ArtisansOfSkyrim.esp|000A2E,03000A2E,000A2E,Potion,Master,2500,240
+AOS_ALCH_PotionRestoreMagickaPlusFortifyIllusionMaster,Potion of Illusion Focus,ArtisansOfSkyrim.esp|000A2F,03000A2F,000A2F,Potion,Master,2500,240
+AOS_ALCH_PotionRestoreStaminaPlusRegenerateStaminaMaster,Potion of Stamina Recovery,ArtisansOfSkyrim.esp|000A30,03000A30,000A30,Potion,Master,2000,190
+AOS_ALCH_PotionCureDiseaseAdept,Potion of Cure Disease,ArtisansOfSkyrim.esp|000A31,03000A31,000A31,Potion,Adept,500,60
+AOS_ALCH_PotionFortifyCarryWeightExpert,Potion of Fortify Carry Weight,ArtisansOfSkyrim.esp|000A32,03000A32,000A32,Potion,Expert,500,50
+AOS_ALCH_PotionFortifyCarryWeightMaster,Potion of Fortify Carry Weight,ArtisansOfSkyrim.esp|000A33,03000A33,000A33,Potion,Master,1000,100
+AOS_ALCH_PotionWaterbreathingMaster,Potion of Waterbreathing,ArtisansOfSkyrim.esp|000A34,03000A34,000A34,Potion,Master,1500,140
+AOS_ALCH_PotionInvisibilityMaster,Potion of Invisibility,ArtisansOfSkyrim.esp|000A35,03000A35,000A35,Potion,Master,2000,180
+AOS_ALCH_PotionHealthOverTimeAdept,Potion of Health Over Time,ArtisansOfSkyrim.esp|000A36,03000A36,000A36,Potion,Adept,250,30
+AOS_ALCH_PotionHealthOverTimeExpert,Potion of Health Over Time,ArtisansOfSkyrim.esp|000A37,03000A37,000A37,Potion,Expert,500,60
+AOS_ALCH_PotionHealthOverTimeMaster,Potion of Health Over Time,ArtisansOfSkyrim.esp|000A38,03000A38,000A38,Potion,Master,1000,120
+AOS_ALCH_PotionMagickaOverTimeAdept,Potion of Magicka Over Time,ArtisansOfSkyrim.esp|000A39,03000A39,000A39,Potion,Adept,250,30
+AOS_ALCH_PotionMagickaOverTimeExpert,Potion of Magicka Over Time,ArtisansOfSkyrim.esp|000A3A,03000A3A,000A3A,Potion,Expert,500,60
+AOS_ALCH_PotionMagickaOverTimeMaster,Potion of Magicka Over Time,ArtisansOfSkyrim.esp|000A3B,03000A3B,000A3B,Potion,Master,1000,120
+AOS_ALCH_PotionStaminaOverTimeAdept,Potion of Stamina Over Time,ArtisansOfSkyrim.esp|000A3C,03000A3C,000A3C,Potion,Adept,250,30
+AOS_ALCH_PotionStaminaOverTimeExpert,Potion of Stamina Over Time,ArtisansOfSkyrim.esp|000A3D,03000A3D,000A3D,Potion,Expert,500,60
+AOS_ALCH_PotionStaminaOverTimeMaster,Potion of Stamina Over Time,ArtisansOfSkyrim.esp|000A3E,03000A3E,000A3E,Potion,Master,1000,120

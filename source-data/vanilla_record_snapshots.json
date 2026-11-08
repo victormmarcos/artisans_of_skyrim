@@ -1,0 +1,2593 @@
+{
+  "00013955": {
+    "signature": "ARMO",
+    "editor_id": "ArmorSteelShield",
+    "flags": 64,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "41726d6f72537465656c536869656c6400"
+      },
+      {
+        "signature": "OBND",
+        "data": "e7ffe7fff5ff190019000100"
+      },
+      {
+        "signature": "FULL",
+        "data": "22660000"
+      },
+      {
+        "signature": "MOD2",
+        "data": "41726d6f725c537465656c5c536869656c642e6e696600"
+      },
+      {
+        "signature": "MO2T",
+        "data": "020000000200000000000000fe2edaf56464730017407fafe239c0c16464730017407faf"
+      },
+      {
+        "signature": "MOD4",
+        "data": "41726d6f725c537465656c5c536869656c642e6e696600"
+      },
+      {
+        "signature": "MO4T",
+        "data": "020000000200000000000000fe2edaf56464730017407fafe239c0c16464730017407faf"
+      },
+      {
+        "signature": "BOD2",
+        "data": "0002000001000000"
+      },
+      {
+        "signature": "ETYP",
+        "data": "e8410100"
+      },
+      {
+        "signature": "BIDS",
+        "data": "fe830100"
+      },
+      {
+        "signature": "BAMT",
+        "data": "79690100"
+      },
+      {
+        "signature": "RNAM",
+        "data": "19000000"
+      },
+      {
+        "signature": "KSIZ",
+        "data": "03000000"
+      },
+      {
+        "signature": "KWDA",
+        "data": "e6bb060059f90800b2650900"
+      },
+      {
+        "signature": "DESC",
+        "data": "00000000"
+      },
+      {
+        "signature": "MODL",
+        "data": "64290200"
+      },
+      {
+        "signature": "DATA",
+        "data": "9600000000004041"
+      },
+      {
+        "signature": "DNAM",
+        "data": "60090000"
+      }
+    ]
+  },
+  "0001395B": {
+    "signature": "ARMO",
+    "editor_id": "ArmorSteelPlateBoots",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "41726d6f72537465656c506c617465426f6f747300"
+      },
+      {
+        "signature": "OBND",
+        "data": "f4fff5ffffff0c000b002300"
+      },
+      {
+        "signature": "FULL",
+        "data": "7de50000"
+      },
+      {
+        "signature": "MOD2",
+        "data": "41726d6f725c4e6f7264506c6174655c426f6f74735f474f2e6e696600"
+      },
+      {
+        "signature": "MO2T",
+        "data": "0200000002000000000000007fa0adc564647300127a9fadb80e58e964647300127a9fad"
+      },
+      {
+        "signature": "BOD2",
+        "data": "8000000001000000"
+      },
+      {
+        "signature": "RNAM",
+        "data": "19000000"
+      },
+      {
+        "signature": "KSIZ",
+        "data": "04000000"
+      },
+      {
+        "signature": "KWDA",
+        "data": "d2bb0600e7bb0600edc0060059f90800"
+      },
+      {
+        "signature": "DESC",
+        "data": "00000000"
+      },
+      {
+        "signature": "MODL",
+        "data": "d94a0e00"
+      },
+      {
+        "signature": "DATA",
+        "data": "7d00000000001041"
+      },
+      {
+        "signature": "DNAM",
+        "data": "78050000"
+      }
+    ]
+  },
+  "0001395C": {
+    "signature": "ARMO",
+    "editor_id": "ArmorSteelPlateCuirass",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "41726d6f72537465656c506c6174654375697261737300"
+      },
+      {
+        "signature": "OBND",
+        "data": "e9ffeaffffff170016001200"
+      },
+      {
+        "signature": "FULL",
+        "data": "2ec20000"
+      },
+      {
+        "signature": "MOD2",
+        "data": "41726d6f725c4e6f7264506c6174655c437569726173735f474f2e6e696600"
+      },
+      {
+        "signature": "MO2T",
+        "data": "020000000400000000000000cdc1737164647300127a9fad92271e0564647300127a9fadad99560a64647300262c333b2876179c64647300127a9fad"
+      },
+      {
+        "signature": "BOD2",
+        "data": "0400000001000000"
+      },
+      {
+        "signature": "RNAM",
+        "data": "19000000"
+      },
+      {
+        "signature": "KSIZ",
+        "data": "04000000"
+      },
+      {
+        "signature": "KWDA",
+        "data": "d2bb0600e7bb0600ecc0060059f90800"
+      },
+      {
+        "signature": "DESC",
+        "data": "00000000"
+      },
+      {
+        "signature": "MODL",
+        "data": "d74a0e00"
+      },
+      {
+        "signature": "DATA",
+        "data": "7102000000001842"
+      },
+      {
+        "signature": "DNAM",
+        "data": "a00f0000"
+      }
+    ]
+  },
+  "0001395D": {
+    "signature": "ARMO",
+    "editor_id": "ArmorSteelPlateGauntlets",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "41726d6f72537465656c506c6174654761756e746c65747300"
+      },
+      {
+        "signature": "OBND",
+        "data": "f6ffeefffdff0a0012000900"
+      },
+      {
+        "signature": "FULL",
+        "data": "87f10000"
+      },
+      {
+        "signature": "MOD2",
+        "data": "41726d6f725c4e6f7264506c6174655c6761756e746c6574735f474f2e6e696600"
+      },
+      {
+        "signature": "MO2T",
+        "data": "02000000020000000000000034a9153564647300127a9fad6ad0098364647300127a9fad"
+      },
+      {
+        "signature": "BOD2",
+        "data": "0800000001000000"
+      },
+      {
+        "signature": "RNAM",
+        "data": "19000000"
+      },
+      {
+        "signature": "KSIZ",
+        "data": "05000000"
+      },
+      {
+        "signature": "KWDA",
+        "data": "d2bb0600e7bb0600efc0060059f9080079c10200"
+      },
+      {
+        "signature": "DESC",
+        "data": "00000000"
+      },
+      {
+        "signature": "MODL",
+        "data": "db4a0e00"
+      },
+      {
+        "signature": "DATA",
+        "data": "7d0000000000c040"
+      },
+      {
+        "signature": "DNAM",
+        "data": "78050000"
+      }
+    ]
+  },
+  "0001395E": {
+    "signature": "ARMO",
+    "editor_id": "ArmorSteelPlateHelmet",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "41726d6f72537465656c506c61746548656c6d657400"
+      },
+      {
+        "signature": "OBND",
+        "data": "f7fff6fffcff09000a001200"
+      },
+      {
+        "signature": "FULL",
+        "data": "7cfc0000"
+      },
+      {
+        "signature": "MOD2",
+        "data": "41726d6f725c4e6f7264506c6174655c48656c6d65745f474f2e6e696600"
+      },
+      {
+        "signature": "MO2T",
+        "data": "020000000200000000000000b1ca0dc664647300127a9fad9e7f461164647300127a9fad"
+      },
+      {
+        "signature": "BOD2",
+        "data": "0330000001000000"
+      },
+      {
+        "signature": "RNAM",
+        "data": "19000000"
+      },
+      {
+        "signature": "KSIZ",
+        "data": "04000000"
+      },
+      {
+        "signature": "KWDA",
+        "data": "d2bb0600e7bb0600eec0060059f90800"
+      },
+      {
+        "signature": "DESC",
+        "data": "00000000"
+      },
+      {
+        "signature": "MODL",
+        "data": "dd4a0e00"
+      },
+      {
+        "signature": "DATA",
+        "data": "2c0100000000c040"
+      },
+      {
+        "signature": "DNAM",
+        "data": "6c070000"
+      }
+    ]
+  },
+  "00013988": {
+    "signature": "WEAP",
+    "editor_id": "SteelMace",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "537465656c4d61636500"
+      },
+      {
+        "signature": "OBND",
+        "data": "f9ffeffff8ff080032000700"
+      },
+      {
+        "signature": "FULL",
+        "data": "edc00000"
+      },
+      {
+        "signature": "MODL",
+        "data": "576561706f6e735c537465656c5c537465656c4d6163652e6e696600"
+      },
+      {
+        "signature": "MODT",
+        "data": "020000000b000000000000004fabdc0564647300a0b86305d09b0bbb64647300a0b86305b221cca164647300a0b86305da8e929164647300262c333b0872ddb66464730014f240e60121fbe16464730014f240e6b8ec307b64647300262c333bbb70f2786464730014f240e6e72410cf6464730014f240e62e4315ba6464730014f240e694121c236464730014f240e6"
+      },
+      {
+        "signature": "ETYP",
+        "data": "423f0100"
+      },
+      {
+        "signature": "BIDS",
+        "data": "c7930100"
+      },
+      {
+        "signature": "BAMT",
+        "data": "c1740700"
+      },
+      {
+        "signature": "KSIZ",
+        "data": "03000000"
+      },
+      {
+        "signature": "KWDA",
+        "data": "19e7010014e7010058f90800"
+      },
+      {
+        "signature": "DESC",
+        "data": "00000000"
+      },
+      {
+        "signature": "INAM",
+        "data": "b7930100"
+      },
+      {
+        "signature": "WNAM",
+        "data": "05430100"
+      },
+      {
+        "signature": "TNAM",
+        "data": "435d1000"
+      },
+      {
+        "signature": "NAM9",
+        "data": "2ade0300"
+      },
+      {
+        "signature": "NAM8",
+        "data": "2bde0300"
+      },
+      {
+        "signature": "DATA",
+        "data": "41000000000060410a00"
+      },
+      {
+        "signature": "DNAM",
+        "data": "04000000cdcc4c3f0000803f40000000000000000000000000ff0100000000000000000000000000000100000000803f0000803f0000003f0000803fc3f5a83e000000000000000000000000060000000000000000000000ffffffff000000000000803f"
+      },
+      {
+        "signature": "CRDT",
+        "data": "05005b0b0000803f01000000010000000000000000000000"
+      },
+      {
+        "signature": "VNAM",
+        "data": "01000000"
+      }
+    ]
+  },
+  "0001398A": {
+    "signature": "WEAP",
+    "editor_id": "SteelWarhammer",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "537465656c57617268616d6d657200"
+      },
+      {
+        "signature": "OBND",
+        "data": "f4ffdffffcff120034000400"
+      },
+      {
+        "signature": "FULL",
+        "data": "45050000"
+      },
+      {
+        "signature": "MODL",
+        "data": "576561706f6e735c537465656c5c537465656c57617268616d6d65722e6e696600"
+      },
+      {
+        "signature": "MODT",
+        "data": "0200000008000000000000004fabdc0564647300a0b86305d09b0bbb64647300a0b86305b221cca164647300a0b86305da8e929164647300262c333bbea1a92a6464730014f240e62537be4c6464730014f240e6b8ec307b64647300262c333b9f66b7d56464730014f240e6"
+      },
+      {
+        "signature": "ETYP",
+        "data": "453f0100"
+      },
+      {
+        "signature": "BIDS",
+        "data": "c7930100"
+      },
+      {
+        "signature": "BAMT",
+        "data": "a9640e00"
+      },
+      {
+        "signature": "KSIZ",
+        "data": "03000000"
+      },
+      {
+        "signature": "KWDA",
+        "data": "19e7010030d9060058f90800"
+      },
+      {
+        "signature": "DESC",
+        "data": "00000000"
+      },
+      {
+        "signature": "INAM",
+        "data": "b04c0e00"
+      },
+      {
+        "signature": "WNAM",
+        "data": "f3c40100"
+      },
+      {
+        "signature": "TNAM",
+        "data": "ac4c0e00"
+      },
+      {
+        "signature": "NAM9",
+        "data": "104f0e00"
+      },
+      {
+        "signature": "NAM8",
+        "data": "114f0e00"
+      },
+      {
+        "signature": "DATA",
+        "data": "6e0000000000c8411400"
+      },
+      {
+        "signature": "DNAM",
+        "data": "060000009a99193f6666a63f00000000000000000000000000ff0100000000000000000000000000000000000000803f0000c03f0000003f0000803fc3f5a83e000000000000000000000000070000000000000000000000ffffffff000000000000a03f"
+      },
+      {
+        "signature": "CRDT",
+        "data": "0a005b0b0000803f01000000010000000000000000000000"
+      },
+      {
+        "signature": "VNAM",
+        "data": "00000000"
+      }
+    ]
+  },
+  "00017192": {
+    "signature": "MGEF",
+    "editor_id": "VoiceDragonrendBlankHostile",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "566f696365447261676f6e72656e64426c616e6b486f7374696c6500"
+      },
+      {
+        "signature": "MDOB",
+        "data": "a5350400"
+      },
+      {
+        "signature": "DATA",
+        "data": "018000000000000000000000ffffffffffffffff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000ffffffff00000000000000000100000002000000ffffffff00000000000000000000000000000000000000000000803f000000000000000000000000000000000000000000000000010000000000000000000000"
+      },
+      {
+        "signature": "SNDD",
+        "data": ""
+      },
+      {
+        "signature": "DNAM",
+        "data": "00000000"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803f30020000595d0300000000000000000000000000ffffffff"
+      }
+    ]
+  },
+  "0003EB15": {
+    "signature": "MGEF",
+    "editor_id": "AlchRestoreHealth",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "416c6368526573746f72654865616c746800"
+      },
+      {
+        "signature": "FULL",
+        "data": "6fee0000"
+      },
+      {
+        "signature": "MDOB",
+        "data": "a5350400"
+      },
+      {
+        "signature": "KSIZ",
+        "data": "02000000"
+      },
+      {
+        "signature": "KWDA",
+        "data": "032504004e8a0f00"
+      },
+      {
+        "signature": "DATA",
+        "data": "000a20000000003f00000000ffffffffffffffff000000000000000000000000d92f010000000000000000000000000000000000000000000000000000000000000000001800000000000000000000000100000000000000ffffffff00000000b4f103000000000000000000000000000000803f000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "signature": "SNDD",
+        "data": "0000000057e9030001000000226605000200000063f303000300000061f303000500000071d60c00"
+      },
+      {
+        "signature": "DNAM",
+        "data": "c9220100"
+      }
+    ]
+  },
+  "0003EB16": {
+    "signature": "MGEF",
+    "editor_id": "AlchRestoreStamina",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "416c6368526573746f72655374616d696e6100"
+      },
+      {
+        "signature": "FULL",
+        "data": "bc830000"
+      },
+      {
+        "signature": "MDOB",
+        "data": "a5350400"
+      },
+      {
+        "signature": "KSIZ",
+        "data": "02000000"
+      },
+      {
+        "signature": "KWDA",
+        "data": "042504004e8a0f00"
+      },
+      {
+        "signature": "DATA",
+        "data": "000a20009a99193f00000000ffffffffffffffff00000000000000000000000007bf0a0000000000000000000000000000000000000000000000000000000000000000001a00000000000000000000000100000000000000ffffffff0000000023e204000000000000000000000000000000803f000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "signature": "SNDD",
+        "data": ""
+      },
+      {
+        "signature": "DNAM",
+        "data": "85230100"
+      }
+    ]
+  },
+  "0003EB17": {
+    "signature": "MGEF",
+    "editor_id": "AlchRestoreMagicka",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "416c6368526573746f72654d616769636b6100"
+      },
+      {
+        "signature": "FULL",
+        "data": "79fc0000"
+      },
+      {
+        "signature": "MDOB",
+        "data": "a5350400"
+      },
+      {
+        "signature": "KSIZ",
+        "data": "02000000"
+      },
+      {
+        "signature": "KWDA",
+        "data": "082504004e8a0f00"
+      },
+      {
+        "signature": "DATA",
+        "data": "000a20009a99193f00000000ffffffffffffffff00000000000000000000000020e2040000000000000000000000000000000000000000000000000000000000000000001900000000000000000000000100000000000000ffffffff0000000021e204000000000000000000000000000000803f000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "signature": "SNDD",
+        "data": "0000000057e9030001000000226605000200000063f303000300000061f30300"
+      },
+      {
+        "signature": "DNAM",
+        "data": "93210100"
+      }
+    ]
+  },
+  "00044255": {
+    "signature": "MGEF",
+    "editor_id": "VoiceDragonrendEffect",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "566f696365447261676f6e72656e6445666665637400"
+      },
+      {
+        "signature": "FULL",
+        "data": "1f4b0000"
+      },
+      {
+        "signature": "DATA",
+        "data": "001002000000000000000000ffffffffffffffff00000000000000000000803f01fd01000000000000000000000000000000000000000000000000000000000021000000ffffffff3d000300000000000100000002000000ffffffff000000000a5c05007b5c010000000000000000000000803f0000000000000000000000000000000004fd01000000000003000000003c1c4600000000"
+      },
+      {
+        "signature": "SNDD",
+        "data": "0300000037ea0700"
+      },
+      {
+        "signature": "DNAM",
+        "data": "00000000"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803f30020000595d0300000000000000000000000000ffffffff"
+      }
+    ]
+  },
+  "00051B1C": {
+    "signature": "PERK",
+    "editor_id": "Unhindered",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "556e68696e646572656400"
+      },
+      {
+        "signature": "FULL",
+        "data": "07150000"
+      },
+      {
+        "signature": "DESC",
+        "data": "05150000"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803fc00100001b1b0500000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "6000000000004842150100000c000000000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "DATA",
+        "data": "0000010100"
+      },
+      {
+        "signature": "PRKE",
+        "data": "020000"
+      },
+      {
+        "signature": "DATA",
+        "data": "200102"
+      },
+      {
+        "signature": "PRKC",
+        "data": "01"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803f30020000edc00600000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803f30020000d3bb0600000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "EPFT",
+        "data": "01"
+      },
+      {
+        "signature": "EPFD",
+        "data": "00000000"
+      },
+      {
+        "signature": "PRKF",
+        "data": ""
+      },
+      {
+        "signature": "PRKE",
+        "data": "020000"
+      },
+      {
+        "signature": "DATA",
+        "data": "200102"
+      },
+      {
+        "signature": "PRKC",
+        "data": "01"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803f30020000ecc00600000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803f30020000d3bb0600000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "EPFT",
+        "data": "01"
+      },
+      {
+        "signature": "EPFD",
+        "data": "00000000"
+      },
+      {
+        "signature": "PRKF",
+        "data": ""
+      },
+      {
+        "signature": "PRKE",
+        "data": "020000"
+      },
+      {
+        "signature": "DATA",
+        "data": "200102"
+      },
+      {
+        "signature": "PRKC",
+        "data": "01"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803f30020000eec00600000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803f30020000d3bb0600000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "EPFT",
+        "data": "01"
+      },
+      {
+        "signature": "EPFD",
+        "data": "00000000"
+      },
+      {
+        "signature": "PRKF",
+        "data": ""
+      },
+      {
+        "signature": "PRKE",
+        "data": "020000"
+      },
+      {
+        "signature": "DATA",
+        "data": "200102"
+      },
+      {
+        "signature": "PRKC",
+        "data": "01"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803f30020000efc00600000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803f30020000d3bb0600000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "EPFT",
+        "data": "01"
+      },
+      {
+        "signature": "EPFD",
+        "data": "00000000"
+      },
+      {
+        "signature": "PRKF",
+        "data": ""
+      }
+    ]
+  },
+  "00052D51": {
+    "signature": "PERK",
+    "editor_id": "ChampionsStance",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "4368616d70696f6e735374616e636500"
+      },
+      {
+        "signature": "FULL",
+        "data": "a5550000"
+      },
+      {
+        "signature": "DESC",
+        "data": "ca160000"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803fc0010000e8ab0b00000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "600000000000a0411501000007000000000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "DATA",
+        "data": "0000010100"
+      },
+      {
+        "signature": "PRKE",
+        "data": "020000"
+      },
+      {
+        "signature": "DATA",
+        "data": "1b0302"
+      },
+      {
+        "signature": "PRKC",
+        "data": "01"
+      },
+      {
+        "signature": "CTDA",
+        "data": "010000000000803f3002000032d90600000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "010000000000803f3002000031d90600000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "010000000000803f3002000030d90600000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "EPFT",
+        "data": "01"
+      },
+      {
+        "signature": "EPFD",
+        "data": "0000403f"
+      },
+      {
+        "signature": "PRKF",
+        "data": ""
+      }
+    ]
+  },
+  "00058F6C": {
+    "signature": "PERK",
+    "editor_id": "TowerOfStrength",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "546f7765724f66537472656e67746800"
+      },
+      {
+        "signature": "FULL",
+        "data": "56160000"
+      },
+      {
+        "signature": "DESC",
+        "data": "0ee70000"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803fc00100006f8f0500000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "6000000000004842150100000b000000000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "DATA",
+        "data": "0000010100"
+      },
+      {
+        "signature": "PRKE",
+        "data": "020000"
+      },
+      {
+        "signature": "DATA",
+        "data": "210302"
+      },
+      {
+        "signature": "PRKC",
+        "data": "00"
+      },
+      {
+        "signature": "CTDA",
+        "data": "0000000000000000aa020000d3bb0600000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803faa020000d2bb0600000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "EPFT",
+        "data": "01"
+      },
+      {
+        "signature": "EPFD",
+        "data": "0000003f"
+      },
+      {
+        "signature": "PRKF",
+        "data": ""
+      }
+    ]
+  },
+  "00058F6D": {
+    "signature": "PERK",
+    "editor_id": "Conditioning",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "436f6e646974696f6e696e6700"
+      },
+      {
+        "signature": "FULL",
+        "data": "5c160000"
+      },
+      {
+        "signature": "DESC",
+        "data": "5b160000"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803fc00100002bcd0b00000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "6000000000008c42150100000b000000000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "DATA",
+        "data": "0000010100"
+      },
+      {
+        "signature": "PRKE",
+        "data": "020000"
+      },
+      {
+        "signature": "DATA",
+        "data": "200102"
+      },
+      {
+        "signature": "PRKC",
+        "data": "01"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803f30020000edc00600000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803f30020000d2bb0600000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "EPFT",
+        "data": "01"
+      },
+      {
+        "signature": "EPFD",
+        "data": "00000000"
+      },
+      {
+        "signature": "PRKF",
+        "data": ""
+      },
+      {
+        "signature": "PRKE",
+        "data": "020000"
+      },
+      {
+        "signature": "DATA",
+        "data": "200102"
+      },
+      {
+        "signature": "PRKC",
+        "data": "01"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803f30020000eec00600000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803f30020000d2bb0600000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "EPFT",
+        "data": "01"
+      },
+      {
+        "signature": "EPFD",
+        "data": "00000000"
+      },
+      {
+        "signature": "PRKF",
+        "data": ""
+      },
+      {
+        "signature": "PRKE",
+        "data": "020000"
+      },
+      {
+        "signature": "DATA",
+        "data": "200102"
+      },
+      {
+        "signature": "PRKC",
+        "data": "01"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803f30020000efc00600000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803f30020000d2bb0600000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "EPFT",
+        "data": "01"
+      },
+      {
+        "signature": "EPFD",
+        "data": "00000000"
+      },
+      {
+        "signature": "PRKF",
+        "data": ""
+      },
+      {
+        "signature": "PRKE",
+        "data": "020000"
+      },
+      {
+        "signature": "DATA",
+        "data": "200102"
+      },
+      {
+        "signature": "PRKC",
+        "data": "01"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803f30020000ecc00600000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803f30020000d2bb0600000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "EPFT",
+        "data": "01"
+      },
+      {
+        "signature": "EPFD",
+        "data": "00000000"
+      },
+      {
+        "signature": "PRKF",
+        "data": ""
+      }
+    ]
+  },
+  "0005F592": {
+    "signature": "PERK",
+    "editor_id": "BoneBreaker30",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "426f6e65427265616b6572333000"
+      },
+      {
+        "signature": "FULL",
+        "data": "e7160000"
+      },
+      {
+        "signature": "DESC",
+        "data": "b7920000"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803fc0010000e4ab0b00000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "600000000000f0411501000006000000000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "DATA",
+        "data": "0000010100"
+      },
+      {
+        "signature": "NNAM",
+        "data": "921e0c00"
+      },
+      {
+        "signature": "PRKE",
+        "data": "020000"
+      },
+      {
+        "signature": "DATA",
+        "data": "250303"
+      },
+      {
+        "signature": "PRKC",
+        "data": "00"
+      },
+      {
+        "signature": "CTDA",
+        "data": "0000000000000000c0010000921e0c00000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "PRKC",
+        "data": "01"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803f3002000014e70100000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "EPFT",
+        "data": "01"
+      },
+      {
+        "signature": "EPFD",
+        "data": "0000403f"
+      },
+      {
+        "signature": "PRKF",
+        "data": ""
+      }
+    ]
+  },
+  "0007A0F6": {
+    "signature": "MGEF",
+    "editor_id": "EnchFortifyDestructionConstantSelf",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "456e6368466f72746966794465737472756374696f6e436f6e7374616e7453656c6600"
+      },
+      {
+        "signature": "FULL",
+        "data": "78130000"
+      },
+      {
+        "signature": "MDOB",
+        "data": "a5350400"
+      },
+      {
+        "signature": "KSIZ",
+        "data": "01000000"
+      },
+      {
+        "signature": "KWDA",
+        "data": "5f4f0700"
+      },
+      {
+        "signature": "DATA",
+        "data": "020a20000000d0410000000016000000ffffffff00000000000000000000000000000000e72d0900000000000000000000000000000000000000000000000000220000006e00000000000000000000000000000000000000ffffffff00000000000000000000000000000000000000000000803f000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "signature": "SNDD",
+        "data": ""
+      },
+      {
+        "signature": "DNAM",
+        "data": "c9210100"
+      }
+    ]
+  },
+  "0009F25C": {
+    "signature": "WEAP",
+    "editor_id": "SkyforgeSteelSword",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "536b79666f726765537465656c53776f726400"
+      },
+      {
+        "signature": "OBND",
+        "data": "d0fff5ffffff080046000100"
+      },
+      {
+        "signature": "FULL",
+        "data": "22360000"
+      },
+      {
+        "signature": "MODL",
+        "data": "576561706f6e735c537465656c5c537465656c53776f72642e6e696600"
+      },
+      {
+        "signature": "MODT",
+        "data": "020000000b000000000000004fe0756464647300a0b8630533168c0764647300a0b8630503d8c24064647300a0b86305da8e929164647300262c333b0872ddb66464730014f240e60121fbe16464730014f240e6b8ec307b64647300262c333bbb70f2786464730014f240e6ec9e45d26464730014f240e622dd55726464730014f240e6988c5ceb6464730014f240e6"
+      },
+      {
+        "signature": "ETYP",
+        "data": "423f0100"
+      },
+      {
+        "signature": "BIDS",
+        "data": "ff830100"
+      },
+      {
+        "signature": "BAMT",
+        "data": "c2740700"
+      },
+      {
+        "signature": "KSIZ",
+        "data": "03000000"
+      },
+      {
+        "signature": "KWDA",
+        "data": "19e7010011e7010058f90800"
+      },
+      {
+        "signature": "DESC",
+        "data": "00000000"
+      },
+      {
+        "signature": "INAM",
+        "data": "ac3c0100"
+      },
+      {
+        "signature": "WNAM",
+        "data": "ef400100"
+      },
+      {
+        "signature": "TNAM",
+        "data": "30c70300"
+      },
+      {
+        "signature": "NAM9",
+        "data": "2ec70300"
+      },
+      {
+        "signature": "NAM8",
+        "data": "2fc70300"
+      },
+      {
+        "signature": "DATA",
+        "data": "46000000000020410b00"
+      },
+      {
+        "signature": "DNAM",
+        "data": "010000000000803f0000803f40000000000000000000000000ff0100000000000000000000000000000100000000803fcdcc4c3f0000003f0000803fc3f5a83e000000000000000000000000060000000000000000000000ffffffff000000000000403f"
+      },
+      {
+        "signature": "CRDT",
+        "data": "05005b0b0000803f01000000010000000000000000000000"
+      },
+      {
+        "signature": "VNAM",
+        "data": "01000000"
+      }
+    ]
+  },
+  "0009F25D": {
+    "signature": "WEAP",
+    "editor_id": "SkyforgeSteelDagger",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "536b79666f726765537465656c44616767657200"
+      },
+      {
+        "signature": "OBND",
+        "data": "fdfff1ffffff030020000000"
+      },
+      {
+        "signature": "FULL",
+        "data": "22e20000"
+      },
+      {
+        "signature": "MODL",
+        "data": "576561706f6e735c537465656c5c537465656c4461676765722e6e696600"
+      },
+      {
+        "signature": "MODT",
+        "data": "020000000b000000000000004fe0756464647300a0b8630533168c0764647300a0b8630503d8c24064647300a0b86305da8e929164647300262c333b0872ddb66464730014f240e60121fbe16464730014f240e6b8ec307b64647300262c333bbb70f2786464730014f240e6e9d354206464730014f240e65be64f076464730014f240e6e1b7469e6464730014f240e6"
+      },
+      {
+        "signature": "ETYP",
+        "data": "423f0100"
+      },
+      {
+        "signature": "BIDS",
+        "data": "ff830100"
+      },
+      {
+        "signature": "BAMT",
+        "data": "01840100"
+      },
+      {
+        "signature": "KSIZ",
+        "data": "03000000"
+      },
+      {
+        "signature": "KWDA",
+        "data": "19e7010013e7010058f90800"
+      },
+      {
+        "signature": "DESC",
+        "data": "00000000"
+      },
+      {
+        "signature": "INAM",
+        "data": "ac3c0100"
+      },
+      {
+        "signature": "WNAM",
+        "data": "b73e0100"
+      },
+      {
+        "signature": "TNAM",
+        "data": "30c70300"
+      },
+      {
+        "signature": "NAM9",
+        "data": "d9ce0300"
+      },
+      {
+        "signature": "NAM8",
+        "data": "dbce0300"
+      },
+      {
+        "signature": "DATA",
+        "data": "19000000000020400800"
+      },
+      {
+        "signature": "DNAM",
+        "data": "020000006666a63f3333333f00000000000000000000000000ff0100000000000000000000000000000000000000803f0000003f0000003f0000803fc3f5a83e000000000000000000000000060000000000000000000000ffffffff0000000000000000"
+      },
+      {
+        "signature": "CRDT",
+        "data": "00005b0b0000803f01000000010000000000000000000000"
+      },
+      {
+        "signature": "VNAM",
+        "data": "02000000"
+      }
+    ]
+  },
+  "0009F25E": {
+    "signature": "WEAP",
+    "editor_id": "SkyforgeSteelGreatsword",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "536b79666f726765537465656c477265617473776f726400"
+      },
+      {
+        "signature": "OBND",
+        "data": "f5ffebffffff0b005d000100"
+      },
+      {
+        "signature": "FULL",
+        "data": "d20a0000"
+      },
+      {
+        "signature": "MODL",
+        "data": "576561706f6e735c537465656c5c537465656c477265617453776f72642e6e696600"
+      },
+      {
+        "signature": "MODT",
+        "data": "02000000080000000000000033168c0764647300a0b8630503d8c24064647300a0b86305da8e929164647300262c333b4fe0756464647300a0b86305d7df66036464730014f240e63f923c4f6464730014f240e6b8ec307b64647300262c333b85c335d66464730014f240e6"
+      },
+      {
+        "signature": "ETYP",
+        "data": "453f0100"
+      },
+      {
+        "signature": "BIDS",
+        "data": "ff830100"
+      },
+      {
+        "signature": "BAMT",
+        "data": "86770900"
+      },
+      {
+        "signature": "KSIZ",
+        "data": "03000000"
+      },
+      {
+        "signature": "KWDA",
+        "data": "19e7010031d9060058f90800"
+      },
+      {
+        "signature": "DESC",
+        "data": "00000000"
+      },
+      {
+        "signature": "INAM",
+        "data": "d5490900"
+      },
+      {
+        "signature": "WNAM",
+        "data": "6f6d0100"
+      },
+      {
+        "signature": "TNAM",
+        "data": "ac4c0e00"
+      },
+      {
+        "signature": "NAM9",
+        "data": "a9c80300"
+      },
+      {
+        "signature": "NAM8",
+        "data": "aac80300"
+      },
+      {
+        "signature": "DATA",
+        "data": "8c000000000088411400"
+      },
+      {
+        "signature": "DNAM",
+        "data": "050000003333333f6666a63f40000000000000000000000000ff0100000000000000000000000000000100000000803f6666a63f0000003f0000803fc3f5a83e000000000000000000000000070000000000000000000000ffffffff00000000cdcc8c3f"
+      },
+      {
+        "signature": "CRDT",
+        "data": "09005b0b0000803f01000000010000000000000000000000"
+      },
+      {
+        "signature": "VNAM",
+        "data": "00000000"
+      }
+    ]
+  },
+  "0009F25F": {
+    "signature": "WEAP",
+    "editor_id": "SkyforgeSteelBattleaxe",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "536b79666f726765537465656c426174746c6561786500"
+      },
+      {
+        "signature": "OBND",
+        "data": "eeffb3ffffff110015000700"
+      },
+      {
+        "signature": "FULL",
+        "data": "14140000"
+      },
+      {
+        "signature": "MODL",
+        "data": "576561706f6e735c537465656c5c537465656c426174746c654178652e6e696600"
+      },
+      {
+        "signature": "MODT",
+        "data": "0200000008000000000000004fe0756464647300a0b8630533168c0764647300a0b8630503d8c24064647300a0b86305da8e929164647300262c333bbbadbb936464730014f240e659367f386464730014f240e6b8ec307b64647300262c333be36776a16464730014f240e6"
+      },
+      {
+        "signature": "ETYP",
+        "data": "453f0100"
+      },
+      {
+        "signature": "BIDS",
+        "data": "c7930100"
+      },
+      {
+        "signature": "BAMT",
+        "data": "a9640e00"
+      },
+      {
+        "signature": "KSIZ",
+        "data": "03000000"
+      },
+      {
+        "signature": "KWDA",
+        "data": "19e7010032d9060058f90800"
+      },
+      {
+        "signature": "DESC",
+        "data": "00000000"
+      },
+      {
+        "signature": "INAM",
+        "data": "5b6a0300"
+      },
+      {
+        "signature": "WNAM",
+        "data": "270e0200"
+      },
+      {
+        "signature": "TNAM",
+        "data": "ac4c0e00"
+      },
+      {
+        "signature": "NAM9",
+        "data": "6a030600"
+      },
+      {
+        "signature": "NAM8",
+        "data": "d3050600"
+      },
+      {
+        "signature": "DATA",
+        "data": "960000000000a8411500"
+      },
+      {
+        "signature": "DNAM",
+        "data": "060000003333333f6666a63f00000000000000000000000000ff0100000000000000000000000000000000000000803f3333b33f0000003f0000803fc3f5a83e000000000000000000000000070000000000000000000000ffffffff000000003333933f"
+      },
+      {
+        "signature": "CRDT",
+        "data": "09005b0b0000803f01000000010000000000000000000000"
+      },
+      {
+        "signature": "VNAM",
+        "data": "00000000"
+      }
+    ]
+  },
+  "0009F260": {
+    "signature": "WEAP",
+    "editor_id": "SkyforgeSteelWarAxe",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "536b79666f726765537465656c57617241786500"
+      },
+      {
+        "signature": "OBND",
+        "data": "f3ffeffffdff120029000200"
+      },
+      {
+        "signature": "FULL",
+        "data": "8ccd0000"
+      },
+      {
+        "signature": "MODL",
+        "data": "576561706f6e735c537465656c5c537465656c5761724178652e6e696600"
+      },
+      {
+        "signature": "MODT",
+        "data": "020000000a0000000000000033168c0764647300a0b8630503d8c24064647300a0b86305da8e929164647300262c333b4fe0756464647300a0b863050872ddb66464730014f240e60121fbe16464730014f240e61891e3ba6464730014f240e6ac8c3a926464730014f240e6b8ec307b64647300262c333b16dd330b6464730014f240e6"
+      },
+      {
+        "signature": "ETYP",
+        "data": "423f0100"
+      },
+      {
+        "signature": "BIDS",
+        "data": "c9930100"
+      },
+      {
+        "signature": "BAMT",
+        "data": "c0740700"
+      },
+      {
+        "signature": "KSIZ",
+        "data": "03000000"
+      },
+      {
+        "signature": "KWDA",
+        "data": "19e7010012e7010058f90800"
+      },
+      {
+        "signature": "DESC",
+        "data": "00000000"
+      },
+      {
+        "signature": "INAM",
+        "data": "b8930100"
+      },
+      {
+        "signature": "WNAM",
+        "data": "65ac0100"
+      },
+      {
+        "signature": "TNAM",
+        "data": "09f20300"
+      },
+      {
+        "signature": "NAM9",
+        "data": "b7dd0300"
+      },
+      {
+        "signature": "NAM8",
+        "data": "b8dd0300"
+      },
+      {
+        "signature": "DATA",
+        "data": "50000000000040410c00"
+      },
+      {
+        "signature": "DNAM",
+        "data": "030000006666663f0000803f00000000000000000000000000ff0100000000000000000000000000000000000000803f6666663f0000003f0000803fc3f5a83e000000000000000000000000060000000000000000000000ffffffff000000009a99593f"
+      },
+      {
+        "signature": "CRDT",
+        "data": "07005b0b0000803f01000000010000000000000000000000"
+      },
+      {
+        "signature": "VNAM",
+        "data": "01000000"
+      }
+    ]
+  },
+  "000E8279": {
+    "signature": "PERK",
+    "editor_id": "MQGreybeardsFus",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "4d514772657962656172647346757300"
+      },
+      {
+        "signature": "FULL",
+        "data": "da1a0000"
+      },
+      {
+        "signature": "DESC",
+        "data": "d91a0000"
+      },
+      {
+        "signature": "DATA",
+        "data": "0000010100"
+      },
+      {
+        "signature": "PRKE",
+        "data": "020000"
+      },
+      {
+        "signature": "DATA",
+        "data": "220302"
+      },
+      {
+        "signature": "EPFT",
+        "data": "01"
+      },
+      {
+        "signature": "EPFD",
+        "data": "0000a03f"
+      },
+      {
+        "signature": "PRKF",
+        "data": ""
+      },
+      {
+        "signature": "PRKE",
+        "data": "020000"
+      },
+      {
+        "signature": "DATA",
+        "data": "210302"
+      },
+      {
+        "signature": "EPFT",
+        "data": "01"
+      },
+      {
+        "signature": "EPFD",
+        "data": "0000403f"
+      },
+      {
+        "signature": "PRKF",
+        "data": ""
+      }
+    ]
+  },
+  "000EB856": {
+    "signature": "COBJ",
+    "editor_id": "TemperArmorSteelPlateBoots",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "54656d70657241726d6f72537465656c506c617465426f6f747300"
+      },
+      {
+        "signature": "COCT",
+        "data": "01000000"
+      },
+      {
+        "signature": "CNTO",
+        "data": "93ad050001000000"
+      },
+      {
+        "signature": "CTDA",
+        "data": "210000000000803f9302540000000000000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803fc00154008e210500000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CNAM",
+        "data": "5b390100"
+      },
+      {
+        "signature": "BNAM",
+        "data": "78db0a00"
+      },
+      {
+        "signature": "NAM1",
+        "data": "0100"
+      }
+    ]
+  },
+  "000EB857": {
+    "signature": "COBJ",
+    "editor_id": "TemperArmorSteelPlateCuirass",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "54656d70657241726d6f72537465656c506c6174654375697261737300"
+      },
+      {
+        "signature": "COCT",
+        "data": "01000000"
+      },
+      {
+        "signature": "CNTO",
+        "data": "93ad050001000000"
+      },
+      {
+        "signature": "CTDA",
+        "data": "210000000000803f9302540000000000000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803fc00154008e210500000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CNAM",
+        "data": "5c390100"
+      },
+      {
+        "signature": "BNAM",
+        "data": "78db0a00"
+      },
+      {
+        "signature": "NAM1",
+        "data": "0100"
+      }
+    ]
+  },
+  "000EB858": {
+    "signature": "COBJ",
+    "editor_id": "TemperArmorSteelPlateGauntlets",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "54656d70657241726d6f72537465656c506c6174654761756e746c65747300"
+      },
+      {
+        "signature": "COCT",
+        "data": "01000000"
+      },
+      {
+        "signature": "CNTO",
+        "data": "93ad050001000000"
+      },
+      {
+        "signature": "CTDA",
+        "data": "210000000000803f9302540000000000000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803fc00154008e210500000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CNAM",
+        "data": "5d390100"
+      },
+      {
+        "signature": "BNAM",
+        "data": "78db0a00"
+      },
+      {
+        "signature": "NAM1",
+        "data": "0100"
+      }
+    ]
+  },
+  "000EB859": {
+    "signature": "COBJ",
+    "editor_id": "TemperArmorSteelPlateHelmet",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "54656d70657241726d6f72537465656c506c61746548656c6d657400"
+      },
+      {
+        "signature": "COCT",
+        "data": "01000000"
+      },
+      {
+        "signature": "CNTO",
+        "data": "93ad050001000000"
+      },
+      {
+        "signature": "CTDA",
+        "data": "210000000000803f9302540000000000000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803fc00154008e210500000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CNAM",
+        "data": "5e390100"
+      },
+      {
+        "signature": "BNAM",
+        "data": "78db0a00"
+      },
+      {
+        "signature": "NAM1",
+        "data": "0100"
+      }
+    ]
+  },
+  "000EB85B": {
+    "signature": "COBJ",
+    "editor_id": "TemperArmorSteelShield",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "54656d70657241726d6f72537465656c536869656c6400"
+      },
+      {
+        "signature": "COCT",
+        "data": "01000000"
+      },
+      {
+        "signature": "CNTO",
+        "data": "e5ac050001000000"
+      },
+      {
+        "signature": "CTDA",
+        "data": "210000000000803f9302540000000000000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803fc00154008e210500000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CNAM",
+        "data": "55390100"
+      },
+      {
+        "signature": "BNAM",
+        "data": "78db0a00"
+      },
+      {
+        "signature": "NAM1",
+        "data": "0100"
+      }
+    ]
+  },
+  "000F46AA": {
+    "signature": "COBJ",
+    "editor_id": "TemperWeaponSteelBattleAxe",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "54656d706572576561706f6e537465656c426174746c6541786500"
+      },
+      {
+        "signature": "COCT",
+        "data": "01000000"
+      },
+      {
+        "signature": "CNTO",
+        "data": "e5ac050001000000"
+      },
+      {
+        "signature": "CTDA",
+        "data": "210000000000803f9302540000000000000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803fc00154008e210500000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CNAM",
+        "data": "84390100"
+      },
+      {
+        "signature": "BNAM",
+        "data": "08810800"
+      },
+      {
+        "signature": "NAM1",
+        "data": "0100"
+      }
+    ]
+  },
+  "000F46AB": {
+    "signature": "COBJ",
+    "editor_id": "TemperWeaponSteelDagger",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "54656d706572576561706f6e537465656c44616767657200"
+      },
+      {
+        "signature": "COCT",
+        "data": "01000000"
+      },
+      {
+        "signature": "CNTO",
+        "data": "e5ac050001000000"
+      },
+      {
+        "signature": "CTDA",
+        "data": "210000000000803f9302540000000000000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803fc00154008e210500000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CNAM",
+        "data": "86390100"
+      },
+      {
+        "signature": "BNAM",
+        "data": "08810800"
+      },
+      {
+        "signature": "NAM1",
+        "data": "0100"
+      }
+    ]
+  },
+  "000F46AC": {
+    "signature": "COBJ",
+    "editor_id": "TemperWeaponSteelGreatsword",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "54656d706572576561706f6e537465656c477265617473776f726400"
+      },
+      {
+        "signature": "COCT",
+        "data": "01000000"
+      },
+      {
+        "signature": "CNTO",
+        "data": "e5ac050001000000"
+      },
+      {
+        "signature": "CTDA",
+        "data": "210000000000803f9302540000000000000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803fc00154008e210500000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CNAM",
+        "data": "87390100"
+      },
+      {
+        "signature": "BNAM",
+        "data": "08810800"
+      },
+      {
+        "signature": "NAM1",
+        "data": "0100"
+      }
+    ]
+  },
+  "000F46AD": {
+    "signature": "COBJ",
+    "editor_id": "TemperWeaponSteelMace",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "54656d706572576561706f6e537465656c4d61636500"
+      },
+      {
+        "signature": "COCT",
+        "data": "01000000"
+      },
+      {
+        "signature": "CNTO",
+        "data": "e5ac050001000000"
+      },
+      {
+        "signature": "CTDA",
+        "data": "210000000000803f9302540000000000000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803fc00154008e210500000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CNAM",
+        "data": "88390100"
+      },
+      {
+        "signature": "BNAM",
+        "data": "08810800"
+      },
+      {
+        "signature": "NAM1",
+        "data": "0100"
+      }
+    ]
+  },
+  "000F46AE": {
+    "signature": "COBJ",
+    "editor_id": "TemperWeaponSteelSword",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "54656d706572576561706f6e537465656c53776f726400"
+      },
+      {
+        "signature": "COCT",
+        "data": "01000000"
+      },
+      {
+        "signature": "CNTO",
+        "data": "e5ac050001000000"
+      },
+      {
+        "signature": "CTDA",
+        "data": "210000000000803f9302540000000000000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803fc00154008e210500000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CNAM",
+        "data": "89390100"
+      },
+      {
+        "signature": "BNAM",
+        "data": "08810800"
+      },
+      {
+        "signature": "NAM1",
+        "data": "0100"
+      }
+    ]
+  },
+  "000F46AF": {
+    "signature": "COBJ",
+    "editor_id": "TemperWeaponSteelWarAxe",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "54656d706572576561706f6e537465656c57617241786500"
+      },
+      {
+        "signature": "COCT",
+        "data": "01000000"
+      },
+      {
+        "signature": "CNTO",
+        "data": "e5ac050001000000"
+      },
+      {
+        "signature": "CTDA",
+        "data": "210000000000803f9302540000000000000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803fc00154008e210500000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CNAM",
+        "data": "83390100"
+      },
+      {
+        "signature": "BNAM",
+        "data": "08810800"
+      },
+      {
+        "signature": "NAM1",
+        "data": "0100"
+      }
+    ]
+  },
+  "000F46B0": {
+    "signature": "COBJ",
+    "editor_id": "TemperWeaponSteelWarhammer",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "54656d706572576561706f6e537465656c57617268616d6d657200"
+      },
+      {
+        "signature": "COCT",
+        "data": "01000000"
+      },
+      {
+        "signature": "CNTO",
+        "data": "e5ac050001000000"
+      },
+      {
+        "signature": "CTDA",
+        "data": "210000000000803f9302540000000000000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803fc00154008e210500000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CNAM",
+        "data": "8a390100"
+      },
+      {
+        "signature": "BNAM",
+        "data": "08810800"
+      },
+      {
+        "signature": "NAM1",
+        "data": "0100"
+      }
+    ]
+  },
+  "001058A2": {
+    "signature": "MGEF",
+    "editor_id": "FoodRestoreHealthDuration",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "466f6f64526573746f72654865616c74684475726174696f6e00"
+      },
+      {
+        "signature": "FULL",
+        "data": "a5140100"
+      },
+      {
+        "signature": "MDOB",
+        "data": "a5350400"
+      },
+      {
+        "signature": "KSIZ",
+        "data": "01000000"
+      },
+      {
+        "signature": "KWDA",
+        "data": "305a0600"
+      },
+      {
+        "signature": "DATA",
+        "data": "000820000000803f305a0600ffffffffffffffff000000000000000000000000d92f010000000000000000000000000000000000000000000000000000000000220000009b00000000000000000000000100000000000000ffffffff00000000b4f103000000000000000000000000000000803f000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "signature": "SNDD",
+        "data": ""
+      },
+      {
+        "signature": "DNAM",
+        "data": "b1220100"
+      }
+    ]
+  },
+  "001058A3": {
+    "signature": "MGEF",
+    "editor_id": "FoodRestoreStaminaDuration",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "466f6f64526573746f72655374616d696e614475726174696f6e00"
+      },
+      {
+        "signature": "FULL",
+        "data": "54150100"
+      },
+      {
+        "signature": "MDOB",
+        "data": "a5350400"
+      },
+      {
+        "signature": "KSIZ",
+        "data": "01000000"
+      },
+      {
+        "signature": "KWDA",
+        "data": "04250400"
+      },
+      {
+        "signature": "DATA",
+        "data": "000820000000403f00000000ffffffffffffffff00000000000000000000000007bf0a0000000000000000000000000000000000000000000000000000000000000000001a00000000000000000000000100000000000000ffffffff0000000028cf0b000000000000000000000000000000803f000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "signature": "SNDD",
+        "data": ""
+      },
+      {
+        "signature": "DNAM",
+        "data": "35230100"
+      }
+    ]
+  },
+  "001058A7": {
+    "signature": "MGEF",
+    "editor_id": "FoodRestoreMagickaDuration",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "466f6f64526573746f72654d616769636b614475726174696f6e00"
+      },
+      {
+        "signature": "FULL",
+        "data": "71140100"
+      },
+      {
+        "signature": "MDOB",
+        "data": "a5350400"
+      },
+      {
+        "signature": "KSIZ",
+        "data": "02000000"
+      },
+      {
+        "signature": "KWDA",
+        "data": "082504004e8a0f00"
+      },
+      {
+        "signature": "DATA",
+        "data": "000820009a99993e00000000ffffffffffffffff00000000000000000000000020e2040000000000000000000000000000000000000000000000000000000000000000001900000000000000000000000100000000000000ffffffff0000000021e204000000000000000000000000000000803f000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "signature": "SNDD",
+        "data": "0000000057e9030001000000226605000200000063f303000300000061f30300"
+      },
+      {
+        "signature": "DNAM",
+        "data": "75210100"
+      }
+    ]
+  },
+  "0010AA4A": {
+    "signature": "MGEF",
+    "editor_id": "AlchDamageHealthDuration",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "416c636844616d6167654865616c74684475726174696f6e00"
+      },
+      {
+        "signature": "VMAD",
+        "data": "0500020001001a004d61676963496d6f644f6e506c617965724869745363726970740002000e004f6e46696e697368496d6f64465801010000ffffd3e310000d004f6e5374617274496d6f64465801010000ffffd2e31000"
+      },
+      {
+        "signature": "FULL",
+        "data": "5c190100"
+      },
+      {
+        "signature": "MDOB",
+        "data": "a5350400"
+      },
+      {
+        "signature": "KSIZ",
+        "data": "01000000"
+      },
+      {
+        "signature": "KWDA",
+        "data": "09250400"
+      },
+      {
+        "signature": "DATA",
+        "data": "050820000000404100000000ffffffff2800000000000000000000000000000064cc10000000000000000000000000000000003f000000000000000000000000000000001800000000000000000000000100000000000000ffffffff00000000000000000000000000000000000000000000803f000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "signature": "SNDD",
+        "data": "0000000057e9030001000000226605000200000063f303000300000061f30300"
+      },
+      {
+        "signature": "DNAM",
+        "data": "63220100"
+      }
+    ]
+  },
+  "0010FB75": {
+    "signature": "ENCH",
+    "editor_id": "EnchArmorFortifyDestructionBase",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "456e636841726d6f72466f72746966794465737472756374696f6e4261736500"
+      },
+      {
+        "signature": "OBND",
+        "data": "000000000000000000000000"
+      },
+      {
+        "signature": "FULL",
+        "data": "19260100"
+      },
+      {
+        "signature": "ENIT",
+        "data": "00010000000000000000000000010000000000000600000000000000000000001ccd1000"
+      },
+      {
+        "signature": "EFID",
+        "data": "f6a00700"
+      },
+      {
+        "signature": "EFIT",
+        "data": "000000410000000000000000"
+      }
+    ]
+  },
+  "0010FB95": {
+    "signature": "ENCH",
+    "editor_id": "EnchWeaponFireDamageBase",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "456e6368576561706f6e4669726544616d6167654261736500"
+      },
+      {
+        "signature": "OBND",
+        "data": "000000000000000000000000"
+      },
+      {
+        "signature": "FULL",
+        "data": "07260100"
+      },
+      {
+        "signature": "ENIT",
+        "data": "0b00000000000000010000000b0000000100000006000000000000000000000000000000"
+      },
+      {
+        "signature": "EFID",
+        "data": "5a600400"
+      },
+      {
+        "signature": "EFIT",
+        "data": "000020410000000000000000"
+      }
+    ]
+  },
+  "0010FCF8": {
+    "signature": "PERK",
+    "editor_id": "AugmentedFlames60",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "4175676d656e746564466c616d6573363000"
+      },
+      {
+        "signature": "FULL",
+        "data": "36260100"
+      },
+      {
+        "signature": "DESC",
+        "data": "35260100"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803fc0010000e7810500000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "60000000000070421501000014000000000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "DATA",
+        "data": "0000010100"
+      },
+      {
+        "signature": "PRKE",
+        "data": "020000"
+      },
+      {
+        "signature": "DATA",
+        "data": "1d0303"
+      },
+      {
+        "signature": "PRKC",
+        "data": "01"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803fb5020000adce0100000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "EPFT",
+        "data": "01"
+      },
+      {
+        "signature": "EPFD",
+        "data": "0000c03f"
+      },
+      {
+        "signature": "PRKF",
+        "data": ""
+      }
+    ]
+  },
+  "0010FCF9": {
+    "signature": "PERK",
+    "editor_id": "AugmentedFrost60",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "4175676d656e74656446726f7374363000"
+      },
+      {
+        "signature": "FULL",
+        "data": "38260100"
+      },
+      {
+        "signature": "DESC",
+        "data": "37260100"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803fc0010000ea810500000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "60000000000070421501000014000000000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "DATA",
+        "data": "0000010100"
+      },
+      {
+        "signature": "PRKE",
+        "data": "020000"
+      },
+      {
+        "signature": "DATA",
+        "data": "1d0303"
+      },
+      {
+        "signature": "PRKC",
+        "data": "01"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803fb5020000aece0100000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "EPFT",
+        "data": "01"
+      },
+      {
+        "signature": "EPFD",
+        "data": "0000c03f"
+      },
+      {
+        "signature": "PRKF",
+        "data": ""
+      }
+    ]
+  },
+  "0010FCFA": {
+    "signature": "PERK",
+    "editor_id": "AugmentedShock60",
+    "flags": 0,
+    "fields": [
+      {
+        "signature": "EDID",
+        "data": "4175676d656e74656453686f636b363000"
+      },
+      {
+        "signature": "FULL",
+        "data": "39260100"
+      },
+      {
+        "signature": "DESC",
+        "data": "3a260100"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803fc001000000820500000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "CTDA",
+        "data": "60000000000070421501000014000000000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "DATA",
+        "data": "0000010100"
+      },
+      {
+        "signature": "PRKE",
+        "data": "020000"
+      },
+      {
+        "signature": "DATA",
+        "data": "1d0303"
+      },
+      {
+        "signature": "PRKC",
+        "data": "01"
+      },
+      {
+        "signature": "CTDA",
+        "data": "000000000000803fb5020000afce0100000000000000000000000000ffffffff"
+      },
+      {
+        "signature": "EPFT",
+        "data": "01"
+      },
+      {
+        "signature": "EPFD",
+        "data": "0000c03f"
+      },
+      {
+        "signature": "PRKF",
+        "data": ""
+      }
+    ]
+  }
+}

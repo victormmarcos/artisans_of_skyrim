@@ -1,0 +1,23 @@
+# Build output
+/build/
+/xlsx_qa/
+**/__pycache__/
+*.pyc
+*.pdb
+*.log
+*.tmp
+
+# Copy of config/ArtisansOfSkyrim.toml written by the ESP generator; the
+# installer uses the presets in installer/presets instead.
+/dist/Data/SKSE/Plugins/ArtisansOfSkyrim.toml
+
+# Release archives (published on Nexus, not in the repository)
+*.zip
+
+# Editor and local CMake settings
+.vs/
+.vscode/
+CMakeUserPresets.json
+
+# Local-only tools, never published
+/local/

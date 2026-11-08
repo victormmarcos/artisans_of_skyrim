@@ -1,0 +1,2639 @@
+{
+  "modName": "ArtisansOfSkyrim",
+  "displayName": "$AOS_MCM_ArtisansOfSkyrim_97f50d",
+  "minMcmVersion": 9,
+  "pluginRequirements": [
+    "ArtisansOfSkyrim.esp"
+  ],
+  "customContent": {
+    "source": "ArtisansOfSkyrim/mcm_logo.dds",
+    "x": 120,
+    "y": 90
+  },
+  "pages": [
+    {
+      "pageDisplayName": "$AOS_MCM_Smithing_6e044f",
+      "cursorFillMode": "leftToRight",
+      "content": [
+        {
+          "type": "header",
+          "text": "$AOS_MCM_CraftingPrice_e00d80"
+        },
+        {
+          "type": "header",
+          "text": "$AOS_MCM_ImprovementFeeFine_78e6d9"
+        },
+        {
+          "id": "fpricing__crafting__craftMultiplier:Smithing",
+          "text": "$AOS_MCM_ValueMultiplier_415022",
+          "type": "slider",
+          "help": "$AOS_MCM_PriceFeeForTheItemSizeItemValueT_511adc",
+          "valueOptions": {
+            "min": 0.25,
+            "max": 5.0,
+            "step": 0.05,
+            "formatString": "{2}x",
+            "sourceType": "ModSettingFloat"
+          }
+        },
+        {
+          "id": "fpricing__improvementFees__fineSmall:Smithing",
+          "text": "$AOS_MCM_ComplexitySmall_f70c90",
+          "type": "slider",
+          "help": "$AOS_MCM_FixedPartOfThePriceToImproveToFi_043ae4",
+          "valueOptions": {
+            "min": 50.0,
+            "max": 10000.0,
+            "step": 50.0,
+            "formatString": "{0}",
+            "sourceType": "ModSettingFloat"
+          }
+        },
+        {
+          "id": "fpricing__crafting__smallServiceFee:Smithing",
+          "text": "$AOS_MCM_FeeComplexitySmall_a0d111",
+          "type": "slider",
+          "help": "$AOS_MCM_FixedPartOfThePriceAddedToTheIte_bfb328",
+          "valueOptions": {
+            "min": 50.0,
+            "max": 10000.0,
+            "step": 50.0,
+            "formatString": "{0}",
+            "sourceType": "ModSettingFloat"
+          }
+        },
+        {
+          "id": "fpricing__improvementFees__fineMedium:Smithing",
+          "text": "$AOS_MCM_ComplexityMedium_334001",
+          "type": "slider",
+          "help": "$AOS_MCM_FixedPartOfThePriceToImproveToFi_0751ac",
+          "valueOptions": {
+            "min": 50.0,
+            "max": 10000.0,
+            "step": 50.0,
+            "formatString": "{0}",
+            "sourceType": "ModSettingFloat"
+          }
+        },
+        {
+          "id": "fpricing__crafting__mediumServiceFee:Smithing",
+          "text": "$AOS_MCM_FeeComplexityMedium_6f63fd",
+          "type": "slider",
+          "help": "$AOS_MCM_FixedPartOfThePriceAddedToTheIte_85189f",
+          "valueOptions": {
+            "min": 50.0,
+            "max": 10000.0,
+            "step": 50.0,
+            "formatString": "{0}",
+            "sourceType": "ModSettingFloat"
+          }
+        },
+        {
+          "id": "fpricing__improvementFees__fineLarge:Smithing",
+          "text": "$AOS_MCM_ComplexityLarge_4fc056",
+          "type": "slider",
+          "help": "$AOS_MCM_FixedPartOfThePriceToImproveToFi_dd6449",
+          "valueOptions": {
+            "min": 50.0,
+            "max": 10000.0,
+            "step": 50.0,
+            "formatString": "{0}",
+            "sourceType": "ModSettingFloat"
+          }
+        },
+        {
+          "id": "fpricing__crafting__largeServiceFee:Smithing",
+          "text": "$AOS_MCM_FeeComplexityLarge_05d3cc",
+          "type": "slider",
+          "help": "$AOS_MCM_FixedPartOfThePriceAddedToTheIte_da2993",
+          "valueOptions": {
+            "min": 50.0,
+            "max": 10000.0,
+            "step": 50.0,
+            "formatString": "{0}",
+            "sourceType": "ModSettingFloat"
+          }
+        },
+        {
+          "type": "header",
+          "text": "$AOS_MCM_ImprovementFeeSuperior_717bea"
+        },
+        {
+          "id": "fpricing__crafting__ammunitionServiceFee:Smithing",
+          "text": "$AOS_MCM_FeeAmmunition_c21aed",
+          "type": "slider",
+          "help": "$AOS_MCM_ArrowsAndBoltsWithoutAFixedBatch_fb1bcb",
+          "valueOptions": {
+            "min": 50.0,
+            "max": 2000.0,
+            "step": 50.0,
+            "formatString": "{0}",
+            "sourceType": "ModSettingFloat"
+          }
+        },
+        {
+          "id": "fpricing__improvementFees__superiorSmall:Smithing",
+          "text": "$AOS_MCM_ComplexitySmall_f70c90",
+          "type": "slider",
+          "help": "$AOS_MCM_FixedPartOfThePriceToImproveToSu_77286a",
+          "valueOptions": {
+            "min": 50.0,
+            "max": 10000.0,
+            "step": 50.0,
+            "formatString": "{0}",
+            "sourceType": "ModSettingFloat"
+          }
+        },
+        {
+          "type": "header",
+          "text": "$AOS_MCM_ImprovementPrice_664901"
+        },
+        {
+          "id": "fpricing__improvementFees__superiorMedium:Smithing",
+          "text": "$AOS_MCM_ComplexityMedium_334001",
+          "type": "slider",
+          "help": "$AOS_MCM_FixedPartOfThePriceToImproveToSu_027b3d",
+          "valueOptions": {
+            "min": 50.0,
+            "max": 10000.0,
+            "step": 50.0,
+            "formatString": "{0}",
+            "sourceType": "ModSettingFloat"
+          }
+        },
+        {
+          "id": "fpricing__improvement__valueMultiplier:Smithing",
+          "text": "$AOS_MCM_ValueMultiplier_415022",
+          "type": "slider",
+          "help": "$AOS_MCM_PriceFeeForTheQualityAndSizeItem_188ffe",
+          "valueOptions": {
+            "min": 0.0,
+            "max": 3.0,
+            "step": 0.05,
+            "formatString": "{2}x",
+            "sourceType": "ModSettingFloat"
+          }
+        },
+        {
+          "id": "fpricing__improvementFees__superiorLarge:Smithing",
+          "text": "$AOS_MCM_ComplexityLarge_4fc056",
+          "type": "slider",
+          "help": "$AOS_MCM_FixedPartOfThePriceToImproveToSu_34f6f3",
+          "valueOptions": {
+            "min": 50.0,
+            "max": 10000.0,
+            "step": 50.0,
+            "formatString": "{0}",
+            "sourceType": "ModSettingFloat"
+          }
+        },
+        {
+          "type": "header",
+          "text": "$AOS_MCM_QualityTargets_15203f"
+        },
+        {
+          "type": "header",
+          "text": "$AOS_MCM_ImprovementFeeExquisite_95c0cc"
+        },
+        {
+          "id": "ftempering__targets__fine:Smithing",
+          "text": "$AOS_MCM_Fine_226d7e",
+          "type": "slider",
+          "help": "$AOS_MCM_DamageOrArmorMultiplierAfterImpr_5cd689",
+          "valueOptions": {
+            "min": 1.1,
+            "max": 1.19,
+            "step": 0.01,
+            "formatString": "{2}",
+            "sourceType": "ModSettingFloat"
+          }
+        },
+        {
+          "id": "fpricing__improvementFees__exquisiteSmall:Smithing",
+          "text": "$AOS_MCM_ComplexitySmall_f70c90",
+          "type": "slider",
+          "help": "$AOS_MCM_FixedPartOfThePriceToImproveToEx_8397ef",
+          "valueOptions": {
+            "min": 50.0,
+            "max": 10000.0,
+            "step": 50.0,
+            "formatString": "{0}",
+            "sourceType": "ModSettingFloat"
+          }
+        },
+        {
+          "id": "ftempering__targets__superior:Smithing",
+          "text": "$AOS_MCM_Superior_69cbd0",
+          "type": "slider",
+          "help": "$AOS_MCM_DamageOrArmorMultiplierAfterImpr_5cd689",
+          "valueOptions": {
+            "min": 1.2,
+            "max": 1.29,
+            "step": 0.01,
+            "formatString": "{2}",
+            "sourceType": "ModSettingFloat"
+          }
+        },
+        {
+          "id": "fpricing__improvementFees__exquisiteMedium:Smithing",
+          "text": "$AOS_MCM_ComplexityMedium_334001",
+          "type": "slider",
+          "help": "$AOS_MCM_FixedPartOfThePriceToImproveToEx_d07e0e",
+          "valueOptions": {
+            "min": 50.0,
+            "max": 10000.0,
+            "step": 50.0,
+            "formatString": "{0}",
+            "sourceType": "ModSettingFloat"
+          }
+        },
+        {
+          "id": "ftempering__targets__exquisite:Smithing",
+          "text": "$AOS_MCM_Exquisite_1d1371",
+          "type": "slider",
+          "help": "$AOS_MCM_DamageOrArmorMultiplierAfterImpr_5cd689",
+          "valueOptions": {
+            "min": 1.3,
+            "max": 1.39,
+            "step": 0.01,
+            "formatString": "{2}",
+            "sourceType": "ModSettingFloat"
+          }
+        },
+        {
+          "id": "fpricing__improvementFees__exquisiteLarge:Smithing",
+          "text": "$AOS_MCM_ComplexityLarge_4fc056",
+          "type": "slider",
+          "help": "$AOS_MCM_FixedPartOfThePriceToImproveToEx_e74cfc",
+          "valueOptions": {
+            "min": 50.0,
+            "max": 10000.0,
+            "step": 50.0,
+            "formatString": "{0}",
+            "sourceType": "ModSettingFloat"
+          }
+        },
+        {
+          "id": "ftempering__targets__flawless:Smithing",
+          "text": "$AOS_MCM_Flawless_22b9ee",
+          "type": "slider",
+          "help": "$AOS_MCM_DamageOrArmorMultiplierAfterImpr_5cd689",
+          "valueOptions": {
+            "min": 1.4,
+            "max": 1.49,
+            "step": 0.01,
+            "formatString": "{2}",
+            "sourceType": "ModSettingFloat"
+          }
+        },
+        {
+          "type": "header",
+          "text": "$AOS_MCM_ImprovementFeeFlawless_7140ed"
+        },
+        {
+          "id": "ftempering__targets__epic:Smithing",
+          "text": "$AOS_MCM_Epic_b3efd0",
+          "type": "slider",
+          "help": "$AOS_MCM_DamageOrArmorMultiplierAfterImpr_5cd689",
+          "valueOptions": {
+            "min": 1.5,
+            "max": 1.59,
+            "step": 0.01,
+            "formatString": "{2}",
+            "sourceType": "ModSettingFloat"
+          }
+        },
+        {
+          "id": "fpricing__improvementFees__flawlessSmall:Smithing",
+          "text": "$AOS_MCM_ComplexitySmall_f70c90",
+          "type": "slider",
+          "help": "$AOS_MCM_FixedPartOfThePriceToImproveToFl_485b3a",
+          "valueOptions": {
+            "min": 50.0,
+            "max": 10000.0,
+            "step": 50.0,
+            "formatString": "{0}",
+            "sourceType": "ModSettingFloat"
+          }
+        },
+        {
+          "id": "ftempering__targets__legendary:Smithing",
+          "text": "$AOS_MCM_Legendary_b7e891",
+          "type": "slider",
+          "help": "$AOS_MCM_DamageOrArmorMultiplierAfterImpr_5cd689",
+          "valueOptions": {
+            "min": 1.6,
+            "max": 3.0,
+            "step": 0.05,
+            "formatString": "{2}",
+            "sourceType": "ModSettingFloat"
+          }
+        },
+        {
+          "id": "fpricing__improvementFees__flawlessMedium:Smithing",
+          "text": "$AOS_MCM_ComplexityMedium_334001",
+          "type": "slider",
+          "help": "$AOS_MCM_FixedPartOfThePriceToImproveToFl_fa5c3d",
+          "valueOptions": {
+            "min": 50.0,
+            "max": 10000.0,
+            "step": 50.0,
+            "formatString": "{0}",
+            "sourceType": "ModSettingFloat"
+          }
+        },
+        {
+          "type": "empty"
+        },
+        {
+          "id": "fpricing__improvementFees__flawlessLarge:Smithing",
+          "text": "$AOS_MCM_ComplexityLarge_4fc056",
+          "type": "slider",
+          "help": "$AOS_MCM_FixedPartOfThePriceToImproveToFl_23b5cd",
+          "valueOptions": {
+            "min": 50.0,
+            "max": 10000.0,
+            "step": 50.0,
+            "formatString": "{0}",
+            "sourceType": "ModSettingFloat"
+          }
+        },
+        {
+          "type": "empty"
+        },
+        {
+          "type": "header",
+          "text": "$AOS_MCM_ImprovementFeeEpic_2d6bb1"
+        },
+        {
+          "type": "empty"
+        },
+        {
+          "id": "fpricing__improvementFees__epicSmall:Smithing",
+          "text": "$AOS_MCM_ComplexitySmall_f70c90",
+          "type": "slider",
+          "help": "$AOS_MCM_FixedPartOfThePriceToImproveToEp_e966e6",
+          "valueOptions": {
+            "min": 50.0,
+            "max": 10000.0,
+            "step": 50.0,
+            "formatString": "{0}",
+            "sourceType": "ModSettingFloat"
+          }
+        },
+        {
+          "type": "empty"
+        },
+        {
+          "id": "fpricing__improvementFees__epicMedium:Smithing",
+          "text": "$AOS_MCM_ComplexityMedium_334001",
+          "type": "slider",
+          "help": "$AOS_MCM_FixedPartOfThePriceToImproveToEp_8d2005",
+          "valueOptions": {
+            "min": 50.0,
+            "max": 10000.0,
+            "step": 50.0,
+            "formatString": "{0}",
+            "sourceType": "ModSettingFloat"
+          }
+        },
+        {
+          "type": "empty"
+        },
+        {
+          "id": "fpricing__improvementFees__epicLarge:Smithing",
+          "text": "$AOS_MCM_ComplexityLarge_4fc056",
+          "type": "slider",
+          "help": "$AOS_MCM_FixedPartOfThePriceToImproveToEp_ffb33c",
+          "valueOptions": {
+            "min": 50.0,
+            "max": 10000.0,
+            "step": 50.0,
+            "formatString": "{0}",
+            "sourceType": "ModSettingFloat"
+          }
+        },
+        {
+          "type": "empty"
+        },
+        {
+          "type": "header",
+          "text": "$AOS_MCM_ImprovementFeeLegendary_70a43e"
+        },
+        {
+          "type": "empty"
+        },
+        {
+          "id": "fpricing__improvementFees__legendarySmall:Smithing",
+          "text": "$AOS_MCM_ComplexitySmall_f70c90",
+          "type": "slider",
+          "help": "$AOS_MCM_FixedPartOfThePriceToImproveToLe_d9b916",
+          "valueOptions": {
+            "min": 50.0,
+            "max": 10000.0,
+            "step": 50.0,
+            "formatString": "{0}",
+            "sourceType": "ModSettingFloat"
+          }
+        },
+        {
+          "type": "empty"
+        },
+        {
+          "id": "fpricing__improvementFees__legendaryMedium:Smithing",
+          "text": "$AOS_MCM_ComplexityMedium_334001",
+          "type": "slider",
+          "help": "$AOS_MCM_FixedPartOfThePriceToImproveToLe_e9a892",
+          "valueOptions": {
+            "min": 50.0,
+            "max": 10000.0,
+            "step": 50.0,
+            "formatString": "{0}",
+            "sourceType": "ModSettingFloat"
+          }
+        },
+        {
+          "type": "empty"
+        },
+        {
+          "id": "fpricing__improvementFees__legendaryLarge:Smithing",
+          "text": "$AOS_MCM_ComplexityLarge_4fc056",
+          "type": "slider",
+          "help": "$AOS_MCM_FixedPartOfThePriceToImproveToLe_3833a0",
+          "valueOptions": {
+            "min": 50.0,
+            "max": 10000.0,
+            "step": 50.0,
+            "formatString": "{0}",
+            "sourceType": "ModSettingFloat"
+          }
+        }
+      ]
+    },
+    {
+      "pageDisplayName": "$AOS_MCM_Enchanting_1bd64f",
+      "cursorFillMode": "leftToRight",
+      "content": [
+        {
+          "type": "header",
+          "text": "$AOS_MCM_GrandSoul_2775c9"
+        },
+        {
+          "type": "empty"
+        },
+        {
+          "id": "ipricing__grandSoulServiceCost:Enchanting",
+          "text": "$AOS_MCM_GrandSoulCost_d8489b",
+          "type": "slider",
+          "help": "$AOS_MCM_AddedForEveryEffectIncludingBoth_34ae73",
+          "valueOptions": {
+            "min": 500,
+            "max": 5000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "type": "empty"
+        },
+        {
+          "type": "header",
+          "text": "$AOS_MCM_Adept_e54454"
+        },
+        {
+          "type": "header",
+          "text": "$AOS_MCM_Adept_e54454"
+        },
+        {
+          "id": "ienchantmentPrices__damage_magicka__adept:Enchanting",
+          "text": "$AOS_MCM_DamageMagicka_476a92",
+          "type": "slider",
+          "help": "$AOS_MCM_Adept15PointsBeforeTheGrandSoulC_32fef9",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__frost_damage__adept:Enchanting",
+          "text": "$AOS_MCM_FrostDamage_9c59b5",
+          "type": "slider",
+          "help": "$AOS_MCM_Adept15PointsBeforeTheGrandSoulC_32fef9",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__damage_stamina__adept:Enchanting",
+          "text": "$AOS_MCM_DamageStamina_129758",
+          "type": "slider",
+          "help": "$AOS_MCM_Adept15PointsBeforeTheGrandSoulC_32fef9",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__resist_fire__adept:Enchanting",
+          "text": "$AOS_MCM_ResistFire_4096dd",
+          "type": "slider",
+          "help": "$AOS_MCM_Adept15BeforeTheGrandSoulCost_501651",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fear__adept:Enchanting",
+          "text": "$AOS_MCM_Fear_689e02",
+          "type": "slider",
+          "help": "$AOS_MCM_AdeptLevel10BeforeTheGrandSoulCo_5659e9",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__resist_frost__adept:Enchanting",
+          "text": "$AOS_MCM_ResistFrost_90578a",
+          "type": "slider",
+          "help": "$AOS_MCM_Adept15BeforeTheGrandSoulCost_501651",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fire_damage__adept:Enchanting",
+          "text": "$AOS_MCM_FireDamage_0d0a02",
+          "type": "slider",
+          "help": "$AOS_MCM_Adept15PointsBeforeTheGrandSoulC_32fef9",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__resist_shock__adept:Enchanting",
+          "text": "$AOS_MCM_ResistShock_633776",
+          "type": "slider",
+          "help": "$AOS_MCM_Adept15BeforeTheGrandSoulCost_501651",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_health__adept:Enchanting",
+          "text": "$AOS_MCM_FortifyHealth_441b09",
+          "type": "slider",
+          "help": "$AOS_MCM_Adept30PointsBeforeTheGrandSoulC_21f128",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__shock_damage__adept:Enchanting",
+          "text": "$AOS_MCM_ShockDamage_41330b",
+          "type": "slider",
+          "help": "$AOS_MCM_Adept15PointsBeforeTheGrandSoulC_32fef9",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_magicka__adept:Enchanting",
+          "text": "$AOS_MCM_FortifyMagicka_b3aa82",
+          "type": "slider",
+          "help": "$AOS_MCM_Adept30PointsBeforeTheGrandSoulC_21f128",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__turn_undead__adept:Enchanting",
+          "text": "$AOS_MCM_TurnUndead_e0b482",
+          "type": "slider",
+          "help": "$AOS_MCM_AdeptLevel10BeforeTheGrandSoulCo_5659e9",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_stamina__adept:Enchanting",
+          "text": "$AOS_MCM_FortifyStamina_6f1501",
+          "type": "slider",
+          "help": "$AOS_MCM_Adept30PointsBeforeTheGrandSoulC_21f128",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "type": "empty"
+        },
+        {
+          "type": "header",
+          "text": "$AOS_MCM_Expert_d7a501"
+        },
+        {
+          "type": "header",
+          "text": "$AOS_MCM_Expert_d7a501"
+        },
+        {
+          "id": "ienchantmentPrices__damage_magicka__expert:Enchanting",
+          "text": "$AOS_MCM_DamageMagicka_476a92",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert20PointsBeforeTheGrandSoul_a90805",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_magicka_regen__expert:Enchanting",
+          "text": "$AOS_MCM_FortifyMagickaRegen_dc09e8",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert25BeforeTheGrandSoulCost_13ac40",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__damage_stamina__expert:Enchanting",
+          "text": "$AOS_MCM_DamageStamina_129758",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert20PointsBeforeTheGrandSoul_a90805",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_one_handed__expert:Enchanting",
+          "text": "$AOS_MCM_FortifyOneHanded_2eee37",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert25BeforeTheGrandSoulCost_13ac40",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fear__expert:Enchanting",
+          "text": "$AOS_MCM_Fear_689e02",
+          "type": "slider",
+          "help": "$AOS_MCM_ExpertLevel20BeforeTheGrandSoulC_814609",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_pickpocket__expert:Enchanting",
+          "text": "$AOS_MCM_FortifyPickpocket_07199e",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert25BeforeTheGrandSoulCost_13ac40",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fire_damage__expert:Enchanting",
+          "text": "$AOS_MCM_FireDamage_0d0a02",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert20PointsBeforeTheGrandSoul_a90805",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_restoration__expert:Enchanting",
+          "text": "$AOS_MCM_FortifyRestoration_7be4dc",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert20BeforeTheGrandSoulCost_918041",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_alteration__expert:Enchanting",
+          "text": "$AOS_MCM_FortifyAlteration_74894c",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert20BeforeTheGrandSoulCost_918041",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_sneak__expert:Enchanting",
+          "text": "$AOS_MCM_FortifySneak_adbdf6",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert25BeforeTheGrandSoulCost_13ac40",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_archery__expert:Enchanting",
+          "text": "$AOS_MCM_FortifyArchery_0a1d3a",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert25BeforeTheGrandSoulCost_13ac40",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_stamina__expert:Enchanting",
+          "text": "$AOS_MCM_FortifyStamina_6f1501",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert40PointsBeforeTheGrandSoul_445f4a",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_block__expert:Enchanting",
+          "text": "$AOS_MCM_FortifyBlock_439769",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert25BeforeTheGrandSoulCost_13ac40",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_stamina_regen__expert:Enchanting",
+          "text": "$AOS_MCM_FortifyStaminaRegen_0c07fb",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert25BeforeTheGrandSoulCost_13ac40",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_carry_weight__expert:Enchanting",
+          "text": "$AOS_MCM_FortifyCarryWeight_dcee11",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert30PointsBeforeTheGrandSoul_214e12",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_two_handed__expert:Enchanting",
+          "text": "$AOS_MCM_FortifyTwoHanded_9b116e",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert25BeforeTheGrandSoulCost_13ac40",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_conjuration__expert:Enchanting",
+          "text": "$AOS_MCM_FortifyConjuration_b6be1b",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert20BeforeTheGrandSoulCost_918041",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_unarmed__expert:Enchanting",
+          "text": "$AOS_MCM_FortifyUnarmed_ea2b01",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert25BeforeTheGrandSoulCost_13ac40",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_destruction__expert:Enchanting",
+          "text": "$AOS_MCM_FortifyDestruction_56a1c1",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert20BeforeTheGrandSoulCost_918041",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__frost_damage__expert:Enchanting",
+          "text": "$AOS_MCM_FrostDamage_9c59b5",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert20PointsBeforeTheGrandSoul_a90805",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_healing_rate__expert:Enchanting",
+          "text": "$AOS_MCM_FortifyHealingRate_61dbbc",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert25BeforeTheGrandSoulCost_13ac40",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__resist_disease__expert:Enchanting",
+          "text": "$AOS_MCM_ResistDisease_361ac4",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert50BeforeTheGrandSoulCost_757131",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_health__expert:Enchanting",
+          "text": "$AOS_MCM_FortifyHealth_441b09",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert40PointsBeforeTheGrandSoul_445f4a",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__resist_fire__expert:Enchanting",
+          "text": "$AOS_MCM_ResistFire_4096dd",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert25BeforeTheGrandSoulCost_13ac40",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_heavy_armor__expert:Enchanting",
+          "text": "$AOS_MCM_FortifyHeavyArmor_cf7795",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert25PointsBeforeTheGrandSoul_be0960",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__resist_frost__expert:Enchanting",
+          "text": "$AOS_MCM_ResistFrost_90578a",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert25BeforeTheGrandSoulCost_13ac40",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_illusion__expert:Enchanting",
+          "text": "$AOS_MCM_FortifyIllusion_294caf",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert20BeforeTheGrandSoulCost_918041",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__resist_poison__expert:Enchanting",
+          "text": "$AOS_MCM_ResistPoison_1d2a38",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert25BeforeTheGrandSoulCost_13ac40",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_light_armor__expert:Enchanting",
+          "text": "$AOS_MCM_FortifyLightArmor_2c6724",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert25PointsBeforeTheGrandSoul_be0960",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__resist_shock__expert:Enchanting",
+          "text": "$AOS_MCM_ResistShock_633776",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert25BeforeTheGrandSoulCost_13ac40",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_lockpicking__expert:Enchanting",
+          "text": "$AOS_MCM_FortifyLockpicking_11b615",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert25BeforeTheGrandSoulCost_13ac40",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__shock_damage__expert:Enchanting",
+          "text": "$AOS_MCM_ShockDamage_41330b",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert20PointsBeforeTheGrandSoul_a90805",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_magicka__expert:Enchanting",
+          "text": "$AOS_MCM_FortifyMagicka_b3aa82",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert40PointsBeforeTheGrandSoul_445f4a",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__turn_undead__expert:Enchanting",
+          "text": "$AOS_MCM_TurnUndead_e0b482",
+          "type": "slider",
+          "help": "$AOS_MCM_ExpertLevel20BeforeTheGrandSoulC_814609",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "type": "header",
+          "text": "$AOS_MCM_Master_78f384"
+        },
+        {
+          "type": "header",
+          "text": "$AOS_MCM_Master_78f384"
+        },
+        {
+          "id": "ienchantmentPrices__absorb_health__master:Enchanting",
+          "text": "$AOS_MCM_AbsorbHealth_4721bd",
+          "type": "slider",
+          "help": "$AOS_MCM_Master20PointsBeforeTheGrandSoul_3e398c",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_one_handed__master:Enchanting",
+          "text": "$AOS_MCM_FortifyOneHanded_2eee37",
+          "type": "slider",
+          "help": "$AOS_MCM_Master35BeforeTheGrandSoulCost_b5c99d",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__absorb_magicka__master:Enchanting",
+          "text": "$AOS_MCM_AbsorbMagicka_215015",
+          "type": "slider",
+          "help": "$AOS_MCM_Master20PointsBeforeTheGrandSoul_3e398c",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_pickpocket__master:Enchanting",
+          "text": "$AOS_MCM_FortifyPickpocket_07199e",
+          "type": "slider",
+          "help": "$AOS_MCM_Master35BeforeTheGrandSoulCost_b5c99d",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__absorb_stamina__master:Enchanting",
+          "text": "$AOS_MCM_AbsorbStamina_a026d2",
+          "type": "slider",
+          "help": "$AOS_MCM_Master20PointsBeforeTheGrandSoul_3e398c",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_restoration__master:Enchanting",
+          "text": "$AOS_MCM_FortifyRestoration_7be4dc",
+          "type": "slider",
+          "help": "$AOS_MCM_Master25BeforeTheGrandSoulCost_26c694",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__banish__master:Enchanting",
+          "text": "$AOS_MCM_Banish_341102",
+          "type": "slider",
+          "help": "$AOS_MCM_MasterLevel30BeforeTheGrandSoulC_3afcc7",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_sneak__master:Enchanting",
+          "text": "$AOS_MCM_FortifySneak_adbdf6",
+          "type": "slider",
+          "help": "$AOS_MCM_Master35BeforeTheGrandSoulCost_b5c99d",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__damage_magicka__master:Enchanting",
+          "text": "$AOS_MCM_DamageMagicka_476a92",
+          "type": "slider",
+          "help": "$AOS_MCM_Master25PointsBeforeTheGrandSoul_6e2e3a",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_stamina__master:Enchanting",
+          "text": "$AOS_MCM_FortifyStamina_6f1501",
+          "type": "slider",
+          "help": "$AOS_MCM_Master50PointsBeforeTheGrandSoul_1a901a",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__damage_stamina__master:Enchanting",
+          "text": "$AOS_MCM_DamageStamina_129758",
+          "type": "slider",
+          "help": "$AOS_MCM_Master25PointsBeforeTheGrandSoul_6e2e3a",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_stamina_regen__master:Enchanting",
+          "text": "$AOS_MCM_FortifyStaminaRegen_0c07fb",
+          "type": "slider",
+          "help": "$AOS_MCM_Master35BeforeTheGrandSoulCost_b5c99d",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fear__master:Enchanting",
+          "text": "$AOS_MCM_Fear_689e02",
+          "type": "slider",
+          "help": "$AOS_MCM_MasterLevel30BeforeTheGrandSoulC_3afcc7",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_two_handed__master:Enchanting",
+          "text": "$AOS_MCM_FortifyTwoHanded_9b116e",
+          "type": "slider",
+          "help": "$AOS_MCM_Master35BeforeTheGrandSoulCost_b5c99d",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fire_damage__master:Enchanting",
+          "text": "$AOS_MCM_FireDamage_0d0a02",
+          "type": "slider",
+          "help": "$AOS_MCM_Master25PointsBeforeTheGrandSoul_6e2e3a",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_unarmed__master:Enchanting",
+          "text": "$AOS_MCM_FortifyUnarmed_ea2b01",
+          "type": "slider",
+          "help": "$AOS_MCM_Master35BeforeTheGrandSoulCost_b5c99d",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_alteration__master:Enchanting",
+          "text": "$AOS_MCM_FortifyAlteration_74894c",
+          "type": "slider",
+          "help": "$AOS_MCM_Master25BeforeTheGrandSoulCost_26c694",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__frost_damage__master:Enchanting",
+          "text": "$AOS_MCM_FrostDamage_9c59b5",
+          "type": "slider",
+          "help": "$AOS_MCM_Master25PointsBeforeTheGrandSoul_6e2e3a",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_archery__master:Enchanting",
+          "text": "$AOS_MCM_FortifyArchery_0a1d3a",
+          "type": "slider",
+          "help": "$AOS_MCM_Master35BeforeTheGrandSoulCost_b5c99d",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__muffle__master:Enchanting",
+          "text": "$AOS_MCM_Muffle_d4b83e",
+          "type": "slider",
+          "help": "$AOS_MCM_MasterMuffleBeforeTheGrandSoulCo_089947",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_block__master:Enchanting",
+          "text": "$AOS_MCM_FortifyBlock_439769",
+          "type": "slider",
+          "help": "$AOS_MCM_Master35BeforeTheGrandSoulCost_b5c99d",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__paralyze__master:Enchanting",
+          "text": "$AOS_MCM_Paralyze_a23514",
+          "type": "slider",
+          "help": "$AOS_MCM_Master2SecondsBeforeTheGrandSoul_6746ec",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_carry_weight__master:Enchanting",
+          "text": "$AOS_MCM_FortifyCarryWeight_dcee11",
+          "type": "slider",
+          "help": "$AOS_MCM_Master60PointsBeforeTheGrandSoul_2077b9",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__resist_disease__master:Enchanting",
+          "text": "$AOS_MCM_ResistDisease_361ac4",
+          "type": "slider",
+          "help": "$AOS_MCM_Master100BeforeTheGrandSoulCost_03d2c4",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_conjuration__master:Enchanting",
+          "text": "$AOS_MCM_FortifyConjuration_b6be1b",
+          "type": "slider",
+          "help": "$AOS_MCM_Master25BeforeTheGrandSoulCost_26c694",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__resist_fire__master:Enchanting",
+          "text": "$AOS_MCM_ResistFire_4096dd",
+          "type": "slider",
+          "help": "$AOS_MCM_Master35BeforeTheGrandSoulCost_b5c99d",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_destruction__master:Enchanting",
+          "text": "$AOS_MCM_FortifyDestruction_56a1c1",
+          "type": "slider",
+          "help": "$AOS_MCM_Master25BeforeTheGrandSoulCost_26c694",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__resist_frost__master:Enchanting",
+          "text": "$AOS_MCM_ResistFrost_90578a",
+          "type": "slider",
+          "help": "$AOS_MCM_Master35BeforeTheGrandSoulCost_b5c99d",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_healing_rate__master:Enchanting",
+          "text": "$AOS_MCM_FortifyHealingRate_61dbbc",
+          "type": "slider",
+          "help": "$AOS_MCM_Master35BeforeTheGrandSoulCost_b5c99d",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__resist_magic__master:Enchanting",
+          "text": "$AOS_MCM_ResistMagic_ffd614",
+          "type": "slider",
+          "help": "$AOS_MCM_Master20BeforeTheGrandSoulCost_211c01",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_health__master:Enchanting",
+          "text": "$AOS_MCM_FortifyHealth_441b09",
+          "type": "slider",
+          "help": "$AOS_MCM_Master50PointsBeforeTheGrandSoul_1a901a",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__resist_poison__master:Enchanting",
+          "text": "$AOS_MCM_ResistPoison_1d2a38",
+          "type": "slider",
+          "help": "$AOS_MCM_Master50BeforeTheGrandSoulCost_fcdccd",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_heavy_armor__master:Enchanting",
+          "text": "$AOS_MCM_FortifyHeavyArmor_cf7795",
+          "type": "slider",
+          "help": "$AOS_MCM_Master50PointsBeforeTheGrandSoul_1a901a",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__resist_shock__master:Enchanting",
+          "text": "$AOS_MCM_ResistShock_633776",
+          "type": "slider",
+          "help": "$AOS_MCM_Master35BeforeTheGrandSoulCost_b5c99d",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_illusion__master:Enchanting",
+          "text": "$AOS_MCM_FortifyIllusion_294caf",
+          "type": "slider",
+          "help": "$AOS_MCM_Master25BeforeTheGrandSoulCost_26c694",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__shock_damage__master:Enchanting",
+          "text": "$AOS_MCM_ShockDamage_41330b",
+          "type": "slider",
+          "help": "$AOS_MCM_Master25PointsBeforeTheGrandSoul_6e2e3a",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_light_armor__master:Enchanting",
+          "text": "$AOS_MCM_FortifyLightArmor_2c6724",
+          "type": "slider",
+          "help": "$AOS_MCM_Master50PointsBeforeTheGrandSoul_1a901a",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__soul_trap__master:Enchanting",
+          "text": "$AOS_MCM_SoulTrap_045b63",
+          "type": "slider",
+          "help": "$AOS_MCM_Master1SecondBeforeTheGrandSoulC_6f9ac1",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_lockpicking__master:Enchanting",
+          "text": "$AOS_MCM_FortifyLockpicking_11b615",
+          "type": "slider",
+          "help": "$AOS_MCM_Master35BeforeTheGrandSoulCost_b5c99d",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__turn_undead__master:Enchanting",
+          "text": "$AOS_MCM_TurnUndead_e0b482",
+          "type": "slider",
+          "help": "$AOS_MCM_MasterLevel30BeforeTheGrandSoulC_3afcc7",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_magicka__master:Enchanting",
+          "text": "$AOS_MCM_FortifyMagicka_b3aa82",
+          "type": "slider",
+          "help": "$AOS_MCM_Master50PointsBeforeTheGrandSoul_1a901a",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__waterbreathing__master:Enchanting",
+          "text": "$AOS_MCM_Waterbreathing_0cd9b2",
+          "type": "slider",
+          "help": "$AOS_MCM_MasterWaterbreathingBeforeTheGra_ddb4eb",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ienchantmentPrices__fortify_magicka_regen__master:Enchanting",
+          "text": "$AOS_MCM_FortifyMagickaRegen_dc09e8",
+          "type": "slider",
+          "help": "$AOS_MCM_Master35BeforeTheGrandSoulCost_b5c99d",
+          "valueOptions": {
+            "min": 100,
+            "max": 20000,
+            "step": 100,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "type": "empty"
+        }
+      ]
+    },
+    {
+      "pageDisplayName": "$AOS_MCM_Alchemy_ae436c",
+      "cursorFillMode": "leftToRight",
+      "content": [
+        {
+          "type": "header",
+          "text": "$AOS_MCM_Adept_e54454"
+        },
+        {
+          "type": "header",
+          "text": "$AOS_MCM_Adept_e54454"
+        },
+        {
+          "id": "ialchemyPrices__potion_cure_disease_adept:Alchemy",
+          "text": "$AOS_MCM_CureDisease_c35160",
+          "type": "slider",
+          "help": "$AOS_MCM_AdeptYesBatchOf5Minimum400_3f928c",
+          "valueOptions": {
+            "min": 400,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_restore_health_adept:Alchemy",
+          "text": "$AOS_MCM_RestoreHealth_56a07c",
+          "type": "slider",
+          "help": "$AOS_MCM_Adept50PointsBatchOf5Minimum200_902109",
+          "valueOptions": {
+            "min": 200,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__poison_damage_health_adept:Alchemy",
+          "text": "$AOS_MCM_DamageHealth_35d78b",
+          "type": "slider",
+          "help": "$AOS_MCM_Adept25PointsBatchOf5Minimum200_66f61b",
+          "valueOptions": {
+            "min": 200,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_restore_magicka_adept:Alchemy",
+          "text": "$AOS_MCM_RestoreMagicka_0a0397",
+          "type": "slider",
+          "help": "$AOS_MCM_Adept50PointsBatchOf5Minimum200_902109",
+          "valueOptions": {
+            "min": 200,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__poison_damage_magicka_adept:Alchemy",
+          "text": "$AOS_MCM_DamageMagicka_476a92",
+          "type": "slider",
+          "help": "$AOS_MCM_Adept50PointsBatchOf5Minimum200_902109",
+          "valueOptions": {
+            "min": 200,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_restore_stamina_adept:Alchemy",
+          "text": "$AOS_MCM_RestoreStamina_5f14e3",
+          "type": "slider",
+          "help": "$AOS_MCM_Adept50PointsBatchOf5Minimum200_902109",
+          "valueOptions": {
+            "min": 200,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__poison_damage_stamina_adept:Alchemy",
+          "text": "$AOS_MCM_DamageStamina_129758",
+          "type": "slider",
+          "help": "$AOS_MCM_Adept50PointsBatchOf5Minimum200_902109",
+          "valueOptions": {
+            "min": 200,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "type": "empty"
+        },
+        {
+          "type": "header",
+          "text": "$AOS_MCM_Expert_d7a501"
+        },
+        {
+          "type": "header",
+          "text": "$AOS_MCM_Expert_d7a501"
+        },
+        {
+          "id": "ialchemyPrices__poison_damage_health_expert:Alchemy",
+          "text": "$AOS_MCM_DamageHealth_35d78b",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert50PointsBatchOf5Minimum400_a57f49",
+          "valueOptions": {
+            "min": 400,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_fortify_two_handed_expert:Alchemy",
+          "text": "$AOS_MCM_FortifyTwoHanded_9b116e",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert2060SecondsBatchOf5Minimum_117493",
+          "valueOptions": {
+            "min": 700,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__poison_damage_magicka_expert:Alchemy",
+          "text": "$AOS_MCM_DamageMagicka_476a92",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert100PointsBatchOf5Minimum40_dc2bac",
+          "valueOptions": {
+            "min": 400,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_resist_fire_expert:Alchemy",
+          "text": "$AOS_MCM_ResistFire_4096dd",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert2060SecondsBatchOf5Minimum_72dfb1",
+          "valueOptions": {
+            "min": 550,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__poison_damage_stamina_expert:Alchemy",
+          "text": "$AOS_MCM_DamageStamina_129758",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert100PointsBatchOf5Minimum40_dc2bac",
+          "valueOptions": {
+            "min": 400,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_resist_frost_expert:Alchemy",
+          "text": "$AOS_MCM_ResistFrost_90578a",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert2060SecondsBatchOf5Minimum_72dfb1",
+          "valueOptions": {
+            "min": 550,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_fortify_archery_expert:Alchemy",
+          "text": "$AOS_MCM_FortifyArchery_0a1d3a",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert2060SecondsBatchOf5Minimum_117493",
+          "valueOptions": {
+            "min": 700,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_resist_poison_expert:Alchemy",
+          "text": "$AOS_MCM_ResistPoison_1d2a38",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert2060SecondsBatchOf5Minimum_13a677",
+          "valueOptions": {
+            "min": 400,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_fortify_carry_weight_expert:Alchemy",
+          "text": "$AOS_MCM_FortifyCarryWeight_dcee11",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert50Points120SecondsBatchOf5_4f5641",
+          "valueOptions": {
+            "min": 350,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_resist_shock_expert:Alchemy",
+          "text": "$AOS_MCM_ResistShock_633776",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert2060SecondsBatchOf5Minimum_72dfb1",
+          "valueOptions": {
+            "min": 550,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_fortify_destruction_expert:Alchemy",
+          "text": "$AOS_MCM_FortifyDestruction_56a1c1",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert2060SecondsBatchOf5Minimum_117493",
+          "valueOptions": {
+            "min": 700,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_restore_health_expert:Alchemy",
+          "text": "$AOS_MCM_RestoreHealth_56a07c",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert100PointsBatchOf5Minimum40_dc2bac",
+          "valueOptions": {
+            "min": 400,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_fortify_illusion_expert:Alchemy",
+          "text": "$AOS_MCM_FortifyIllusion_294caf",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert2060SecondsBatchOf5Minimum_117493",
+          "valueOptions": {
+            "min": 700,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_restore_magicka_expert:Alchemy",
+          "text": "$AOS_MCM_RestoreMagicka_0a0397",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert100PointsBatchOf5Minimum40_dc2bac",
+          "valueOptions": {
+            "min": 400,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_fortify_one_handed_expert:Alchemy",
+          "text": "$AOS_MCM_FortifyOneHanded_2eee37",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert2060SecondsBatchOf5Minimum_117493",
+          "valueOptions": {
+            "min": 700,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_restore_stamina_expert:Alchemy",
+          "text": "$AOS_MCM_RestoreStamina_5f14e3",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert100PointsBatchOf5Minimum40_dc2bac",
+          "valueOptions": {
+            "min": 400,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_fortify_sneak_expert:Alchemy",
+          "text": "$AOS_MCM_FortifySneak_adbdf6",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert2060SecondsBatchOf5Minimum_117493",
+          "valueOptions": {
+            "min": 700,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__poison_slow_expert:Alchemy",
+          "text": "$AOS_MCM_Slow_33dcec",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert50SlowerFor10SecondsBatchO_8e5758",
+          "valueOptions": {
+            "min": 450,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "type": "header",
+          "text": "$AOS_MCM_Master_78f384"
+        },
+        {
+          "type": "header",
+          "text": "$AOS_MCM_Master_78f384"
+        },
+        {
+          "id": "ialchemyPrices__poison_damage_health_master:Alchemy",
+          "text": "$AOS_MCM_DamageHealth_35d78b",
+          "type": "slider",
+          "help": "$AOS_MCM_Master100PointsBatchOf5Minimum70_02e5a5",
+          "valueOptions": {
+            "min": 700,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__poison_damage_health_plus_lingering_damage_health_master:Alchemy",
+          "text": "$AOS_MCM_LingeringDamage_75f32f",
+          "type": "slider",
+          "help": "$AOS_MCM_Master100Points10PointsPerSecond_b0ad90",
+          "valueOptions": {
+            "min": 1150,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__poison_damage_magicka_master:Alchemy",
+          "text": "$AOS_MCM_DamageMagicka_476a92",
+          "type": "slider",
+          "help": "$AOS_MCM_Master200PointsBatchOf5Minimum70_1f3642",
+          "valueOptions": {
+            "min": 700,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_restore_magicka_plus_regenerate_magicka_master:Alchemy",
+          "text": "$AOS_MCM_MagickaRecovery_c090af",
+          "type": "slider",
+          "help": "$AOS_MCM_Master200Points20Faster60Seconds_3b0cc8",
+          "valueOptions": {
+            "min": 1200,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__poison_damage_stamina_master:Alchemy",
+          "text": "$AOS_MCM_DamageStamina_129758",
+          "type": "slider",
+          "help": "$AOS_MCM_Master200PointsBatchOf5Minimum70_1f3642",
+          "valueOptions": {
+            "min": 700,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__poison_paralysis_master:Alchemy",
+          "text": "$AOS_MCM_Paralysis_9794c2",
+          "type": "slider",
+          "help": "$AOS_MCM_Master15SecondsBatchOf5Minimum11_3b7d81",
+          "valueOptions": {
+            "min": 1150,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_restore_magicka_plus_fortify_destruction_master:Alchemy",
+          "text": "$AOS_MCM_DestructionFocus_d5a7b6",
+          "type": "slider",
+          "help": "$AOS_MCM_Master200Points4060SecondsBatchO_d71992",
+          "valueOptions": {
+            "min": 1550,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_resist_fire_master:Alchemy",
+          "text": "$AOS_MCM_ResistFire_4096dd",
+          "type": "slider",
+          "help": "$AOS_MCM_Master4060SecondsBatchOf5Minimum_5a7c96",
+          "valueOptions": {
+            "min": 1100,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__poison_fear_master:Alchemy",
+          "text": "$AOS_MCM_Fear_689e02",
+          "type": "slider",
+          "help": "$AOS_MCM_MasterUpToLevel30For60SecondsBat_92eb9c",
+          "valueOptions": {
+            "min": 1200,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_resist_frost_master:Alchemy",
+          "text": "$AOS_MCM_ResistFrost_90578a",
+          "type": "slider",
+          "help": "$AOS_MCM_Master4060SecondsBatchOf5Minimum_5a7c96",
+          "valueOptions": {
+            "min": 1100,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_fortify_archery_master:Alchemy",
+          "text": "$AOS_MCM_FortifyArchery_0a1d3a",
+          "type": "slider",
+          "help": "$AOS_MCM_Master4060SecondsBatchOf5Minimum_0c34d9",
+          "valueOptions": {
+            "min": 1400,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_resist_magic_master:Alchemy",
+          "text": "$AOS_MCM_ResistMagic_ffd614",
+          "type": "slider",
+          "help": "$AOS_MCM_Master4060SecondsBatchOf5Minimum_be00ed",
+          "valueOptions": {
+            "min": 1200,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_fortify_carry_weight_master:Alchemy",
+          "text": "$AOS_MCM_FortifyCarryWeight_dcee11",
+          "type": "slider",
+          "help": "$AOS_MCM_Master100Points120SecondsBatchOf_10203d",
+          "valueOptions": {
+            "min": 650,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_resist_poison_master:Alchemy",
+          "text": "$AOS_MCM_ResistPoison_1d2a38",
+          "type": "slider",
+          "help": "$AOS_MCM_Master4060SecondsBatchOf5Minimum_488648",
+          "valueOptions": {
+            "min": 700,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_fortify_destruction_master:Alchemy",
+          "text": "$AOS_MCM_FortifyDestruction_56a1c1",
+          "type": "slider",
+          "help": "$AOS_MCM_Master4060SecondsBatchOf5Minimum_0c34d9",
+          "valueOptions": {
+            "min": 1400,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_resist_shock_master:Alchemy",
+          "text": "$AOS_MCM_ResistShock_633776",
+          "type": "slider",
+          "help": "$AOS_MCM_Master4060SecondsBatchOf5Minimum_5a7c96",
+          "valueOptions": {
+            "min": 1100,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_fortify_illusion_master:Alchemy",
+          "text": "$AOS_MCM_FortifyIllusion_294caf",
+          "type": "slider",
+          "help": "$AOS_MCM_Master4060SecondsBatchOf5Minimum_0c34d9",
+          "valueOptions": {
+            "min": 1400,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_restore_health_master:Alchemy",
+          "text": "$AOS_MCM_RestoreHealth_56a07c",
+          "type": "slider",
+          "help": "$AOS_MCM_Master200PointsBatchOf5Minimum70_1f3642",
+          "valueOptions": {
+            "min": 700,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_fortify_one_handed_master:Alchemy",
+          "text": "$AOS_MCM_FortifyOneHanded_2eee37",
+          "type": "slider",
+          "help": "$AOS_MCM_Master4060SecondsBatchOf5Minimum_0c34d9",
+          "valueOptions": {
+            "min": 1400,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_restore_magicka_master:Alchemy",
+          "text": "$AOS_MCM_RestoreMagicka_0a0397",
+          "type": "slider",
+          "help": "$AOS_MCM_Master200PointsBatchOf5Minimum70_1f3642",
+          "valueOptions": {
+            "min": 700,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_fortify_sneak_master:Alchemy",
+          "text": "$AOS_MCM_FortifySneak_adbdf6",
+          "type": "slider",
+          "help": "$AOS_MCM_Master4060SecondsBatchOf5Minimum_0c34d9",
+          "valueOptions": {
+            "min": 1400,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_restore_stamina_master:Alchemy",
+          "text": "$AOS_MCM_RestoreStamina_5f14e3",
+          "type": "slider",
+          "help": "$AOS_MCM_Master200PointsBatchOf5Minimum70_1f3642",
+          "valueOptions": {
+            "min": 700,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_fortify_two_handed_master:Alchemy",
+          "text": "$AOS_MCM_FortifyTwoHanded_9b116e",
+          "type": "slider",
+          "help": "$AOS_MCM_Master4060SecondsBatchOf5Minimum_0c34d9",
+          "valueOptions": {
+            "min": 1400,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__poison_slow_master:Alchemy",
+          "text": "$AOS_MCM_Slow_33dcec",
+          "type": "slider",
+          "help": "$AOS_MCM_Master50SlowerFor20SecondsBatchO_5cbc22",
+          "valueOptions": {
+            "min": 900,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__poison_frenzy_master:Alchemy",
+          "text": "$AOS_MCM_Frenzy_c09573",
+          "type": "slider",
+          "help": "$AOS_MCM_MasterUpToLevel30For60SecondsBat_92eb9c",
+          "valueOptions": {
+            "min": 1200,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_restore_stamina_plus_regenerate_stamina_master:Alchemy",
+          "text": "$AOS_MCM_StaminaRecovery_ed1447",
+          "type": "slider",
+          "help": "$AOS_MCM_Master200Points20Faster60Seconds_3b0cc8",
+          "valueOptions": {
+            "min": 1200,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_restore_magicka_plus_fortify_illusion_master:Alchemy",
+          "text": "$AOS_MCM_IllusionFocus_3c135b",
+          "type": "slider",
+          "help": "$AOS_MCM_Master200Points4060SecondsBatchO_d71992",
+          "valueOptions": {
+            "min": 1550,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_waterbreathing_master:Alchemy",
+          "text": "$AOS_MCM_Waterbreathing_0cd9b2",
+          "type": "slider",
+          "help": "$AOS_MCM_Master60SecondsBatchOf5Minimum90_6ce634",
+          "valueOptions": {
+            "min": 900,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_invisibility_master:Alchemy",
+          "text": "$AOS_MCM_Invisibility_d516e7",
+          "type": "slider",
+          "help": "$AOS_MCM_Master60SecondsBatchOf5Minimum11_5fefd6",
+          "valueOptions": {
+            "min": 1150,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "type": "empty"
+        }
+      ]
+    },
+    {
+      "pageDisplayName": "$AOS_MCM_CustomPotions_2521a6",
+      "cursorFillMode": "leftToRight",
+      "content": [
+        {
+          "type": "header",
+          "text": "$AOS_MCM_Adept_e54454"
+        },
+        {
+          "type": "header",
+          "text": "$AOS_MCM_Adept_e54454"
+        },
+        {
+          "id": "ialchemyPrices__potion_health_over_time_adept:Alchemy",
+          "text": "$AOS_MCM_HealthOverTime_ad5f8d",
+          "type": "slider",
+          "help": "$AOS_MCM_Adept10PointsPerSecondFor10Secon_36d3b2",
+          "valueOptions": {
+            "min": 200,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_stamina_over_time_adept:Alchemy",
+          "text": "$AOS_MCM_StaminaOverTime_7a560d",
+          "type": "slider",
+          "help": "$AOS_MCM_Adept10PointsPerSecondFor10Secon_36d3b2",
+          "valueOptions": {
+            "min": 200,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_magicka_over_time_adept:Alchemy",
+          "text": "$AOS_MCM_MagickaOverTime_aaead0",
+          "type": "slider",
+          "help": "$AOS_MCM_Adept10PointsPerSecondFor10Secon_36d3b2",
+          "valueOptions": {
+            "min": 200,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "type": "empty"
+        },
+        {
+          "type": "header",
+          "text": "$AOS_MCM_Expert_d7a501"
+        },
+        {
+          "type": "header",
+          "text": "$AOS_MCM_Expert_d7a501"
+        },
+        {
+          "id": "ialchemyPrices__potion_health_over_time_expert:Alchemy",
+          "text": "$AOS_MCM_HealthOverTime_ad5f8d",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert20PointsPerSecondFor10Seco_82bff4",
+          "valueOptions": {
+            "min": 400,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_stamina_over_time_expert:Alchemy",
+          "text": "$AOS_MCM_StaminaOverTime_7a560d",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert20PointsPerSecondFor10Seco_82bff4",
+          "valueOptions": {
+            "min": 400,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_magicka_over_time_expert:Alchemy",
+          "text": "$AOS_MCM_MagickaOverTime_aaead0",
+          "type": "slider",
+          "help": "$AOS_MCM_Expert20PointsPerSecondFor10Seco_82bff4",
+          "valueOptions": {
+            "min": 400,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "type": "empty"
+        },
+        {
+          "type": "header",
+          "text": "$AOS_MCM_Master_78f384"
+        },
+        {
+          "type": "header",
+          "text": "$AOS_MCM_Master_78f384"
+        },
+        {
+          "id": "ialchemyPrices__potion_health_over_time_master:Alchemy",
+          "text": "$AOS_MCM_HealthOverTime_ad5f8d",
+          "type": "slider",
+          "help": "$AOS_MCM_Master40PointsPerSecondFor10Seco_5c1de6",
+          "valueOptions": {
+            "min": 800,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_stamina_over_time_master:Alchemy",
+          "text": "$AOS_MCM_StaminaOverTime_7a560d",
+          "type": "slider",
+          "help": "$AOS_MCM_Master40PointsPerSecondFor10Seco_5c1de6",
+          "valueOptions": {
+            "min": 800,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemyPrices__potion_magicka_over_time_master:Alchemy",
+          "text": "$AOS_MCM_MagickaOverTime_aaead0",
+          "type": "slider",
+          "help": "$AOS_MCM_Master40PointsPerSecondFor10Seco_5c1de6",
+          "valueOptions": {
+            "min": 800,
+            "max": 10000,
+            "step": 50,
+            "formatString": "{0}",
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "type": "empty"
+        }
+      ]
+    },
+    {
+      "pageDisplayName": "$AOS_MCM_ModAddedArtisans_0b7559",
+      "cursorFillMode": "leftToRight",
+      "content": [
+        {
+          "type": "header",
+          "text": "$AOS_MCM_Blacksmiths_acab31"
+        },
+        {
+          "type": "header",
+          "text": "$AOS_MCM_Alchemists_477756"
+        },
+        {
+          "id": "irules__modAddedSmithTier:Smithing",
+          "text": "$AOS_MCM_BlacksmithTier_dac883",
+          "type": "stepper",
+          "help": "$AOS_MCM_TierForBlacksmithsFromOtherModsP_0b1972",
+          "valueOptions": {
+            "options": [
+              "$AOS_MCM_Adept_e54454",
+              "$AOS_MCM_Expert_d7a501",
+              "$AOS_MCM_Master_78f384"
+            ],
+            "sourceType": "ModSettingInt"
+          }
+        },
+        {
+          "id": "ialchemy__rules__modAddedAlchemistTier:Alchemy",
+          "text": "$AOS_MCM_AlchemistTier_3278c4",
+          "type": "stepper",
+          "help": "$AOS_MCM_TierForAlchemistsFromOtherModsPe_74d896",
+          "valueOptions": {
+            "options": [
+              "$AOS_MCM_Adept_e54454",
+              "$AOS_MCM_Expert_d7a501",
+              "$AOS_MCM_Master_78f384"
+            ],
+            "sourceType": "ModSettingInt"
+          }
+        }
+      ]
+    }
+  ]
+}

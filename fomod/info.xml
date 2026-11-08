@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fomod>
+  <Name>Artisans of Skyrim</Name>
+  <Author>victormmarcos</Author>
+  <Version>1.8</Version>
+  <Id>185212</Id>
+  <Website>https://www.nexusmods.com/skyrimspecialedition/mods/185212</Website>
+  <Description>Hire Skyrim's blacksmiths, enchanters, and alchemists for crafting services with dedicated item menus, optional timed smithing orders, and courier notices. Requires the matching SKSE and Address Library. SkyUI is not required; the optional settings menu uses MCM Helper.</Description>
+</fomod>

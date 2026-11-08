@@ -1,0 +1,12 @@
+# Keep every file byte-for-byte: generated files and the release checks
+# compare exact bytes and hashes, so Git must not convert line endings.
+* -text
+
+# Game and build binaries (no text diff).
+*.dll binary
+*.esp binary
+*.pex binary
+*.seq binary
+*.swf binary
+*.dds binary
+*.png binary

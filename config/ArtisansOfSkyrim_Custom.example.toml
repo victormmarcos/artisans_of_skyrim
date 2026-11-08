@@ -1,0 +1,69 @@
+# Artisans of Skyrim - personal settings
+#
+# Copy this file to Data/SKSE/Plugins/ArtisansOfSkyrim_Custom.toml and keep
+# only the values you want to change. Mod updates never overwrite it.
+#
+# Priority: MCM (if installed) > this file > the preset chosen in the installer.
+# Any value from ArtisansOfSkyrim.toml can be set here using the same table
+# names. Lists such as [[enchantments]] cannot be replaced; use the price
+# tables below instead. Item lists in [items] are added to the mod's own.
+
+# Remove the "# " in front of a [section] and of the lines you change.
+
+# --- Smithing: crafting ----------------------------------------------------
+# Price = fee for the item size + item value x craftMultiplier
+# [pricing.crafting]
+# craftMultiplier = 1.25
+# smallServiceFee = 400.0
+# mediumServiceFee = 700.0
+# largeServiceFee = 1000.0
+
+# --- Smithing: improvement -------------------------------------------------
+# Price = fee for the quality and item size + item value x valueMultiplier
+# [pricing.improvement]
+# valueMultiplier = 0.2
+
+# [pricing.improvementFees]
+# legendaryLarge = 3000.0
+
+# Damage or armor multiplier at each quality (not a price).
+# [tempering.targets]
+# legendary = 2.0
+
+# --- Enchanting -----------------------------------------------------------
+
+# [pricing]
+# grandSoulServiceCost = 1000
+
+# Price per effect and rank, before the Grand Soul and discounts.
+# Only ranks the effect already offers can be changed.
+# [enchantmentPrices.fortify_health]
+# adept = 600
+# expert = 1200
+# master = 2400
+
+# --- Alchemy --------------------------------------------------------------
+
+# Price for one batch. Prices that would allow reselling the batch at a profit
+# are raised automatically to the safe minimum.
+# [alchemyPrices]
+# potion_health_over_time_master = 1000
+
+# --- Equipment from other mods ---------------------------------------------
+# Items whose material the mod does not know are not crafted or improved.
+# The log (Documents/My Games/Skyrim Special Edition/SKSE/ArtisansOfSkyrim.log)
+# lists them as lines ready to copy. Tier: Adept, Expert or Master.
+# A form entry names the item: it is offered even if the mod would exclude it
+# (unique, conversion, enchanted by default). A keyword only sets the tier.
+# [items] block always wins.
+# [[items.tiers]]
+# form = "Plugin.esp|000800"
+# tier = "Expert"
+# price = 2500        # needed when the item has no forge recipe or is worth 0
+#
+# [[items.tiers]]
+# keyword = "ArmorMaterialThievesGuild"
+# tier = "Adept"
+#
+# The same entries can go in a patch file of their own:
+# Data/SKSE/Plugins/ArtisansOfSkyrim/<AnyName>.toml

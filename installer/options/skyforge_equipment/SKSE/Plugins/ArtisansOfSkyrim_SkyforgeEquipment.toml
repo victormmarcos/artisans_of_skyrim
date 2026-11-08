@@ -1,0 +1,5 @@
+# Installed by the Artisans of Skyrim installer checkbox for this option.
+# Delete this file, or reinstall without the option, to turn it off.
+
+[features]
+enableSkyforgeEquipment = true
